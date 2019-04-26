@@ -120,7 +120,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
                 public void onClick(View v) {
                     new SimpleTooltip.Builder(v.getContext())
                             .anchorView(phone)
-                            .text("2 PM")
+                            .text("  2 PM")
                             .gravity(Gravity.BOTTOM)
                             .textColor(Color.WHITE)
                             .setHeight(100)

@@ -83,9 +83,8 @@ public class NavigationActivity extends AppCompatActivity
                     // mTextMessage.setText("three");
                     return true;
                 case R.id.navigation_profile:
-                    //  mTextMessage.setText("four");
-                  /*  Intent intent1 = new Intent(Navigation.this, Profile_Manu_Dealer.class);
-                    startActivity(intent1);*/
+                    Intent intent1 = new Intent(NavigationActivity.this, ProfileActivity.class);
+                    startActivity(intent1);
                     return true;
             }
             return false;
@@ -119,6 +118,8 @@ public class NavigationActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
        /* recycler_view = (RecyclerView) findViewById(R.id.recycler_view);
 
 
