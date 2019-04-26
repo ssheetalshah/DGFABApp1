@@ -1,7 +1,16 @@
 package com.ics.dgfabapp;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.design.widget.NavigationView;
@@ -13,16 +22,76 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
+import com.ics.dgfabapp.adapter.MyAdapterrr;
 import com.ics.dgfabapp.adapter.MyListAdapter;
 import com.ics.dgfabapp.model.MyListData;
 
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import me.relex.circleindicator.CircleIndicator;
+
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    RecyclerView recycler_view;
-    MyListData[] myListData;
-    View view;
-    Context c;
+    LinearLayout proid;
+    private static ViewPager mPager;
+    Toolbar toolbar_home;
+    final int duration = 1500;
+    final int pixelsToMove = 500;
+    private final Handler mHandler = new Handler(Looper.getMainLooper());
+    private static int currentPage = 0;
+    private static final Integer[] XMEN = {R.drawable.one, R.drawable.newonw};
+    private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
+    Button btn;
+    LinearLayout sad;
+//    HeaderAdapter madapter;
+    private RecyclerView rv_autoScroll;
+    private final Runnable SCROLLING_RUNNABLE = new Runnable() {
+
+        @Override
+        public void run() {
+            rv_autoScroll.smoothScrollBy(pixelsToMove, 0);
+            mHandler.postDelayed(this, duration);
+        }
+    };
+    AlertDialog.Builder builder;
+    String[] listItems = {"Manufacturer", "Dealer", "Buyer"};
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.navigation_home:
+                    //   mTextMessage.setText("one");
+                 /*   Intent intent = new Intent(Navigation.this, ChatActivity.class);
+                    startActivity(intent);*/
+                    return true;
+                case R.id.navigation_dashboard:
+                  /*  Intent intent2 = new Intent(Navigation.this, DirCateActivity.class);
+                    //   Intent intent2 = new Intent(Navigation.this, Product_SubCategory.class);
+                    startActivity(intent2);*/
+                    //  mTextMessage.setText("Two");
+                    return true;
+                case R.id.navigation_notifications:
+                    // mTextMessage.setText("three");
+                    return true;
+                case R.id.navigation_profile:
+                    //  mTextMessage.setText("four");
+                  /*  Intent intent1 = new Intent(Navigation.this, Profile_Manu_Dealer.class);
+                    startActivity(intent1);*/
+                    return true;
+            }
+            return false;
+        }
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +99,8 @@ public class NavigationActivity extends AppCompatActivity
         setContentView(R.layout.activity_navigation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-    //    c = NavigationActivity.this.view.getContext();
+        builder = new AlertDialog.Builder(this);
+        //    c = NavigationActivity.this.view.getContext();
     /*    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +119,7 @@ public class NavigationActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        recycler_view = (RecyclerView) findViewById(R.id.recycler_view);
+       /* recycler_view = (RecyclerView) findViewById(R.id.recycler_view);
 
 
         myListData = new MyListData[]{
@@ -65,7 +135,34 @@ public class NavigationActivity extends AppCompatActivity
         MyListAdapter adapter = new MyListAdapter(NavigationActivity.this, myListData);
         recycler_view.setHasFixedSize(true);
         recycler_view.setLayoutManager(new LinearLayoutManager(NavigationActivity.this));
-        recycler_view.setAdapter(adapter);
+        recycler_view.setAdapter(adapter);*/
+
+
+        for (int i = 0; i < XMEN.length; i++)
+            XMENArray.add(XMEN[i]);
+
+        mPager = (ViewPager)findViewById(R.id.pager);
+        mPager.setAdapter(new MyAdapterrr(NavigationActivity.this, XMENArray));
+        CircleIndicator indicator = (CircleIndicator)findViewById(R.id.indicator);
+        indicator.setViewPager(mPager);
+
+        // Auto start of viewpager
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == XMEN.length) {
+                    currentPage = 0;
+                }
+                mPager.setCurrentItem(currentPage++, true);
+            }
+        };
+        Timer swipeTimer = new Timer();
+        swipeTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, 3000, 3000);
     }
 
     @Override
@@ -94,6 +191,29 @@ public class NavigationActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(NavigationActivity.this);
+            builder.setTitle("Please Select Your Type..");
+
+            int checkedItem = 0; //this will checked the item when user open the dialog
+            builder.setSingleChoiceItems(listItems, checkedItem, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(NavigationActivity.this, "Position: " + which + " Value: " + listItems[which], Toast.LENGTH_LONG).show();
+                }
+            });
+
+            builder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intent = new Intent(NavigationActivity.this,CompanyList.class);
+                    startActivity(intent);
+                    dialog.dismiss();
+                }
+            });
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
+
             return true;
         }
 
