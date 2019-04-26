@@ -79,7 +79,7 @@ public class NavigationActivity extends AppCompatActivity
                     startActivity(intent2);*/
                     //  mTextMessage.setText("Two");
                     return true;
-                case R.id.navigation_notifications:
+                case R.id.navigation_dealerlist:
                     // mTextMessage.setText("three");
                     return true;
                 case R.id.navigation_profile:

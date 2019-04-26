@@ -78,6 +78,13 @@
                             android:layout_marginBottom="3dp"
                             android:text="Limit - 1,00,000"
                             android:textSize="11dp" />
+                        <TextView
+                            android:id="@+id/textbrandgh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="3dp"
+                            android:text="Pending - 5"
+                            android:textSize="11dp" />
 
                         <TextView
                             android:id="@+id/textView2"
@@ -154,25 +161,27 @@
 
                     <ImageView
                         android:id="@+id/phone"
-                        android:src="@drawable/phone"
-                        android:tooltipText="Show tooltip"
                         android:layout_width="match_parent"
                         android:layout_height="28dp"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:src="@drawable/phone" />
 
                     <ImageView
+                        android:id="@+id/meet"
                         android:layout_width="match_parent"
                         android:layout_height="28dp"
                         android:layout_weight="1"
                         android:src="@drawable/meetingg" />
 
                     <ImageView
+                        android:id="@+id/tell"
                         android:layout_width="match_parent"
                         android:layout_height="28dp"
                         android:layout_weight="1"
                         android:src="@drawable/chating" />
 
                     <ImageView
+                        android:id="@+id/chat"
                         android:layout_width="match_parent"
                         android:layout_height="28dp"
                         android:layout_weight="1"

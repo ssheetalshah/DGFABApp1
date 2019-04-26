@@ -33,11 +33,11 @@ public class DashboardActivity extends AppCompatActivity  {
        //  tooltipView = new TooltipView(btn);
 
         myListData = new MyListData[]{
-                new MyListData("Nike INC", R.drawable.prof),
-                new MyListData("Lakme Cosmetics", R.drawable.prof),
-                new MyListData("Fast Track", R.drawable.prof),
-                new MyListData("Ansian Paints", R.drawable.prof),
-                new MyListData("Peter England", R.drawable.prof),
+                new MyListData("Nike INC", R.drawable.prof , "Indore"),
+                new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
+                new MyListData("Fast Track", R.drawable.prof ,"USA"),
+                new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
+                new MyListData("Peter England", R.drawable.prof , "Bangalore"),
 //                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 

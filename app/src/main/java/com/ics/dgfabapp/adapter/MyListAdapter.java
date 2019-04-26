@@ -5,12 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.TooltipCompat;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -19,8 +17,9 @@ import android.widget.TextView;
 import com.ics.dgfabapp.R;
 import com.ics.dgfabapp.model.MyListData;
 
-
 import java.util.Calendar;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip;
@@ -51,8 +50,110 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     public void onBindViewHolder(final ViewHolder holder, int position) {
         final MyListData myListData = listdata[position];
         int wtf = position + 3;
-        holder.textView.setText(listdata[position].getDescription());
+        holder.textView.setText(listdata[position].getDescription().concat(" ").concat(listdata[position].getAddress()));
+        if(position ==0)
+        {
+            holder.meet.setImageResource(R.drawable.meeting_red);
+          holder.meet.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new SimpleTooltip.Builder(v.getContext())
+                            .anchorView(holder.meet)
+                            .text("  2 PM")
+                            .gravity(Gravity.BOTTOM)
+                            .textColor(Color.WHITE)
+                            .setHeight(100)
+                            .setWidth(150)
+                            .showArrow(true)
+                            .animated(false)
+                            .build()
+                            .show();
 
+                }
+            });
+        }   if(position ==1)
+        {
+            holder.chat.setImageResource(R.drawable.message_red);
+            holder.chat.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new SimpleTooltip.Builder(v.getContext())
+                            .anchorView(holder.chat)
+                            .text("  4 PM")
+                            .gravity(Gravity.BOTTOM)
+                            .textColor(Color.WHITE)
+                            .setHeight(100)
+                            .setWidth(150)
+                            .showArrow(true)
+                            .animated(false)
+                            .build()
+                            .show();
+
+                }
+            });
+        }   if(position ==2)
+        {
+            holder.tell.setImageResource(R.drawable.chat_red);
+            holder.tell.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new SimpleTooltip.Builder(v.getContext())
+                            .anchorView(holder.tell)
+                            .text("  5 PM")
+                            .gravity(Gravity.BOTTOM)
+                            .textColor(Color.WHITE)
+                            .setHeight(100)
+                            .setWidth(150)
+                            .showArrow(true)
+                            .animated(false)
+                            .build()
+                            .show();
+
+                }
+            });
+
+        }   if(position ==3)
+        {
+            holder.meet.setImageResource(R.drawable.meeting_red);
+            holder.meet.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new SimpleTooltip.Builder(v.getContext())
+                            .anchorView(holder.meet)
+                            .text("  6 PM")
+                            .gravity(Gravity.BOTTOM)
+                            .textColor(Color.WHITE)
+                            .setHeight(100)
+                            .setWidth(150)
+                            .showArrow(true)
+                            .animated(false)
+                            .build()
+                            .show();
+
+                }
+            });
+        }
+        if(position ==4)
+        {
+            holder.meet.setImageResource(R.drawable.meeting_red);
+            holder.meet.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new SimpleTooltip.Builder(v.getContext())
+                            .anchorView(holder.meet)
+                            .text("  6 PM")
+                            .gravity(Gravity.BOTTOM)
+                            .textColor(Color.WHITE)
+                            .setHeight(100)
+                            .setWidth(150)
+                            .showArrow(true)
+                            .animated(false)
+                            .build()
+                            .show();
+
+                }
+            });
+        }
       /*  holder.textView2sdf.setText(String.valueOf(wtf).concat("PM"));
 //        if(position ==0)
 //        {
@@ -96,7 +197,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         public TextView textView;
         public RelativeLayout relativeLayout;
         private LinearLayout libelow;
-        ImageView phone;
+        ImageView phone,meet ,chat,tell;
      //   SessionManager sessionManager;
         TextView textView2df, textbrand, textView2sdf;
 
@@ -112,26 +213,11 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             this.textView2sdf = itemView.findViewById(R.id.textView2sdf);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout);
             libelow = (LinearLayout) itemView.findViewById(R.id.libelow);
-
-            phone = (ImageView) itemView.findViewById(R.id.phone);
-         //   View yourView = findViewById(R.id.your_view);
-            phone.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    new SimpleTooltip.Builder(v.getContext())
-                            .anchorView(phone)
-                            .text("2 PM")
-                            .gravity(Gravity.BOTTOM)
-                            .textColor(Color.WHITE)
-                            .setHeight(100)
-                            .setWidth(150)
-                            .showArrow(true)
-                            .animated(false)
-                            .build()
-                            .show();
-
-                }
-            });
+            this.phone = (ImageView) itemView.findViewById(R.id.phone);
+            this.chat = (ImageView) itemView.findViewById(R.id.chat);
+            this.meet = (ImageView) itemView.findViewById(R.id.meet);
+            this.tell = (ImageView) itemView.findViewById(R.id.tell);
+            //   View yourView = findViewById(R.id.your_view);
 
         }
     }
