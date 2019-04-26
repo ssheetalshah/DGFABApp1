@@ -9,15 +9,19 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 
 import com.ics.dgfabapp.adapter.MyListAdapter;
 import com.ics.dgfabapp.model.MyListData;
 
-public class DashboardActivity extends AppCompatActivity {
+
+public class DashboardActivity extends AppCompatActivity  {
     RecyclerView recycler_view;
     MyListData[] myListData;
     View view;
     Context c;
+    Button btn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         recycler_view = (RecyclerView) findViewById(R.id.recycler_view);
 
+       //  tooltipView = new TooltipView(btn);
 
         myListData = new MyListData[]{
                 new MyListData("Nike INC", R.drawable.prof),

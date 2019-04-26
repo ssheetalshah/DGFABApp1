@@ -153,10 +153,12 @@
                         android:layout_weight="1" />
 
                     <ImageView
+                        android:id="@+id/phone"
+                        android:src="@drawable/phone"
+                        android:tooltipText="Show tooltip"
                         android:layout_width="match_parent"
                         android:layout_height="28dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/phone" />
+                        android:layout_weight="1" />
 
                     <ImageView
                         android:layout_width="match_parent"
