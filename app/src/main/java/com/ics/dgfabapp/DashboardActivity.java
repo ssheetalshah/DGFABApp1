@@ -44,9 +44,9 @@ public class DashboardActivity extends AppCompatActivity  {
                     startActivity(intent2);*/
                     //  mTextMessage.setText("Two");
                     return true;
-                case R.id.navigation_notifications:
+             /*   case R.id.navigation_notifications:
                     // mTextMessage.setText("three");
-                    return true;
+                    return true;*/
                 case R.id.navigation_profile:
                     //  mTextMessage.setText("four");
                     Intent intent1 = new Intent(DashboardActivity.this, ProfileActivity.class);
