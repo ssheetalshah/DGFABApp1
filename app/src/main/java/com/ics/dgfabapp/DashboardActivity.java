@@ -1,6 +1,9 @@
 package com.ics.dgfabapp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -8,8 +11,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.ics.dgfabapp.adapter.MyListAdapter;
 import com.ics.dgfabapp.model.MyListData;
@@ -21,6 +26,37 @@ public class DashboardActivity extends AppCompatActivity  {
     View view;
     Context c;
     Button btn;
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.navigation_home:
+                    //   mTextMessage.setText("one");
+                 /*   Intent intent = new Intent(Navigation.this, ChatActivity.class);
+                    startActivity(intent);*/
+                    return true;
+                case R.id.navigation_dashboard:
+                  /*  Intent intent2 = new Intent(Navigation.this, DirCateActivity.class);
+                    //   Intent intent2 = new Intent(Navigation.this, Product_SubCategory.class);
+                    startActivity(intent2);*/
+                    //  mTextMessage.setText("Two");
+                    return true;
+                case R.id.navigation_notifications:
+                    // mTextMessage.setText("three");
+                    return true;
+                case R.id.navigation_profile:
+                    //  mTextMessage.setText("four");
+                    Intent intent1 = new Intent(DashboardActivity.this, ProfileActivity.class);
+                    startActivity(intent1);
+                    return true;
+            }
+            return false;
+        }
+    };
+
 
 
     @Override
@@ -46,5 +82,9 @@ public class DashboardActivity extends AppCompatActivity  {
         recycler_view.setHasFixedSize(true);
         recycler_view.setLayoutManager(new LinearLayoutManager(DashboardActivity.this));
         recycler_view.setAdapter(adapter);
+
+     //   mTextMessage = (TextView) findViewById(R.id.message);
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 }
