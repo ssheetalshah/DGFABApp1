@@ -9,17 +9,17 @@
     <string name="action_settings">Settings</string>
 
     <string-array name="array_technology">
-        <item>Android</item>
-        <item>Java</item>
-        <item>Php</item>
-        <item>Hadoop</item>
-        <item>Sap</item>
-        <item>Python</item>
-        <item>Ajax</item>
-        <item>C++</item>
-        <item>Ruby</item>
-        <item>Rails</item>
-        <item>.Net</item>
+        <item>JET Catrige</item>
+        <item>JET Catrige</item>
+        <item>JET Catrige</item>
+        <item>JET Catrige</item>
+        <item>JET Catrige</item>
+        <item>JET Catrige</item>
+        <item>JET Catrige</item>
+        <item>JET Catrige</item>
+        <item>JET Catrige</item>
+        <item>JET Catrige</item>
+        <item>JET Catrige</item>
         <item>Perl</item>
     </string-array>
 

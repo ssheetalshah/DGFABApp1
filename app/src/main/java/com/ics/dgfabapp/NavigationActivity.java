@@ -80,6 +80,8 @@ public class NavigationActivity extends AppCompatActivity
                     //  mTextMessage.setText("Two");
                     return true;
                 case R.id.navigation_dealerlist:
+                    Intent intent = new Intent(NavigationActivity.this , DealersList.class);
+                    startActivity(intent);
                     // mTextMessage.setText("three");
                     return true;
                 case R.id.navigation_profile:
