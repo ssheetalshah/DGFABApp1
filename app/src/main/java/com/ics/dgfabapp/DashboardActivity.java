@@ -35,8 +35,8 @@ public class DashboardActivity extends AppCompatActivity  {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     //   mTextMessage.setText("one");
-                 /*   Intent intent = new Intent(Navigation.this, ChatActivity.class);
-                    startActivity(intent);*/
+                    Intent intent = new Intent(DashboardActivity.this, ChatActivity.class);
+                    startActivity(intent);
                     return true;
                 case R.id.navigation_dashboard:
                     Intent intent2 = new Intent(DashboardActivity.this, DirCateActivity.class);
@@ -44,8 +44,8 @@ public class DashboardActivity extends AppCompatActivity  {
                     //  mTextMessage.setText("Two");
                     return true;
                 case R.id.navigation_dealerlist:
-                    Intent intent =new Intent(DashboardActivity.this , DealersList.class);
-                    startActivity(intent);
+                    Intent intent4 =new Intent(DashboardActivity.this , DealersList.class);
+                    startActivity(intent4);
                     // mTextMessage.setText("three");
                     return true;
                 case R.id.navigation_profile:
