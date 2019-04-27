@@ -39,9 +39,8 @@ public class DashboardActivity extends AppCompatActivity  {
                     startActivity(intent);*/
                     return true;
                 case R.id.navigation_dashboard:
-                  /*  Intent intent2 = new Intent(Navigation.this, DirCateActivity.class);
-                    //   Intent intent2 = new Intent(Navigation.this, Product_SubCategory.class);
-                    startActivity(intent2);*/
+                    Intent intent2 = new Intent(DashboardActivity.this, DirCateActivity.class);
+                    startActivity(intent2);
                     //  mTextMessage.setText("Two");
                     return true;
                 case R.id.navigation_dealerlist:

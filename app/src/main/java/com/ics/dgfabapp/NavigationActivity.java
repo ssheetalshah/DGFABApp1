@@ -69,19 +69,16 @@ public class NavigationActivity extends AppCompatActivity
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    //   mTextMessage.setText("one");
-                 /*   Intent intent = new Intent(Navigation.this, ChatActivity.class);
-                    startActivity(intent);*/
+                    Intent intent = new Intent(NavigationActivity.this, ChatActivity.class);
+                    startActivity(intent);
                     return true;
                 case R.id.navigation_dashboard:
-                  /*  Intent intent2 = new Intent(Navigation.this, DirCateActivity.class);
-                    //   Intent intent2 = new Intent(Navigation.this, Product_SubCategory.class);
-                    startActivity(intent2);*/
-                    //  mTextMessage.setText("Two");
+                    Intent intent2 = new Intent(NavigationActivity.this, DirCateActivity.class);
+                    startActivity(intent2);
                     return true;
                 case R.id.navigation_dealerlist:
-                    Intent intent = new Intent(NavigationActivity.this , DealersList.class);
-                    startActivity(intent);
+                    Intent intent3 = new Intent(NavigationActivity.this , DealersList.class);
+                    startActivity(intent3);
                     // mTextMessage.setText("three");
                     return true;
                 case R.id.navigation_profile:
