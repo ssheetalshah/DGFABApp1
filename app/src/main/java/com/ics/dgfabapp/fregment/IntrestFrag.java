@@ -9,11 +9,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.ics.dgfabapp.R;
 
 
 public class IntrestFrag extends Fragment {
+TextView New_group;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -23,6 +26,12 @@ public class IntrestFrag extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
+        New_group=view.findViewById(R.id.new_group);
+
+
+
+
 
         super.onViewCreated(view, savedInstanceState);
 
