@@ -4,9 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
+
+import com.ics.dgfabapp.adapter.ExpandableListAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,7 +30,7 @@ public class DirCateActivity extends AppCompatActivity {
         // preparing list data
         prepareListData();
 
-       // listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+       listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
 
         // setting list adapter
         ex_lvdir.setAdapter(listAdapter);
