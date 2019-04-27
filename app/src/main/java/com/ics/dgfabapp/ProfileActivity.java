@@ -18,7 +18,40 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        tabLayout=(TabLayout)findViewById(R.id.tab_layout);
+        viewPager=(ViewPager)findViewById(R.id.pager);
+
+        tabLayout.addTab(tabLayout.newTab().setText("OverView"));
+        tabLayout.addTab(tabLayout.newTab().setText("Products"));
+        tabLayout.addTab(tabLayout.newTab().setText("Average"));
+        tabLayout.addTab(tabLayout.newTab().setText("Analytics"));
+        tabLayout.addTab(tabLayout.newTab().setText("Connections"));
+        tabLayout.addTab(tabLayout.newTab().setText("Intrest"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        final ProfileAdapter profileAdapter = new ProfileAdapter(this,getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(profileAdapter);
+
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+       /* tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         ProfileActivity.this.setTitle("DIGFAB");
         tabLayout.addTab(tabLayout.newTab().setText("OverView"));
@@ -26,7 +59,7 @@ public class ProfileActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Average"));
         tabLayout.addTab(tabLayout.newTab().setText("Analytics"));
         tabLayout.addTab(tabLayout.newTab().setText("Connections"));
-        tabLayout.addTab(tabLayout.newTab().setText("Interst"));
+        tabLayout.addTab(tabLayout.newTab().setText("Intrest"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#353B68"));
         tabLayout.setSelectedTabIndicatorHeight((int) (3 * getResources().getDisplayMetrics().density));
@@ -51,6 +84,6 @@ public class ProfileActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
-        });
+        });*/
     }
 }

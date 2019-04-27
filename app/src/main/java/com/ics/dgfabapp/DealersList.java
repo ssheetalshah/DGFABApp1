@@ -11,6 +11,8 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.ics.dgfabapp.fregment.AveragePurchase;
+
 
 public class DealersList extends AppCompatActivity {
     Toolbar toolbar_dealers;
@@ -32,10 +34,10 @@ public class DealersList extends AppCompatActivity {
         to_avli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                hidethatsht.setVisibility(View.GONE);
+            hidethatsht.setVisibility(View.GONE);
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.frame_deal ,new AveragePurchase()).commit();
+               fragmentTransaction.replace(R.id.frame_deal ,new AveragePurchase()).commit();
             }
         });
         ccccc.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +46,7 @@ public class DealersList extends AppCompatActivity {
                 hidethatsht.setVisibility(View.GONE);
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.frame_deal ,new AveragePurchase()).commit();
+              fragmentTransaction.replace(R.id.frame_deal ,new AveragePurchase()).commit();
             }
         });
 
@@ -60,8 +62,8 @@ public class DealersList extends AppCompatActivity {
         addDealer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(DealersList.this,AddDealer.class);
-//                startActivity(intent);
+                Intent intent = new Intent(DealersList.this,AddDealer.class);
+                startActivity(intent);
             }
         });
     }
