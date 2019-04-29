@@ -61,8 +61,8 @@ public class DashboardActivity extends AppCompatActivity  {
                     //  mTextMessage.setText("Two");
                     return true;
                 case R.id.navigation_dealerlist:
-                    Intent intent4 =new Intent(DashboardActivity.this , DealersList.class);
-                    startActivity(intent4);
+                    Intent intent3 =new Intent(DashboardActivity.this , DealersList.class);
+                    startActivity(intent3);
                     // mTextMessage.setText("three");
                     return true;
                 case R.id.navigation_profile:

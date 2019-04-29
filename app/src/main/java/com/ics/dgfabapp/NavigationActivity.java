@@ -49,7 +49,7 @@ public class NavigationActivity extends AppCompatActivity
     private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
     Button btn;
     LinearLayout sad;
-//    HeaderAdapter madapter;
+    //    HeaderAdapter madapter;
     private RecyclerView rv_autoScroll;
     private final Runnable SCROLLING_RUNNABLE = new Runnable() {
 
@@ -77,7 +77,7 @@ public class NavigationActivity extends AppCompatActivity
                     startActivity(intent2);
                     return true;
                 case R.id.navigation_dealerlist:
-                    Intent intent3 = new Intent(NavigationActivity.this , DealersList.class);
+                    Intent intent3 = new Intent(NavigationActivity.this, DealersList.class);
                     startActivity(intent3);
                     // mTextMessage.setText("three");
                     return true;
@@ -141,9 +141,9 @@ public class NavigationActivity extends AppCompatActivity
         for (int i = 0; i < XMEN.length; i++)
             XMENArray.add(XMEN[i]);
 
-        mPager = (ViewPager)findViewById(R.id.pager);
+        mPager = (ViewPager) findViewById(R.id.pager);
         mPager.setAdapter(new MyAdapterrr(NavigationActivity.this, XMENArray));
-        CircleIndicator indicator = (CircleIndicator)findViewById(R.id.indicator);
+        CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
 
         // Auto start of viewpager
@@ -205,7 +205,7 @@ public class NavigationActivity extends AppCompatActivity
             builder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(NavigationActivity.this,CompanyList.class);
+                    Intent intent = new Intent(NavigationActivity.this, CompanyList.class);
                     startActivity(intent);
                     dialog.dismiss();
                 }
@@ -238,6 +238,9 @@ public class NavigationActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_send) {
 
+        } else if (id == R.id.nav_addprod) {
+            Intent intent = new Intent(NavigationActivity.this, AddProduct.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

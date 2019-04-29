@@ -119,7 +119,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
                             .text("  5 PM")
                             .gravity(Gravity.BOTTOM)
                             .textColor(Color.WHITE)
-                            .setHeight(100)
+                            .setHeight(90)
                             .setWidth(150)
                             .showArrow(true)
                             .animated(false)

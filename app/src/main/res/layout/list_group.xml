@@ -16,7 +16,7 @@
         android:id="@+id/item_icon"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/fashion1"
+        android:src="@drawable/fashex"
         />
 
 

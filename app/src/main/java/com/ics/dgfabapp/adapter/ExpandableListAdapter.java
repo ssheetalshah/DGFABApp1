@@ -96,10 +96,13 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitle);
         if (groupPosition==0){
-            Glide.with(_context).load(R.drawable.mobile).into(iv);
+            Glide.with(_context).load(R.drawable.mobex).into(iv);
         }
         if (groupPosition==1){
-            Glide.with(_context).load(R.drawable.electronic).into(iv);
+            Glide.with(_context).load(R.drawable.elecex).into(iv);
+        }
+        if (groupPosition==2){
+            Glide.with(_context).load(R.drawable.fashex).into(iv);
         }
         else {
 
