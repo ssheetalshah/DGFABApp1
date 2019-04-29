@@ -1,6 +1,7 @@
 package com.ics.dgfabapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -29,6 +30,7 @@ public class ProfileAdapter extends FragmentPagerAdapter {
                 OverviewFrag overviewFrag = new OverviewFrag();
                 return overviewFrag;
             case 1:
+
                 ProductFrag productFrag = new ProductFrag();
                 return productFrag;
             case 2:
