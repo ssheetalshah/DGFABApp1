@@ -87,6 +87,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:visibility="gone"
                     android:layout_weight="0.7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -97,12 +98,11 @@
 
                 <Spinner
                     android:id="@+id/spin_category"
-                    android:layout_weight="0.5"
+                    android:layout_weight="0.3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bt_bg"
-                    android:entries="@array/emp_details"
-                    >
+                    android:entries="@array/emp_details">
 
                 </Spinner>
 
@@ -152,7 +152,6 @@
                 <!---->
 
                 <android.support.v7.widget.CardView
-                    android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">

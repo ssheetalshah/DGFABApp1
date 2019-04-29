@@ -93,16 +93,16 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         TextView lblListHeader = (TextView) convertView.findViewById(R.id.lblListHeader);
         ImageView iv = (ImageView) convertView.findViewById(R.id.item_icon);
-        lblListHeader.setTypeface(null, Typeface.BOLD);
+        lblListHeader.setTypeface(null, Typeface.NORMAL);
         lblListHeader.setText(headerTitle);
         if (groupPosition==0){
-            Glide.with(_context).load(R.drawable.mobex).into(iv);
+            Glide.with(_context).load(R.drawable.gm).into(iv);
         }
         if (groupPosition==1){
-            Glide.with(_context).load(R.drawable.elecex).into(iv);
+            Glide.with(_context).load(R.drawable.elcgm).into(iv);
         }
         if (groupPosition==2){
-            Glide.with(_context).load(R.drawable.fashex).into(iv);
+            Glide.with(_context).load(R.drawable.fagm).into(iv);
         }
         else {
 
