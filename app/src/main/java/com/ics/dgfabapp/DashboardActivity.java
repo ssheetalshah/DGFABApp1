@@ -179,8 +179,8 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (spin_category.getSelectedItem().equals("Sales"))
                 {
-                   // other_details.setVisibility(View.VISIBLE);
-                    ll_admin.setVisibility(View.GONE);
+                    other_details.setVisibility(View.GONE);
+                    ll_admin.setVisibility(View.VISIBLE);
                 }
 
                 if (spin_category.getSelectedItem().equals("Dispatch"))
