@@ -1,6 +1,7 @@
 package com.ics.dgfabapp.fregment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.ics.dgfabapp.CreateNewGroup;
 import com.ics.dgfabapp.R;
 
 
@@ -25,11 +27,17 @@ TextView New_group;
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(final View view, @Nullable Bundle savedInstanceState) {
 
         New_group=view.findViewById(R.id.new_group);
 
-
+          New_group.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                  Intent intent=new Intent(view.getContext(), CreateNewGroup.class);
+                  startActivity(intent);
+              }
+          });
 
 
 

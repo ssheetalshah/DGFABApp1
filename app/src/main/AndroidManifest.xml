@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Products_Act"></activity>
+        <activity android:name=".CreateNewGroup"></activity>
         <activity android:name=".ChatSentMessage" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".Dealer_Order_Info" />
@@ -22,7 +22,6 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".CompanyList" />
         <activity android:name=".DealersList" />
-        <activity android:name=".Call_splash_screen" />
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
