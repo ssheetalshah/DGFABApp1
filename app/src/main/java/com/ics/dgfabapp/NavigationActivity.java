@@ -228,16 +228,27 @@ public class NavigationActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
+        } else if (id == R.id.nav_wallet) {
+            Intent intent = new Intent(NavigationActivity.this, WalletActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_gallery) {
+            Intent intent = new Intent(NavigationActivity.this, ProfileActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_order) {
+            Intent intent = new Intent(NavigationActivity.this, ProfileActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
-
+            Intent intent = new Intent(NavigationActivity.this, NavigationActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_manage) {
-
+            Intent intent = new Intent(NavigationActivity.this, NavigationActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
-
+            Intent intent = new Intent(NavigationActivity.this, NavigationActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_send) {
-
+            Intent intent = new Intent(NavigationActivity.this, NavigationActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_addprod) {
             Intent intent = new Intent(NavigationActivity.this, AddProduct.class);
             startActivity(intent);

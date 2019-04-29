@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ics.dgfabapp.fregment.AveragePurchase;
+import com.ics.dgfabapp.fregment.DealerProfFreg;
 
 
 public class DealersList extends AppCompatActivity {
@@ -37,7 +38,7 @@ public class DealersList extends AppCompatActivity {
             hidethatsht.setVisibility(View.GONE);
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-               fragmentTransaction.replace(R.id.frame_deal ,new AveragePurchase()).commit();
+               fragmentTransaction.replace(R.id.frame_deal ,new DealerProfFreg()).commit();
             }
         });
         ccccc.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +47,7 @@ public class DealersList extends AppCompatActivity {
                 hidethatsht.setVisibility(View.GONE);
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-              fragmentTransaction.replace(R.id.frame_deal ,new AveragePurchase()).commit();
+              fragmentTransaction.replace(R.id.frame_deal ,new DealerProfFreg()).commit();
             }
         });
 

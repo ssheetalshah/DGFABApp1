@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddProduct"></activity>
+        <activity android:name=".Order_Informations"></activity>
+        <activity android:name=".WalletActivity" />
+        <activity android:name=".AddProduct" />
         <activity android:name=".CreateNewGroup" />
         <activity android:name=".ChatSentMessage" />
         <activity android:name=".ChatActivity" />
