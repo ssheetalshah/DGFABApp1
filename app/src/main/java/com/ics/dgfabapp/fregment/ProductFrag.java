@@ -11,11 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
 import com.ics.dgfabapp.R;
+import com.ics.dgfabapp.adapter.ExpandableListAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,6 +30,16 @@ public class ProductFrag extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_product ,container,false);
+
+        return inflater.inflate(R.layout.fragment_product, container, false);
+
+    }
+
+
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
         // get the listview
         expListView = (ExpandableListView) view.findViewById(R.id.ex_lv);
 
@@ -99,54 +109,49 @@ public class ProductFrag extends Fragment {
                 return false;
             }
         });
-        return inflater.inflate(R.layout.fragment_product, container, false);
-
-    }
-
-        private void prepareListData() {
-            listDataHeader = new ArrayList<String>();
-            listDataChild = new HashMap<String, List<String>>();
-
-            // Adding child data
-            listDataHeader.add("Mobiles & Tablets");
-            listDataHeader.add("Electronics");
-            listDataHeader.add("Fashion");
-
-            // Adding child data
-            List<String> top250 = new ArrayList<String>();
-            top250.add("Sumsung");
-            top250.add("IBall");
-            top250.add("IPhone");
-            top250.add("Micromax");
-            top250.add("China Phone");
-            top250.add("SmartPhones");
-            top250.add("Feacher Phones");
-
-            List<String> nowShowing = new ArrayList<String>();
-            nowShowing.add("Laptop Stores");
-            nowShowing.add("Desktop Stores");
-            nowShowing.add("Camera & Accessories");
-            nowShowing.add("Storage Device");
-            nowShowing.add("Mobile Accessories");
-            nowShowing.add("Gaming");
-
-            List<String> comingSoon = new ArrayList<String>();
-            comingSoon.add("Mens Fashion Store");
-            comingSoon.add("Women Fashion Store");
-            comingSoon.add("Kids Wear");
-            comingSoon.add("Sandals & Floters");
-            comingSoon.add("Jewellery");
-
-            listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
-            listDataChild.put(listDataHeader.get(1), nowShowing);
-            listDataChild.put(listDataHeader.get(2), comingSoon);
-        }
 
 
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
         super.onViewCreated(view, savedInstanceState);
 
+    }
+
+    private void prepareListData() {
+        listDataHeader = new ArrayList<String>();
+        listDataChild = new HashMap<String, List<String>>();
+
+        // Adding child data
+        listDataHeader.add("Mobiles & Tablets");
+        listDataHeader.add("Electronics");
+        listDataHeader.add("Fashion");
+
+        // Adding child data
+        List<String> top250 = new ArrayList<String>();
+        top250.add("Sumsung");
+        top250.add("IBall");
+        top250.add("IPhone");
+        top250.add("Micromax");
+        top250.add("China Phone");
+        top250.add("SmartPhones");
+        top250.add("Feacher Phones");
+
+        List<String> nowShowing = new ArrayList<String>();
+        nowShowing.add("Laptop Stores");
+        nowShowing.add("Desktop Stores");
+        nowShowing.add("Camera & Accessories");
+        nowShowing.add("Storage Device");
+        nowShowing.add("Mobile Accessories");
+        nowShowing.add("Gaming");
+
+        List<String> comingSoon = new ArrayList<String>();
+        comingSoon.add("Mens Fashion Store");
+        comingSoon.add("Women Fashion Store");
+        comingSoon.add("Kids Wear");
+        comingSoon.add("Sandals & Floters");
+        comingSoon.add("Jewellery");
+
+        listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
+        listDataChild.put(listDataHeader.get(1), nowShowing);
+        listDataChild.put(listDataHeader.get(2), comingSoon);
     }
 }
