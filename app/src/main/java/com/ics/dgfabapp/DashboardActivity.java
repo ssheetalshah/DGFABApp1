@@ -364,10 +364,14 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
+            Intent intent = new Intent(DashboardActivity.this, My_tender.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
+            Intent intent = new Intent(DashboardActivity.this, BillingHistory.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_send) {
 

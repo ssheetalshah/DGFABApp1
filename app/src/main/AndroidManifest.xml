@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Order_Informations"></activity>
+        <activity android:name=".BillingHistory"></activity>
+        <activity android:name=".My_tender" />
+        <activity android:name=".Order_Informations" />
         <activity android:name=".WalletActivity" />
         <activity android:name=".AddProduct" />
         <activity android:name=".CreateNewGroup" />
