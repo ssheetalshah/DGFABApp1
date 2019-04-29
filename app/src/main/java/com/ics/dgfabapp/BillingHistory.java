@@ -57,6 +57,8 @@ public class BillingHistory extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
 
+        //***************************
+
         prepareMovieData();
     }
 
