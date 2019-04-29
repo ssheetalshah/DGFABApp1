@@ -216,7 +216,7 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
 
                     };
         }
-        if(sessionManager.isLoggedIn().equals("Purachase") )
+        if(sessionManager.isLoggedIn().equals("Purchase") )
         {
             myListData = new MyListData[]
                     {
