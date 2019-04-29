@@ -3,12 +3,15 @@ package com.ics.dgfabapp.adapter;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.ics.dgfabapp.R;
 
 import java.util.HashMap;
@@ -89,8 +92,19 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         }
 
         TextView lblListHeader = (TextView) convertView.findViewById(R.id.lblListHeader);
+        ImageView iv = (ImageView) convertView.findViewById(R.id.item_icon);
         lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitle);
+        if (groupPosition==0){
+            Glide.with(_context).load(R.drawable.mobile).into(iv);
+        }
+        if (groupPosition==1){
+            Glide.with(_context).load(R.drawable.electronic).into(iv);
+        }
+        else {
+
+        }
+
 
         return convertView;
     }

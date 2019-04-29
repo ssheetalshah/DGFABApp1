@@ -103,9 +103,9 @@ public class DirCateActivity extends AppCompatActivity {
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
-        listDataHeader.add(R.drawable.camera,"Mobiles & Tablets");
-        listDataHeader.add(R.drawable.camera,"Electronics");
-        listDataHeader.add(R.drawable.camera,"Fashion");
+        listDataHeader.add("Mobiles & Tablets");
+        listDataHeader.add("Electronics");
+        listDataHeader.add("Fashion");
 
         // Adding child data
         List<String> top250 = new ArrayList<String>();
