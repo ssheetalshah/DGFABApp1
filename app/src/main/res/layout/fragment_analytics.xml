@@ -56,7 +56,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:gravity="center"
-                            android:text="Prakash Footwear"
+                            android:text="JET Catrige"
                             android:textColor="#000"
                             android:textSize="20dp"
                             android:textStyle="bold"

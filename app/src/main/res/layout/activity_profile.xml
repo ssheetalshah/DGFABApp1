@@ -57,6 +57,35 @@
                 android:textColor="#000"
                 android:textSize="18dp"
                 android:typeface="serif" />
+
+            <LinearLayout
+                android:weightSum="1"
+                android:gravity="center"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="60dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ProgressBar
+                    android:layout_weight="0.20"
+                    android:id="@+id/progressBar4"
+                    android:layout_marginLeft="10dp"
+                    style="@style/MyProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:progress="70" />
+
+                <TextView
+                    android:text="50%"
+                    android:textColor="#000"
+                    android:layout_weight="0.80"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
     </LinearLayout>
 
         <RelativeLayout
