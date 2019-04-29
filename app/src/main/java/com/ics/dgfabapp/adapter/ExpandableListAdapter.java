@@ -93,7 +93,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         TextView lblListHeader = (TextView) convertView.findViewById(R.id.lblListHeader);
         ImageView iv = (ImageView) convertView.findViewById(R.id.item_icon);
-        lblListHeader.setTypeface(null, Typeface.BOLD);
+       // lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitle);
         if (groupPosition==0){
             Glide.with(_context).load(R.drawable.mobex).into(iv);
