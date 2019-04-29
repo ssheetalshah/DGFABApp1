@@ -62,26 +62,45 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         if(sessionManager.isLoggedIn().equals("Admin") || sessionManager.isLoggedIn().equals("Sales"))
         {
            holder.action_card.setVisibility(View.VISIBLE);
+           holder.action.setVisibility(View.GONE);
+
+//           holder.nonsaletime.setVisibility(View.GONE);
+//           holder.nonsale.setVisibility(View.GONE);
         }else{
 //            if(sessionManager.isLoggedIn().equals("Dispatch"))
             if(position==0) {
                 holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
                 holder.nonsaletime.setText("2 PM");
+                holder.textbrand.setVisibility(View.GONE);
+                holder.textView2.setVisibility(View.GONE);
+                holder.textbrandgh.setVisibility(View.GONE);
             }
             if(position==1) {
                 holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
                 holder.nonsaletime.setText("3 PM");
+                holder.textbrand.setVisibility(View.GONE);
+                holder.textView2.setVisibility(View.GONE);
+                holder.textbrandgh.setVisibility(View.GONE);
             }
             if(position==2) {
                 holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
                 holder.nonsaletime.setText("4 PM");
+                holder.textbrand.setVisibility(View.GONE);
+                holder.textView2.setVisibility(View.GONE);
+                holder.textbrandgh.setVisibility(View.GONE);
             }
             if(position==3) {
                 holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
                 holder.nonsaletime.setText("5 PM");
+                holder.textbrand.setVisibility(View.GONE);
+                holder.textView2.setVisibility(View.GONE);
+                holder.textbrandgh.setVisibility(View.GONE);
             }    if(position==4) {
                 holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
                 holder.nonsaletime.setText("6 PM");
+                holder.textbrand.setVisibility(View.GONE);
+                holder.textView2.setVisibility(View.GONE);
+                holder.textbrandgh.setVisibility(View.GONE);
             }
 
 
@@ -247,11 +266,11 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         public TextView textView;
         public RelativeLayout relativeLayout;
         private LinearLayout libelow;
-        CardView action_card;
+        CardView action_card,action;
         ImageView phone,meet ,chat,tell;
         TextView nonsale,nonsaletime;
      //   SessionManager sessionManager;
-        TextView textView2df, textbrand, textView2sdf;
+        TextView textView2df, textbrand, textView2sdf,textbrandgh,textView2;
 
         @SuppressLint("WrongViewCast")
         public ViewHolder(View itemView) {
@@ -268,10 +287,13 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             this.phone = (ImageView) itemView.findViewById(R.id.phone);
             this.chat = (ImageView) itemView.findViewById(R.id.chat);
             this.nonsaletime = itemView.findViewById(R.id.nonsaletime);
+            this.textbrandgh = itemView.findViewById(R.id.textbrandgh);
             this.meet = (ImageView) itemView.findViewById(R.id.meet);
             this.tell = (ImageView) itemView.findViewById(R.id.tell);
             this.action_card  = itemView.findViewById(R.id.action_card);
             this.nonsale = itemView.findViewById(R.id.nonsale);
+            action = itemView.findViewById(R.id.action);
+            textView2 = itemView.findViewById(R.id.textView2);
             //   View yourView = findViewById(R.id.your_view);
 
         }
