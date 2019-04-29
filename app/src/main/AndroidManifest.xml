@@ -23,6 +23,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".CompanyList" />
         <activity android:name=".DealersList" />
+        <activity android:name=".Call_splash_screen" />
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
