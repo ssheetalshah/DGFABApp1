@@ -69,6 +69,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginBottom="3dp"
                             android:textColor="#000"
+                            android:text="aaaa"
                             android:textSize="13dp" />
 
                         <TextView

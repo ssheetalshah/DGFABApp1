@@ -12,6 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -19,7 +20,10 @@ import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,6 +48,10 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
     Context c;
     Button btn;
     SessionManager sessionManager;
+   LinearLayout admin_choose,ll_admin;
+   CardView other_details;
+   Spinner spin_category;
+   TextView nonsale,nonsaletime,text_Company;
 
     private HorizontalCalendar horizontalCalendar;
 
@@ -96,6 +104,14 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        admin_choose = (LinearLayout) findViewById(R.id.admin_choose);
+        ll_admin = (LinearLayout) findViewById(R.id.ll_admin);
+
+        other_details = (CardView) findViewById(R.id.other_details);
+        spin_category = (Spinner) findViewById(R.id.spin_category);
+        nonsale = (TextView) findViewById(R.id.nonsale);
+        nonsaletime = (TextView) findViewById(R.id.nonsaletime);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -158,11 +174,81 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
         );
         //*********************************************************************************
 
+        spin_category.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (spin_category.getSelectedItem().equals("Sales"))
+                {
+                   // other_details.setVisibility(View.VISIBLE);
+                    ll_admin.setVisibility(View.GONE);
+                }
+
+                if (spin_category.getSelectedItem().equals("Dispatch"))
+                {
+                    other_details.setVisibility(View.VISIBLE);
+                    ll_admin.setVisibility(View.GONE);
+
+                    nonsale.setText("Action For Dispatch ");
+                    nonsaletime.setText("2 pm");
+
+                }
+                if (spin_category.getSelectedItem().equals("Accountant"))
+                {
+                    other_details.setVisibility(View.VISIBLE);
+                    ll_admin.setVisibility(View.GONE);
+
+                    nonsale.setText("Action For Accountant ");
+                    nonsaletime.setText("3 pm");
+                }
+                if (spin_category.getSelectedItem().equals("Purchase"))
+                {
+                    other_details.setVisibility(View.VISIBLE);
+                    ll_admin.setVisibility(View.GONE);
+
+                    nonsale.setText("Action For Purchase ");
+                    nonsaletime.setText("2.30 pm");
+                }
+                if (spin_category.getSelectedItem().equals("Logistic"))
+                {
+                    other_details.setVisibility(View.VISIBLE);
+                    ll_admin.setVisibility(View.GONE);
+
+                    nonsale.setText("Action For Logistic ");
+                    nonsaletime.setText("1 pm");
+                }
+                if (spin_category.getSelectedItem().equals("IT"))
+                {
+                    other_details.setVisibility(View.VISIBLE);
+                    ll_admin.setVisibility(View.GONE);
+
+                    nonsale.setText("Action For IT ");
+                    nonsaletime.setText("4 pm");
+                }
+
+                if (spin_category.getSelectedItem().equals("-Select-"))
+                {
+                     other_details.setVisibility(View.GONE);
+                    ll_admin.setVisibility(View.VISIBLE);
+                }
+
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+
+            }
+        });
+
+
+
+        //*********************************************************************************************
+
         recycler_view = (RecyclerView) findViewById(R.id.recycler_view);
 
        //  tooltipView = new TooltipView(btn);
         if(sessionManager.isLoggedIn().equals("Admin") )
         {
+            admin_choose.setVisibility(View.VISIBLE);
             myListData = new MyListData[]
                     {
                             new MyListData("Nike INC", R.drawable.prof , "Indore"),
