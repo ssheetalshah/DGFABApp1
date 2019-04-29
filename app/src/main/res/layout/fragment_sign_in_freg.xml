@@ -28,6 +28,7 @@
                 android:textSize="13dp" />
 
             <EditText
+                android:id="@+id/cusid"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="@drawable/bt_bg"
@@ -53,6 +54,7 @@
                 android:textSize="13dp" />
 
             <EditText
+                android:id="@+id/passedt"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="@drawable/bt_bg"
@@ -61,7 +63,6 @@
                 android:textSize="13dp" />
 
             <LinearLayout
-                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="@drawable/bt_bg"

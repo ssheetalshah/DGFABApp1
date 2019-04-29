@@ -5,7 +5,12 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
+import com.ics.dgfabapp.SeasonManager.SessionManager;
 import com.ics.dgfabapp.adapter.MyAdapter;
 
 public class LoginActivity extends AppCompatActivity {
@@ -20,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         LoginActivity.this.setTitle("DIGFAB");
+
         tabLayout.addTab(tabLayout.newTab().setText("SIGN IN"));
         tabLayout.addTab(tabLayout.newTab().setText("SIGN UP"));
         //    tabLayout.addTab(tabLayout.newTab().setText("Movie"));

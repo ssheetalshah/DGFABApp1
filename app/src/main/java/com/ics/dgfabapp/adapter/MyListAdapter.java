@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.telecom.Call;
 import android.view.Gravity;
@@ -19,6 +20,7 @@ import com.ics.dgfabapp.Call_splash_screen;
 import com.ics.dgfabapp.ChatActivity;
 import com.ics.dgfabapp.NavigationActivity;
 import com.ics.dgfabapp.R;
+import com.ics.dgfabapp.SeasonManager.SessionManager;
 import com.ics.dgfabapp.model.MyListData;
 
 import java.util.Calendar;
@@ -29,16 +31,18 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip;
 
 public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder> {
-
+    SessionManager sessionManager;
     private MyListData[] listdata;
     public Context context;
     SimpleTooltip simpleTooltip ;
     Calendar c = Calendar.getInstance();
+
     // RecyclerView recyclerView;
 
     public MyListAdapter(Context c, MyListData[] listdata) {
         this.listdata = listdata;
         context = c;
+
 
     }
 
@@ -46,6 +50,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View listItem = layoutInflater.inflate(R.layout.list_item, parent, false);
+        sessionManager = new SessionManager(listItem.getContext());
         ViewHolder viewHolder = new ViewHolder(listItem);
         return viewHolder;
     }
@@ -54,6 +59,33 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     public void onBindViewHolder(final ViewHolder holder, int position) {
         final MyListData myListData = listdata[position];
         int wtf = position + 3;
+        if(sessionManager.isLoggedIn().equals("Admin") || sessionManager.isLoggedIn().equals("Sales"))
+        {
+           holder.action_card.setVisibility(View.VISIBLE);
+        }else{
+//            if(sessionManager.isLoggedIn().equals("Dispatch"))
+            if(position==0) {
+                holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
+                holder.nonsaletime.setText("2 PM");
+            }
+            if(position==1) {
+                holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
+                holder.nonsaletime.setText("3 PM");
+            }
+            if(position==2) {
+                holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
+                holder.nonsaletime.setText("4 PM");
+            }
+            if(position==3) {
+                holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
+                holder.nonsaletime.setText("5 PM");
+            }    if(position==4) {
+                holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
+                holder.nonsaletime.setText("6 PM");
+            }
+
+
+        }
         holder.textView.setText(listdata[position].getDescription().concat(" ").concat(listdata[position].getAddress()));
         holder.chat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -210,12 +242,14 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         return listdata.length;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-       public CircleImageView imageView;
+    public  class ViewHolder extends RecyclerView.ViewHolder {
+        public CircleImageView imageView;
         public TextView textView;
         public RelativeLayout relativeLayout;
         private LinearLayout libelow;
+        CardView action_card;
         ImageView phone,meet ,chat,tell;
+        TextView nonsale,nonsaletime;
      //   SessionManager sessionManager;
         TextView textView2df, textbrand, textView2sdf;
 
@@ -233,8 +267,11 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             libelow = (LinearLayout) itemView.findViewById(R.id.libelow);
             this.phone = (ImageView) itemView.findViewById(R.id.phone);
             this.chat = (ImageView) itemView.findViewById(R.id.chat);
+            this.nonsaletime = itemView.findViewById(R.id.nonsaletime);
             this.meet = (ImageView) itemView.findViewById(R.id.meet);
             this.tell = (ImageView) itemView.findViewById(R.id.tell);
+            this.action_card  = itemView.findViewById(R.id.action_card);
+            this.nonsale = itemView.findViewById(R.id.nonsale);
             //   View yourView = findViewById(R.id.your_view);
 
         }

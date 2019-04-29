@@ -26,6 +26,7 @@ import com.ics.dgfabapp.Calendar.HorizontalCalendar;
 import com.ics.dgfabapp.Calendar.Model.CalendarEvent;
 import com.ics.dgfabapp.Calendar.utils.CalendarEventsPredicate;
 import com.ics.dgfabapp.Calendar.utils.HorizontalCalendarListener;
+import com.ics.dgfabapp.SeasonManager.SessionManager;
 import com.ics.dgfabapp.adapter.MyListAdapter;
 import com.ics.dgfabapp.model.MyListData;
 
@@ -41,6 +42,7 @@ public class DashboardActivity extends AppCompatActivity  {
     View view;
     Context c;
     Button btn;
+    SessionManager sessionManager;
 
     private HorizontalCalendar horizontalCalendar;
 
@@ -81,6 +83,7 @@ public class DashboardActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        sessionManager = new SessionManager(DashboardActivity.this);
 //******************************************************************************************
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -108,21 +111,21 @@ public class DashboardActivity extends AppCompatActivity  {
                 .colorTextMiddle(Color.LTGRAY, Color.parseColor("#ffd54f"))
                 .end()
                 .defaultSelectedDate(defaultSelectedDate)
-                .addEvents(new CalendarEventsPredicate() {
-
-                    Random rnd = new Random();
-                    @Override
-                    public List<CalendarEvent> events(Calendar date) {
-                        List<CalendarEvent> events = new ArrayList<>();
-                        int count = rnd.nextInt(6);
-
-                        for (int i = 0; i <= count; i++){
-                            events.add(new CalendarEvent(Color.rgb(rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256)), "event"));
-                        }
-
-                        return events;
-                    }
-                })
+//                .addEvents(new CalendarEventsPredicate() {
+//
+//                    Random rnd = new Random();
+//                    @Override
+//                    public List<CalendarEvent> events(Calendar date) {
+//                        List<CalendarEvent> events = new ArrayList<>();
+//                        int count = rnd.nextInt(6);
+//
+//                        for (int i = 0; i <= count; i++){
+//                            events.add(new CalendarEvent(Color.rgb(rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256)), "event"));
+//                        }
+//
+//                        return events;
+//                    }
+//                })
                 .build();
 
         Log.i("Default Date", DateFormat.format("EEE, MMM d, yyyy", defaultSelectedDate).toString());
@@ -143,23 +146,109 @@ public class DashboardActivity extends AppCompatActivity  {
             public void onClick(View view) {
                 horizontalCalendar.goToday(false);
             }
-        });
+        }
+        );
         //*********************************************************************************
 
         recycler_view = (RecyclerView) findViewById(R.id.recycler_view);
 
        //  tooltipView = new TooltipView(btn);
-
-        myListData = new MyListData[]{
-                new MyListData("Nike INC", R.drawable.prof , "Indore"),
-                new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
-                new MyListData("Fast Track", R.drawable.prof ,"USA"),
-                new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
-                new MyListData("Peter England", R.drawable.prof , "Bangalore"),
+        if(sessionManager.isLoggedIn().equals("Admin") )
+        {
+            myListData = new MyListData[]
+                    {
+                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
+                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
 //                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 
-        };
+                    };
+        }  if(sessionManager.isLoggedIn().equals("Sales") )
+        {
+            myListData = new MyListData[]
+                    {
+                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
+                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
+//                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
+//                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
+
+                    };
+        }
+        if(sessionManager.isLoggedIn().equals("Dispatch") )
+        {
+            myListData = new MyListData[]
+                    {
+                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
+                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
+//                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
+//                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
+
+                    };
+        }
+        if(sessionManager.isLoggedIn().equals("Accountant") )
+        {
+            myListData = new MyListData[]
+                    {
+                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
+                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
+//                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
+//                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
+
+                    };
+        }
+        if(sessionManager.isLoggedIn().equals("Purachase") )
+        {
+            myListData = new MyListData[]
+                    {
+                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
+                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
+//                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
+//                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
+
+                    };
+        }  if(sessionManager.isLoggedIn().equals("Logistic") )
+        {
+            myListData = new MyListData[]
+                    {
+                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
+                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
+//                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
+//                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
+
+                    };
+        }if(sessionManager.isLoggedIn().equals("IT") )
+        {
+            myListData = new MyListData[]
+                    {
+                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
+                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
+//                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
+//                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
+
+                    };
+        }
+
         MyListAdapter adapter = new MyListAdapter(DashboardActivity.this, myListData);
         recycler_view.setHasFixedSize(true);
         recycler_view.setLayoutManager(new LinearLayoutManager(DashboardActivity.this));
