@@ -26,7 +26,7 @@ public class ProfileActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Average"));
         tabLayout.addTab(tabLayout.newTab().setText("Analytics"));
         tabLayout.addTab(tabLayout.newTab().setText("Connections"));
-        tabLayout.addTab(tabLayout.newTab().setText("Intrest"));
+        tabLayout.addTab(tabLayout.newTab().setText("Interest"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ProfileAdapter profileAdapter = new ProfileAdapter(this,getSupportFragmentManager(), tabLayout.getTabCount());
