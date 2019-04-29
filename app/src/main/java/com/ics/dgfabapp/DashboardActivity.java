@@ -290,7 +290,7 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
             startActivity(intent);
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layoutxyz);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
