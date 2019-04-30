@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Boxes_Activities.Sales_Order">
+<android.support.design.card.MaterialCardView
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:padding="4dp"
+            android:layout_margin="2dp"
+            android:text="Company : "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+        </TextView>
+        <TextView
+            android:padding="4dp"
+            android:layout_margin="2dp"
+            android:text="Order No :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+
+        </TextView>
+        <TextView
+            android:padding="4dp"
+            android:layout_margin="2dp"
+            android:text="Area :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+
+        </TextView>
+
+        <TextView
+            android:padding="4dp"
+            android:layout_margin="2dp"
+            android:text="Day/Time :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+
+        </TextView>
+        <TextView
+            android:drawableStart="@drawable/iconsschedulemail24"
+            android:padding="4dp"
+            android:layout_margin="2dp"
+            android:text="Delay "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/iconsschedulemail24">
+
+
+        </TextView>
+
+    </LinearLayout>
+</android.support.design.card.MaterialCardView>
+</LinearLayout>

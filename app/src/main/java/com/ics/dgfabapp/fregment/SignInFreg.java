@@ -31,7 +31,8 @@ public class SignInFreg extends Fragment implements
     Spinner spinalo;
    // SessionManager sessionManager;
    Spinner spin;
-    String[] country = {"Admin", "Sales", "Dispatch","Accountant","Purchase","Logistic" , "IT"};
+    String[] country = {"Manufacturer", "Dealer", "Sales"};
+   // String[] country = {"Admin", "Sales", "Dispatch","Accountant","Purchase","Logistic" , "IT"};
     public SessionManager sessionManager;
 
     public SignInFreg() {

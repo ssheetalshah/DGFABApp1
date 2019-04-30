@@ -46,6 +46,7 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
     MyListData[] myListData;
     View view;
     Context c;
+    TextView sale_inv;
     Button btn;
     SessionManager sessionManager;
    LinearLayout admin_choose,ll_admin;
@@ -96,6 +97,7 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
 //******************************************************************************************
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        sale_inv = findViewById(R.id.sale_inv);
         /* start 2 months ago from now */
         Calendar startDate = Calendar.getInstance();
         startDate.add(Calendar.MONTH, -2);
@@ -104,7 +106,12 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+        sale_inv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
         admin_choose = (LinearLayout) findViewById(R.id.admin_choose);
         ll_admin = (LinearLayout) findViewById(R.id.ll_admin);
 
@@ -177,7 +184,7 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
         spin_category.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (spin_category.getSelectedItem().equals("Sales"))
+                if (spin_category.getSelectedItem().equals("Sales") ||spin_category.getSelectedItem().equals("Manufacturer") || spin_category.getSelectedItem().equals("Dealer"))
                 {
                     other_details.setVisibility(View.GONE);
                     ll_admin.setVisibility(View.VISIBLE);

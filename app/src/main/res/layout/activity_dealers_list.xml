@@ -109,7 +109,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginBottom="2dp"
-                                    android:text="Parag Sharma"
+                                    android:text="Best Footwear Dealers"
                                     android:textColor="#000"
                                     android:textSize="15dp" />
 
@@ -212,7 +212,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginBottom="2dp"
-                                    android:text="Raghav Sahu"
+                                    android:text="Krishna Clothes"
                                     android:textColor="#000"
                                     android:textSize="15dp" />
 

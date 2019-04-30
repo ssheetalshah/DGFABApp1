@@ -191,28 +191,30 @@ public class NavigationActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(NavigationActivity.this);
-            builder.setTitle("Please Select Your Type..");
-
-            int checkedItem = 0; //this will checked the item when user open the dialog
-            builder.setSingleChoiceItems(listItems, checkedItem, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Toast.makeText(NavigationActivity.this, "Position: " + which + " Value: " + listItems[which], Toast.LENGTH_LONG).show();
-                }
-            });
-
-            builder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(NavigationActivity.this, CompanyList.class);
-                    startActivity(intent);
-                    dialog.dismiss();
-                }
-            });
-
-            AlertDialog dialog = builder.create();
-            dialog.show();
+            Intent intent = new Intent(NavigationActivity.this, LoginActivity.class);
+            startActivity(intent);
+//            AlertDialog.Builder builder = new AlertDialog.Builder(NavigationActivity.this);
+//            builder.setTitle("Please Select Your Type..");
+//
+//            int checkedItem = 0; //this will checked the item when user open the dialog
+//            builder.setSingleChoiceItems(listItems, checkedItem, new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialog, int which) {
+//                    Toast.makeText(NavigationActivity.this, "Position: " + which + " Value: " + listItems[which], Toast.LENGTH_LONG).show();
+//                }
+//            });
+//
+//            builder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialog, int which) {
+//                    Intent intent = new Intent(NavigationActivity.this, CompanyList.class);
+//                    startActivity(intent);
+//                    dialog.dismiss();
+//                }
+//            });
+//
+//            AlertDialog dialog = builder.create();
+//            dialog.show();
 
             return true;
         }

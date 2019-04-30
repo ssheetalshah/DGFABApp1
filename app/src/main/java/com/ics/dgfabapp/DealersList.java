@@ -30,12 +30,14 @@ public class DealersList extends AppCompatActivity {
         ccccc = findViewById(R.id.ccccc);
         frame_deal = findViewById(R.id.frame_deal);
         hidethatsht = findViewById(R.id.hidethatsht);
+        addDealer = (TextView)findViewById(R.id.addDealer);
         toolbar_dealers = (Toolbar)findViewById(R.id.toolbar_dealers);
       //  toolbar_dealers.setNavigationIcon(R.drawable.arrow);
         to_avli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             hidethatsht.setVisibility(View.GONE);
+                addDealer.setVisibility(View.GONE);
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                fragmentTransaction.replace(R.id.frame_deal ,new DealerProfFreg()).commit();
@@ -45,6 +47,7 @@ public class DealersList extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 hidethatsht.setVisibility(View.GONE);
+                addDealer.setVisibility(View.GONE);
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
               fragmentTransaction.replace(R.id.frame_deal ,new DealerProfFreg()).commit();
@@ -59,7 +62,7 @@ public class DealersList extends AppCompatActivity {
             }
         });
 
-        addDealer = (TextView)findViewById(R.id.addDealer);
+
         addDealer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
