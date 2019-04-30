@@ -240,13 +240,13 @@ public class NavigationActivity extends AppCompatActivity
             Intent intent = new Intent(NavigationActivity.this, Order_Informations.class);
             startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(NavigationActivity.this, NavigationActivity.class);
+            Intent intent = new Intent(NavigationActivity.this, My_tender.class);
             startActivity(intent);
         } else if (id == R.id.nav_manage) {
             Intent intent = new Intent(NavigationActivity.this, ChatActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_share) {
-            Intent intent = new Intent(NavigationActivity.this, NavigationActivity.class);
+            Intent intent = new Intent(NavigationActivity.this, BillingHistory.class);
             startActivity(intent);
         } else if (id == R.id.nav_send) {
             Intent intent = new Intent(NavigationActivity.this, NavigationActivity.class);

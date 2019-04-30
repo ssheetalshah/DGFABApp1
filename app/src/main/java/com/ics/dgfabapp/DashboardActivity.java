@@ -366,18 +366,30 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
+        } else if (id == R.id.nav_wallet) {
+            Intent intent = new Intent(DashboardActivity.this, WalletActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_gallery) {
+            Intent intent = new Intent(DashboardActivity.this, ProfileActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_order) {
+            Intent intent = new Intent(DashboardActivity.this, Order_Informations.class);
+            startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
-
+            Intent intent = new Intent(DashboardActivity.this, My_tender.class);
+            startActivity(intent);
         } else if (id == R.id.nav_manage) {
-
+            Intent intent = new Intent(DashboardActivity.this, ChatActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
-
+            Intent intent = new Intent(DashboardActivity.this, BillingHistory.class);
+            startActivity(intent);
         } else if (id == R.id.nav_send) {
-
+            Intent intent = new Intent(DashboardActivity.this, NavigationActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_addprod) {
             Intent intent = new Intent(DashboardActivity.this, AddProduct.class);
             startActivity(intent);
