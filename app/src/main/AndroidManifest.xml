@@ -9,10 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Boxes_Activities.Company_lIst"></activity>
-        <activity android:name=".Boxes_Activities.Sales_Order" />
-        <activity android:name=".Tracked_Order" />
-        <activity android:name=".Order_Informations" />
+        <activity android:name=".Order_Informations"></activity>
         <activity android:name=".WalletActivity" />
         <activity android:name=".AddProduct" />
         <activity android:name=".CreateNewGroup" />
@@ -29,11 +26,14 @@
         <activity android:name=".CompanyList" />
         <activity android:name=".DealersList" />
         <activity android:name=".Call_splash_screen" />
+        <activity android:name=".BillingHistory" />
+        <activity android:name=".My_tender" />
+        <activity android:name=".Boxes_Activities.Sales_Order" />
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity">
+           <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
