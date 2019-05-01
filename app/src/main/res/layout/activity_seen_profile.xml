@@ -31,12 +31,12 @@
                 android:layout_alignRight="@id/user_profile_photo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-            <ImageView
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/rounded_rectangle_green"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_alignParentRight="false" />
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/rounded_rectangle_green"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="false" />
             </RelativeLayout>
 
             <ImageButton
@@ -80,6 +80,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/dealname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -90,6 +91,7 @@
                 android:typeface="serif" />
 
             <LinearLayout
+                android:visibility="gone"
                 android:weightSum="1"
                 android:gravity="center"
                 android:layout_marginRight="60dp"

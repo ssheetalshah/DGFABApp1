@@ -38,9 +38,12 @@ public class DealersList extends AppCompatActivity {
             public void onClick(View v) {
             hidethatsht.setVisibility(View.GONE);
                 addDealer.setVisibility(View.GONE);
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-               fragmentTransaction.replace(R.id.frame_deal ,new DealerProfFreg()).commit();
+                Intent intent = new Intent(DealersList.this , SeenProfile.class);
+                intent.putExtra("dealname" ,"Best Footwear Dealers" );
+                startActivity(intent);
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//               fragmentTransaction.replace(R.id.frame_deal ,new DealerProfFreg()).commit();
             }
         });
         ccccc.setOnClickListener(new View.OnClickListener() {
@@ -48,9 +51,12 @@ public class DealersList extends AppCompatActivity {
             public void onClick(View v) {
                 hidethatsht.setVisibility(View.GONE);
                 addDealer.setVisibility(View.GONE);
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-              fragmentTransaction.replace(R.id.frame_deal ,new DealerProfFreg()).commit();
+                Intent intent = new Intent(DealersList.this , SeenProfile.class);
+                intent.putExtra("dealname" ,"Krishna Clothes" );
+                startActivity(intent);
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//              fragmentTransaction.replace(R.id.frame_deal ,new DealerProfFreg()).commit();
             }
         });
 

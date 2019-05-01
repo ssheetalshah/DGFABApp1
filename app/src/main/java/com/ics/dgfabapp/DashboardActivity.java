@@ -49,6 +49,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     Context c;
     TextView sale_inv,invoice_tv,tv_blueInvoice,tv_invoiceGreen;
     Button btn;
+   public static String namestatic;
     SessionManager sessionManager;
     LinearLayout admin_choose, ll_admin;
     CardView other_details;

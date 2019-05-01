@@ -21,6 +21,7 @@ import com.ics.dgfabapp.ChatActivity;
 import com.ics.dgfabapp.NavigationActivity;
 import com.ics.dgfabapp.R;
 import com.ics.dgfabapp.SeasonManager.SessionManager;
+import com.ics.dgfabapp.SeenProfile;
 import com.ics.dgfabapp.model.MyListData;
 
 import java.util.Calendar;
@@ -59,6 +60,14 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     public void onBindViewHolder(final ViewHolder holder, int position) {
         final MyListData myListData = listdata[position];
         int wtf = position + 3;
+        holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext() , SeenProfile.class);
+                intent.putExtra("dealname" , holder.textView.getText().toString());
+                v.getContext().startActivity(intent);
+            }
+        });
         if(sessionManager.isLoggedIn().equals("Admin") || sessionManager.isLoggedIn().equals("Sales") || sessionManager.isLoggedIn().equals("Manufacturer") )
         {
            holder.action_card.setVisibility(View.VISIBLE);
@@ -116,6 +125,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
 
         if(position ==0)
         {
+            holder.callid.setText("Call At 2PM");
             holder.phone.setImageResource(R.drawable.phone_red);
           holder.phone.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -138,6 +148,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             });
         }   if(position ==1)
         {
+            holder.callid.setText("Message At 2PM");
             holder.chat.setImageResource(R.drawable.message_red);
             holder.chat.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -160,6 +171,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             });
         }   if(position ==2)
         {
+            holder.callid.setText("Chat At 2PM");
             holder.tell.setImageResource(R.drawable.chat_red);
             holder.tell.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -183,6 +195,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
 
         }   if(position ==3)
         {
+            holder.callid.setText("Meeting At 2PM");
             holder.meet.setImageResource(R.drawable.meeting_red);
             holder.meet.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -204,6 +217,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         }
         if(position ==4)
         {
+            holder.callid.setText("Meeting At 2PM");
             holder.meet.setImageResource(R.drawable.meeting_red);
             holder.meet.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -268,7 +282,9 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         private LinearLayout libelow;
         CardView action_card,action;
         ImageView phone,meet ,chat,tell;
+        TextView callid;
         TextView nonsale,nonsaletime;
+
      //   SessionManager sessionManager;
         TextView textView2df, textbrand, textView2sdf,textbrandgh,textView2;
 
@@ -282,6 +298,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             this.textbrand = itemView.findViewById(R.id.textbrand);
             this.textView2df = itemView.findViewById(R.id.textView2df);
             this.textView2sdf = itemView.findViewById(R.id.textView2sdf);
+            callid = itemView.findViewById(R.id.callid);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout);
             libelow = (LinearLayout) itemView.findViewById(R.id.libelow);
             this.phone = (ImageView) itemView.findViewById(R.id.phone);

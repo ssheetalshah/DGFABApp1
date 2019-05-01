@@ -1,30 +1,28 @@
 package com.ics.dgfabapp;
 
-import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.ics.dgfabapp.adapter.MyAdapter;
 import com.ics.dgfabapp.adapter.ProfileAdapter;
 
-public class ProfileActivity extends AppCompatActivity {
+public class SeenProfile extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
-    TextView add_com;
+    TextView add_com,dealname;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_seen_profile);
+        dealname = findViewById(R.id.dealname);
         tabLayout=(TabLayout)findViewById(R.id.tab_layout);
         viewPager=(ViewPager)findViewById(R.id.pager);
         add_com = findViewById(R.id.add_com);
-
         tabLayout.addTab(tabLayout.newTab().setText("OverView"));
         tabLayout.addTab(tabLayout.newTab().setText("Products"));
         tabLayout.addTab(tabLayout.newTab().setText("Average"));
@@ -32,6 +30,7 @@ public class ProfileActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Connections"));
         tabLayout.addTab(tabLayout.newTab().setText("Interest"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        dealname.setText(getIntent().getStringExtra("dealname"));
         add_com.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,40 +58,5 @@ public class ProfileActivity extends AppCompatActivity {
 
             }
         });
-
-       /* tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        viewPager = (ViewPager) findViewById(R.id.viewPager);
-        ProfileActivity.this.setTitle("DIGFAB");
-        tabLayout.addTab(tabLayout.newTab().setText("OverView"));
-        tabLayout.addTab(tabLayout.newTab().setText("Products"));
-        tabLayout.addTab(tabLayout.newTab().setText("Average"));
-        tabLayout.addTab(tabLayout.newTab().setText("Analytics"));
-        tabLayout.addTab(tabLayout.newTab().setText("Connections"));
-        tabLayout.addTab(tabLayout.newTab().setText("Intrest"));
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-        tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#353B68"));
-        tabLayout.setSelectedTabIndicatorHeight((int) (3 * getResources().getDisplayMetrics().density));
-        tabLayout.setTabTextColors(Color.parseColor("#000000"), Color.parseColor("#000000"));
-        final ProfileAdapter profileAdapter = new ProfileAdapter(this, getSupportFragmentManager(), tabLayout.getTabCount());
-        viewPager.setAdapter(profileAdapter);
-
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });*/
     }
 }
