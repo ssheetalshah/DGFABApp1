@@ -47,7 +47,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     MyListData[] myListData;
     View view;
     Context c;
-    TextView sale_inv,invoice_tv,tv_blueInvoice;
+    TextView sale_inv,invoice_tv,tv_blueInvoice,tv_invoiceGreen;
     Button btn;
     SessionManager sessionManager;
     LinearLayout admin_choose, ll_admin;
@@ -105,6 +105,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         text_Company = findViewById(R.id.sale_inv);
         invoice_tv = findViewById(R.id.invoice_tv);
         tv_blueInvoice = findViewById(R.id.tv_blueInvoice);
+        tv_invoiceGreen = findViewById(R.id.tv_invoiceGreen);
         Calendar startDate = Calendar.getInstance();
         startDate.add(Calendar.MONTH, -2);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layoutxyz);
@@ -132,6 +133,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DashboardActivity.this, Invoice2.class);
+                startActivity(intent);
+            }
+        });
+        tv_invoiceGreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, Invoice3.class);
                 startActivity(intent);
             }
         });

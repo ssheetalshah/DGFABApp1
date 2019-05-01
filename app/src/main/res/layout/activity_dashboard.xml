@@ -249,6 +249,7 @@
                                             android:textSize="15dp" />
 
                                         <TextView
+                                            android:id="@+id/tv_invoiceGreen"
                                             android:layout_width="match_parent"
                                             android:layout_height="30dp"
                                             android:layout_marginLeft="2.5dp"
