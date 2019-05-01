@@ -61,7 +61,7 @@ public class SignInFreg extends Fragment implements
         spin = view.findViewById(R.id.spinalo);
         cusid = view.findViewById(R.id.cusid);
         pass = view.findViewById(R.id.passedt);
-        spinalo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(spin.getItemAtPosition(position).equals("Buyer"))
