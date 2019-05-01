@@ -38,6 +38,7 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/prof" />
 
+
         </RelativeLayout>
 
 
