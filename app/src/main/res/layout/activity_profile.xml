@@ -38,20 +38,6 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/prof" />
 
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/user_profile_photo"
-                android:padding="3dp"
-                android:background="@drawable/bt_bg"
-                android:layout_below="@id/user_profile_photo"
-                android:text="Add Connection"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:typeface="serif" />
-
-
         </RelativeLayout>
 
 
@@ -90,7 +76,7 @@
                     android:layout_marginRight="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:progress="50" />
+                    android:progress="70" />
 
                 <TextView
                     android:text="50%"
