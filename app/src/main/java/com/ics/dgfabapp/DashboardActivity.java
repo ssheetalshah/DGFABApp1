@@ -53,7 +53,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     SessionManager sessionManager;
     LinearLayout admin_choose, ll_admin;
     CardView other_details;
-    Spinner spin_category;
+    String spin_category;
 
     TextView nonsale, nonsaletime, text_Company, pending_sales, salesord3;
 
@@ -96,6 +96,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_navigation);
         sessionManager = new SessionManager(DashboardActivity.this);
+        spin_category = getIntent().getStringExtra("spin_category");
 //******************************************************************************************
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -164,7 +165,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         ll_admin = (LinearLayout) findViewById(R.id.ll_admin);
 
         other_details = (CardView) findViewById(R.id.other_details);
-        spin_category = (Spinner) findViewById(R.id.spin_category);
+
         nonsale = (TextView) findViewById(R.id.nonsale);
         nonsaletime = (TextView) findViewById(R.id.nonsaletime);
 
@@ -229,15 +230,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         );
         //*********************************************************************************
 
-        spin_category.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (spin_category.getSelectedItem().equals("Sales") || spin_category.getSelectedItem().equals("Manufacturer") || spin_category.getSelectedItem().equals("Dealer")) {
+
+                if (spin_category.equals("Sales") || spin_category.equals("Manufacturer") || spin_category.equals("Dealer")) {
                     other_details.setVisibility(View.GONE);
                     ll_admin.setVisibility(View.VISIBLE);
                 }
 
-                if (spin_category.getSelectedItem().equals("Dispatch")) {
+                if (spin_category.equals("Dispatch")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
 
@@ -245,28 +244,28 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     nonsaletime.setText("2 pm");
 
                 }
-                if (spin_category.getSelectedItem().equals("Accountant")) {
+                if (spin_category.equals("Accountant")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
 
                     nonsale.setText("Action For Accountant ");
                     nonsaletime.setText("3 pm");
                 }
-                if (spin_category.getSelectedItem().equals("Purchase")) {
+                if (spin_category.equals("Purchase")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
 
                     nonsale.setText("Action For Purchase ");
                     nonsaletime.setText("2.30 pm");
                 }
-                if (spin_category.getSelectedItem().equals("Logistic")) {
+                if (spin_category.equals("Logistic")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
 
                     nonsale.setText("Action For Logistic ");
                     nonsaletime.setText("1 pm");
                 }
-                if (spin_category.getSelectedItem().equals("IT")) {
+                if (spin_category.equals("IT")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
 
@@ -274,19 +273,14 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     nonsaletime.setText("4 pm");
                 }
 
-                if (spin_category.getSelectedItem().equals("-Select-")) {
+                if (spin_category.equals("-Select-")) {
                     other_details.setVisibility(View.GONE);
                     ll_admin.setVisibility(View.VISIBLE);
                 }
 
 
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> arg0) {
 
-            }
-        });
 
 
         //*********************************************************************************************

@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.ics.dgfabapp.DashboardActivity;
 import com.ics.dgfabapp.LoginActivity;
+import com.ics.dgfabapp.NavigationActivity;
 import com.ics.dgfabapp.R;
 import com.ics.dgfabapp.SeasonManager.SessionManager;
 
@@ -31,9 +32,11 @@ public class SignInFreg extends Fragment implements
     Spinner spinalo;
    // SessionManager sessionManager;
    Spinner spin;
-    String[] country = {"Manufacturer", "Dealer", "Sales"};
+
+    String[] country = {"Manufacturer", "Dealer", "Buyer"};
    // String[] country = {"Admin", "Sales", "Dispatch","Accountant","Purchase","Logistic" , "IT"};
     public SessionManager sessionManager;
+    private Spinner spin_category;
 
     public SignInFreg() {
         // Required empty public constructor
@@ -43,7 +46,7 @@ public class SignInFreg extends Fragment implements
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View vx = inflater.inflate(R.layout.fragment_sign_in_freg, container, false);
-
+        spin_category = (Spinner) vx.findViewById(R.id.spin_category);
         return vx;
 
 //        return inflater.inflate(R.layout.fragment_sign_in_freg, container, false);
@@ -58,7 +61,22 @@ public class SignInFreg extends Fragment implements
         spin = view.findViewById(R.id.spinalo);
         cusid = view.findViewById(R.id.cusid);
         pass = view.findViewById(R.id.passedt);
+        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(spin.getItemAtPosition(position).equals("Buyer"))
+                {
+                    spin_category.setVisibility(View.GONE);
+                }else {
+                    spin_category.setVisibility(View.VISIBLE);
+                }
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         sessionManager = new SessionManager(getActivity());
         //Getting the instance of Spinner and applying OnItemSelectedListener on it
 //        spin = (Spinner)view.findViewById(R.id.spin12);
@@ -85,8 +103,17 @@ public class SignInFreg extends Fragment implements
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), DashboardActivity.class);
-                startActivity(intent);
+                if(spin.getSelectedItem().equals("Buyer"))
+                {
+                    Intent intent = new Intent(getActivity(), NavigationActivity.class);
+                    startActivity(intent);
+
+
+                }else {
+                    Intent intent = new Intent(getActivity(), DashboardActivity.class);
+                    intent.putExtra("spin_category", spin_category.getSelectedItem().toString());
+                    startActivity(intent);
+                }
             }
         });
     }
