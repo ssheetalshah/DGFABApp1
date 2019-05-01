@@ -42,7 +42,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class DashboardActivity extends AppCompatActivity  implements   NavigationView.OnNavigationItemSelectedListener {
+public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     RecyclerView recycler_view;
     MyListData[] myListData;
     View view;
@@ -50,11 +50,11 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
     TextView sale_inv;
     Button btn;
     SessionManager sessionManager;
-   LinearLayout admin_choose,ll_admin;
-   CardView other_details;
-   Spinner spin_category;
+    LinearLayout admin_choose, ll_admin;
+    CardView other_details;
+    Spinner spin_category;
 
-   TextView nonsale,nonsaletime,text_Company,pending_sales;
+    TextView nonsale, nonsaletime, text_Company, pending_sales, salesord3;
 
     private HorizontalCalendar horizontalCalendar;
 
@@ -75,7 +75,7 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
                     //  mTextMessage.setText("Two");
                     return true;
                 case R.id.navigation_dealerlist:
-                    Intent intent3 =new Intent(DashboardActivity.this , DealersList.class);
+                    Intent intent3 = new Intent(DashboardActivity.this, DealersList.class);
                     startActivity(intent3);
                     // mTextMessage.setText("three");
                     return true;
@@ -90,7 +90,6 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
     };
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,6 +101,7 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
         sale_inv = findViewById(R.id.sale_inv);
         /* start 2 months ago from now */
         pending_sales = findViewById(R.id.pending_sales);
+        salesord3 = findViewById(R.id.salesord3);
         text_Company = findViewById(R.id.sale_inv);
         Calendar startDate = Calendar.getInstance();
         startDate.add(Calendar.MONTH, -2);
@@ -114,7 +114,22 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
         sale_inv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this , Sales_Order.class);
+                Intent intent = new Intent(DashboardActivity.this, Sales_Order.class);
+                startActivity(intent);
+            }
+        });
+
+        pending_sales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, SalesOrderTwo.class);
+                startActivity(intent);
+            }
+        });
+        salesord3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, SalesOrderThree.class);
                 startActivity(intent);
             }
         });
@@ -179,25 +194,23 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                horizontalCalendar.goToday(false);
-            }
-        }
+                                   @Override
+                                   public void onClick(View view) {
+                                       horizontalCalendar.goToday(false);
+                                   }
+                               }
         );
         //*********************************************************************************
 
         spin_category.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (spin_category.getSelectedItem().equals("Sales") ||spin_category.getSelectedItem().equals("Manufacturer") || spin_category.getSelectedItem().equals("Dealer"))
-                {
+                if (spin_category.getSelectedItem().equals("Sales") || spin_category.getSelectedItem().equals("Manufacturer") || spin_category.getSelectedItem().equals("Dealer")) {
                     other_details.setVisibility(View.GONE);
                     ll_admin.setVisibility(View.VISIBLE);
                 }
 
-                if (spin_category.getSelectedItem().equals("Dispatch"))
-                {
+                if (spin_category.getSelectedItem().equals("Dispatch")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
 
@@ -205,32 +218,28 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
                     nonsaletime.setText("2 pm");
 
                 }
-                if (spin_category.getSelectedItem().equals("Accountant"))
-                {
+                if (spin_category.getSelectedItem().equals("Accountant")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
 
                     nonsale.setText("Action For Accountant ");
                     nonsaletime.setText("3 pm");
                 }
-                if (spin_category.getSelectedItem().equals("Purchase"))
-                {
+                if (spin_category.getSelectedItem().equals("Purchase")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
 
                     nonsale.setText("Action For Purchase ");
                     nonsaletime.setText("2.30 pm");
                 }
-                if (spin_category.getSelectedItem().equals("Logistic"))
-                {
+                if (spin_category.getSelectedItem().equals("Logistic")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
 
                     nonsale.setText("Action For Logistic ");
                     nonsaletime.setText("1 pm");
                 }
-                if (spin_category.getSelectedItem().equals("IT"))
-                {
+                if (spin_category.getSelectedItem().equals("IT")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
 
@@ -238,14 +247,14 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
                     nonsaletime.setText("4 pm");
                 }
 
-                if (spin_category.getSelectedItem().equals("-Select-"))
-                {
-                     other_details.setVisibility(View.GONE);
+                if (spin_category.getSelectedItem().equals("-Select-")) {
+                    other_details.setVisibility(View.GONE);
                     ll_admin.setVisibility(View.VISIBLE);
                 }
 
 
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {
 
@@ -253,103 +262,98 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
         });
 
 
-
         //*********************************************************************************************
 
         recycler_view = (RecyclerView) findViewById(R.id.recycler_view);
 
-       //  tooltipView = new TooltipView(btn);
-        if(sessionManager.isLoggedIn().equals("Manufacturer") )
-        {
+        //  tooltipView = new TooltipView(btn);
+        if (sessionManager.isLoggedIn().equals("Manufacturer")) {
             admin_choose.setVisibility(View.VISIBLE);
             myListData = new MyListData[]
                     {
-                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
-                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
-                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
-                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
-                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
-//                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
-//                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
-
-                    };
-        }  if(sessionManager.isLoggedIn().equals("Sales")  || sessionManager.isLoggedIn().equals("Dealer") )
-        {
-            myListData = new MyListData[]
-                    {
-                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
-                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
-                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
-                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
-                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
+                            new MyListData("Nike INC", R.drawable.prof, "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof, "Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof, "USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof, "Bombay"),
+                            new MyListData("Peter England", R.drawable.prof, "Bangalore"),
 //                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 
                     };
         }
-        if(sessionManager.isLoggedIn().equals("Dispatch") )
-        {
+        if (sessionManager.isLoggedIn().equals("Sales") || sessionManager.isLoggedIn().equals("Dealer")) {
             myListData = new MyListData[]
                     {
-                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
-                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
-                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
-                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
-                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
+                            new MyListData("Nike INC", R.drawable.prof, "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof, "Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof, "USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof, "Bombay"),
+                            new MyListData("Peter England", R.drawable.prof, "Bangalore"),
 //                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 
                     };
         }
-        if(sessionManager.isLoggedIn().equals("Accountant") )
-        {
+        if (sessionManager.isLoggedIn().equals("Dispatch")) {
             myListData = new MyListData[]
                     {
-                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
-                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
-                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
-                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
-                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
+                            new MyListData("Nike INC", R.drawable.prof, "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof, "Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof, "USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof, "Bombay"),
+                            new MyListData("Peter England", R.drawable.prof, "Bangalore"),
 //                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 
                     };
         }
-        if(sessionManager.isLoggedIn().equals("Purchase") )
-        {
+        if (sessionManager.isLoggedIn().equals("Accountant")) {
             myListData = new MyListData[]
                     {
-                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
-                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
-                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
-                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
-                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
+                            new MyListData("Nike INC", R.drawable.prof, "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof, "Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof, "USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof, "Bombay"),
+                            new MyListData("Peter England", R.drawable.prof, "Bangalore"),
 //                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 
                     };
-        }  if(sessionManager.isLoggedIn().equals("Logistic") )
-        {
+        }
+        if (sessionManager.isLoggedIn().equals("Purchase")) {
             myListData = new MyListData[]
                     {
-                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
-                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
-                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
-                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
-                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
+                            new MyListData("Nike INC", R.drawable.prof, "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof, "Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof, "USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof, "Bombay"),
+                            new MyListData("Peter England", R.drawable.prof, "Bangalore"),
 //                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 
                     };
-        }if(sessionManager.isLoggedIn().equals("IT") )
-        {
+        }
+        if (sessionManager.isLoggedIn().equals("Logistic")) {
             myListData = new MyListData[]
                     {
-                            new MyListData("Nike INC", R.drawable.prof , "Indore"),
-                            new MyListData("Lakme Cosmetics", R.drawable.prof ,"Bhopal"),
-                            new MyListData("Fast Track", R.drawable.prof ,"USA"),
-                            new MyListData("Ansian Paints", R.drawable.prof ,"Bombay"),
-                            new MyListData("Peter England", R.drawable.prof , "Bangalore"),
+                            new MyListData("Nike INC", R.drawable.prof, "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof, "Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof, "USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof, "Bombay"),
+                            new MyListData("Peter England", R.drawable.prof, "Bangalore"),
+//                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
+//                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
+
+                    };
+        }
+        if (sessionManager.isLoggedIn().equals("IT")) {
+            myListData = new MyListData[]
+                    {
+                            new MyListData("Nike INC", R.drawable.prof, "Indore"),
+                            new MyListData("Lakme Cosmetics", R.drawable.prof, "Bhopal"),
+                            new MyListData("Fast Track", R.drawable.prof, "USA"),
+                            new MyListData("Ansian Paints", R.drawable.prof, "Bombay"),
+                            new MyListData("Peter England", R.drawable.prof, "Bangalore"),
 //                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 
@@ -361,7 +365,7 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
         recycler_view.setLayoutManager(new LinearLayoutManager(DashboardActivity.this));
         recycler_view.setAdapter(adapter);
 
-     //   mTextMessage = (TextView) findViewById(R.id.message);
+        //   mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
@@ -378,10 +382,10 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
         } else if (id == R.id.nav_wallet) {
             Intent intent = new Intent(DashboardActivity.this, WalletActivity.class);
             startActivity(intent);
-        }else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_gallery) {
             Intent intent = new Intent(DashboardActivity.this, ProfileActivity.class);
             startActivity(intent);
-        }else if (id == R.id.nav_order) {
+        } else if (id == R.id.nav_order) {
             Intent intent = new Intent(DashboardActivity.this, Order_Informations.class);
             startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
