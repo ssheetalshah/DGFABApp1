@@ -2,16 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
 
         <RelativeLayout
@@ -24,19 +23,22 @@
                 android:layout_height="150dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/pbgg" />
+
             <RelativeLayout
 
-                android:layout_marginTop="-120dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/user_profile_photo"
                 android:layout_alignRight="@id/user_profile_photo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_marginTop="-120dp">
+
                 <ImageView
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/rounded_rectangle_green"
                     android:layout_width="15dp"
                     android:layout_height="15dp"
-                    android:layout_alignParentRight="false" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="false"
+                    android:src="@drawable/rounded_rectangle_green"
+                    android:visibility="gone" />
             </RelativeLayout>
 
             <ImageButton
@@ -51,23 +53,9 @@
                 android:elevation="5dp"
                 android:padding="20dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/prof" >
+                android:src="@drawable/prof">
 
             </ImageButton>
-
-            <TextView
-                android:id="@+id/add_com"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/user_profile_photo"
-                android:padding="3dp"
-                android:background="@drawable/bt_bg"
-                android:layout_below="@id/user_profile_photo"
-                android:text="Add Connection"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:typeface="serif" />
-
 
         </RelativeLayout>
 
@@ -81,42 +69,94 @@
 
             <TextView
                 android:id="@+id/dealname"
-                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_gravity="center"
                 android:padding="3dp"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/dot_green"
                 android:text="JET Catrige"
                 android:textColor="#000"
                 android:textSize="18dp"
                 android:typeface="serif" />
 
             <LinearLayout
-                android:visibility="gone"
-                android:weightSum="1"
-                android:gravity="center"
-                android:layout_marginRight="60dp"
-                android:layout_marginLeft="60dp"
-                android:orientation="horizontal"
+                android:layout_below="@id/user_profile_photo"
+                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/close_Deal"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bt_bg"
+                    android:gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:text="Close Deal"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12dp"
+                    android:typeface="serif" />
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/create_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bt_bg"
+                    android:gravity="center"
+                    android:text="Create Order"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12dp"
+                    android:typeface="serif" />
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/add_com"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/bt_bg"
+                    android:gravity="center"
+                    android:text="Connections"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12dp"
+                    android:typeface="serif" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="1">
+
                 <ProgressBar
-                    android:layout_weight="0.20"
                     android:id="@+id/progressBar4"
-                    android:layout_marginLeft="10dp"
                     style="@style/MyProgressBar"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:layout_weight="0.20"
+                    android:progress="50"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:progress="50" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:text="50%"
-                    android:textColor="#000"
-                    android:layout_weight="0.80"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.80"
+                    android:text="50%"
+                    android:textColor="#000" />
             </LinearLayout>
 
         </LinearLayout>
@@ -146,7 +186,6 @@
 
 
     </LinearLayout>
-
 
 
 </LinearLayout>

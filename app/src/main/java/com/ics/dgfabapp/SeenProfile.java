@@ -1,5 +1,6 @@
 package com.ics.dgfabapp;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ public class SeenProfile extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
     TextView add_com,dealname;
+    TextView create_order;
 
 
     @Override
@@ -22,6 +24,15 @@ public class SeenProfile extends AppCompatActivity {
         dealname = findViewById(R.id.dealname);
         tabLayout=(TabLayout)findViewById(R.id.tab_layout);
         viewPager=(ViewPager)findViewById(R.id.pager);
+        create_order=(TextView) findViewById(R.id.create_order);
+
+        create_order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SeenProfile.this,CreateOrder.class);
+                startActivity(intent);
+            }
+        });
         add_com = findViewById(R.id.add_com);
         tabLayout.addTab(tabLayout.newTab().setText("OverView"));
         tabLayout.addTab(tabLayout.newTab().setText("Products"));

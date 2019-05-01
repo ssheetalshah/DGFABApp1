@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
                 android:padding="4dp"
-                android:text="Company : Krishna Clothes">
+                android:text="Company : Krishna Clothes , Indore">
 
             </TextView>
 
@@ -51,12 +51,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
                 android:padding="4dp"
-                android:text="Order No : 5">
+                android:text="Order No : 5,  1/5/2019 , 4 PM ">
 
 
             </TextView>
 
             <TextView
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
@@ -67,6 +68,7 @@
             </TextView>
 
             <TextView
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
@@ -80,9 +82,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
-                android:drawableStart="@drawable/iconsschedulemail24"
                 android:drawableLeft="@drawable/iconsschedulemail24"
                 android:padding="4dp"
+                android:drawablePadding="8dp"
                 android:text="Delay: 15 days ">
 
 
@@ -107,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
                 android:padding="4dp"
-                android:text="Company : Fast Track USA ">
+                android:text="Company : Fast Track USA , USA San diego">
 
             </TextView>
 
@@ -116,12 +118,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
                 android:padding="4dp"
-                android:text="Order No : 6">
+                android:text="Order No : 6 , 30/4/2019 , 5 PM">
 
 
             </TextView>
 
             <TextView
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
@@ -132,6 +135,7 @@
             </TextView>
 
             <TextView
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
@@ -145,7 +149,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
-                android:drawableStart="@drawable/iconsschedulemail24"
+                android:drawablePadding="8dp"
                 android:drawableLeft="@drawable/iconsschedulemail24"
                 android:padding="4dp"
                 android:text="Delay : 25 days">

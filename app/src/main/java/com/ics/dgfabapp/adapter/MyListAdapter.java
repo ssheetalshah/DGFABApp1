@@ -35,7 +35,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     SessionManager sessionManager;
     private MyListData[] listdata;
     public Context context;
-    SimpleTooltip simpleTooltip ;
+    SimpleTooltip simpleTooltip;
     Calendar c = Calendar.getInstance();
 
     // RecyclerView recyclerView;
@@ -63,48 +63,48 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext() , SeenProfile.class);
-                intent.putExtra("dealname" , holder.textView.getText().toString());
+                Intent intent = new Intent(v.getContext(), SeenProfile.class);
+                intent.putExtra("dealname", holder.textView.getText().toString());
                 v.getContext().startActivity(intent);
             }
         });
-        if(sessionManager.isLoggedIn().equals("Admin") || sessionManager.isLoggedIn().equals("Sales") || sessionManager.isLoggedIn().equals("Manufacturer") )
-        {
-           holder.action_card.setVisibility(View.VISIBLE);
-           holder.action.setVisibility(View.GONE);
+        if (sessionManager.isLoggedIn().equals("Admin") || sessionManager.isLoggedIn().equals("Sales") || sessionManager.isLoggedIn().equals("Manufacturer")) {
+            holder.action_card.setVisibility(View.VISIBLE);
+            holder.action.setVisibility(View.GONE);
 
 //           holder.nonsaletime.setVisibility(View.GONE);
 //           holder.nonsale.setVisibility(View.GONE);
-        }else{
+        } else {
 //            if(sessionManager.isLoggedIn().equals("Dispatch"))
-            if(position==0) {
+            if (position == 0) {
                 holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
                 holder.nonsaletime.setText("2 PM");
                 holder.textbrand.setVisibility(View.GONE);
                 holder.textView2.setVisibility(View.GONE);
                 holder.textbrandgh.setVisibility(View.GONE);
             }
-            if(position==1) {
+            if (position == 1) {
                 holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
                 holder.nonsaletime.setText("3 PM");
                 holder.textbrand.setVisibility(View.GONE);
                 holder.textView2.setVisibility(View.GONE);
                 holder.textbrandgh.setVisibility(View.GONE);
             }
-            if(position==2) {
+            if (position == 2) {
                 holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
                 holder.nonsaletime.setText("4 PM");
                 holder.textbrand.setVisibility(View.GONE);
                 holder.textView2.setVisibility(View.GONE);
                 holder.textbrandgh.setVisibility(View.GONE);
             }
-            if(position==3) {
+            if (position == 3) {
                 holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
                 holder.nonsaletime.setText("5 PM");
                 holder.textbrand.setVisibility(View.GONE);
                 holder.textView2.setVisibility(View.GONE);
                 holder.textbrandgh.setVisibility(View.GONE);
-            }    if(position==4) {
+            }
+            if (position == 4) {
                 holder.nonsale.setText("Action For " + sessionManager.isLoggedIn());
                 holder.nonsaletime.setText("6 PM");
                 holder.textbrand.setVisibility(View.GONE);
@@ -123,14 +123,13 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             }
         });
 
-        if(position ==0)
-        {
+        if (position == 0) {
             holder.callid.setText("Call At 2PM");
             holder.phone.setImageResource(R.drawable.phone_red);
-          holder.phone.setOnClickListener(new View.OnClickListener() {
+            holder.phone.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                              new SimpleTooltip.Builder(v.getContext())
+                    new SimpleTooltip.Builder(v.getContext())
                             .anchorView(holder.meet)
                             .text("  2 PM")
                             .gravity(Gravity.BOTTOM)
@@ -141,13 +140,13 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
                             .animated(false)
                             .build()
                             .show();
-                              Intent intent =new Intent(v.getContext() , Call_splash_screen.class);
-                              v.getContext().startActivity( intent);
+                    Intent intent = new Intent(v.getContext(), Call_splash_screen.class);
+                    v.getContext().startActivity(intent);
 
                 }
             });
-        }   if(position ==1)
-        {
+        }
+        if (position == 1) {
             holder.callid.setText("Message At 2PM");
             holder.chat.setImageResource(R.drawable.message_red);
             holder.chat.setOnClickListener(new View.OnClickListener() {
@@ -164,13 +163,13 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
                             .animated(false)
                             .build()
                             .show();
-                    Intent intent =new Intent(v.getContext() , ChatActivity.class);
-                    v.getContext().startActivity( intent);
+                    Intent intent = new Intent(v.getContext(), ChatActivity.class);
+                    v.getContext().startActivity(intent);
 
                 }
             });
-        }   if(position ==2)
-        {
+        }
+        if (position == 2) {
             holder.callid.setText("Chat At 2PM");
             holder.tell.setImageResource(R.drawable.chat_red);
             holder.tell.setOnClickListener(new View.OnClickListener() {
@@ -188,13 +187,13 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
                             .animated(false)
                             .build()
                             .show();
-                    Intent intent =new Intent(v.getContext() , ChatActivity.class);
-                    v.getContext().startActivity( intent);
+                    Intent intent = new Intent(v.getContext(), ChatActivity.class);
+                    v.getContext().startActivity(intent);
                 }
             });
 
-        }   if(position ==3)
-        {
+        }
+        if (position == 3) {
             holder.callid.setText("Meeting At 2PM");
             holder.meet.setImageResource(R.drawable.meeting_red);
             holder.meet.setOnClickListener(new View.OnClickListener() {
@@ -215,8 +214,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
                 }
             });
         }
-        if(position ==4)
-        {
+        if (position == 4) {
             holder.callid.setText("Meeting At 2PM");
             holder.meet.setImageResource(R.drawable.meeting_red);
             holder.meet.setOnClickListener(new View.OnClickListener() {
@@ -275,25 +273,25 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         return listdata.length;
     }
 
-    public  class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         public CircleImageView imageView;
         public TextView textView;
         public RelativeLayout relativeLayout;
         private LinearLayout libelow;
-        CardView action_card,action;
-        ImageView phone,meet ,chat,tell;
+        CardView action_card, action;
+        ImageView phone, meet, chat, tell;
         TextView callid;
-        TextView nonsale,nonsaletime;
+        TextView nonsale, nonsaletime;
 
-     //   SessionManager sessionManager;
-        TextView textView2df, textbrand, textView2sdf,textbrandgh,textView2;
+        //   SessionManager sessionManager;
+        TextView textView2df, textbrand, textView2sdf, textbrandgh, textView2;
 
         @SuppressLint("WrongViewCast")
         public ViewHolder(View itemView) {
             super(itemView);
 
-          //  sessionManager = new SessionManager(itemView.getContext());
-            this.imageView = (CircleImageView)itemView.findViewById(R.id.dunb_image);
+            //  sessionManager = new SessionManager(itemView.getContext());
+            this.imageView = (CircleImageView) itemView.findViewById(R.id.dunb_image);
             this.textView = (TextView) itemView.findViewById(R.id.textView);
             this.textbrand = itemView.findViewById(R.id.textbrand);
             this.textView2df = itemView.findViewById(R.id.textView2df);
@@ -307,7 +305,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             this.textbrandgh = itemView.findViewById(R.id.textbrandgh);
             this.meet = (ImageView) itemView.findViewById(R.id.meet);
             this.tell = (ImageView) itemView.findViewById(R.id.tell);
-            this.action_card  = itemView.findViewById(R.id.action_card);
+            this.action_card = itemView.findViewById(R.id.action_card);
             this.nonsale = itemView.findViewById(R.id.nonsale);
             action = itemView.findViewById(R.id.action);
             textView2 = itemView.findViewById(R.id.textView2);
