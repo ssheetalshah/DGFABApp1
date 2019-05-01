@@ -29,6 +29,8 @@
         <activity android:name=".CompanyList" />
         <activity android:name=".DealersList" />
         <activity android:name=".Call_splash_screen" />
+        <activity android:name=".SalesOrderThree"></activity>
+        <activity android:name=".SalesOrderTwo"></activity>
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
