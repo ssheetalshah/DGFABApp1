@@ -27,6 +27,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ics.dgfabapp.Boxes_Activities.Sales_Order;
 import com.ics.dgfabapp.Calendar.HorizontalCalendar;
 import com.ics.dgfabapp.Calendar.Model.CalendarEvent;
 import com.ics.dgfabapp.Calendar.utils.CalendarEventsPredicate;
@@ -52,7 +53,8 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
    LinearLayout admin_choose,ll_admin;
    CardView other_details;
    Spinner spin_category;
-   TextView nonsale,nonsaletime,text_Company;
+
+   TextView nonsale,nonsaletime,text_Company,pending_sales;
 
     private HorizontalCalendar horizontalCalendar;
 
@@ -99,6 +101,8 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
         setSupportActionBar(toolbar);
         sale_inv = findViewById(R.id.sale_inv);
         /* start 2 months ago from now */
+        pending_sales = findViewById(R.id.pending_sales);
+        text_Company = findViewById(R.id.sale_inv);
         Calendar startDate = Calendar.getInstance();
         startDate.add(Calendar.MONTH, -2);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layoutxyz);
@@ -106,10 +110,12 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
         sale_inv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(DashboardActivity.this , Sales_Order.class);
+                startActivity(intent);
             }
         });
         admin_choose = (LinearLayout) findViewById(R.id.admin_choose);

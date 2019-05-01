@@ -187,6 +187,7 @@
                                 android:background="@drawable/border" />
 
                             <TextView
+                                android:id="@+id/pending_sales"
                                 android:text="40"
                                 android:gravity="center"
                                 android:textColor="#fff"
