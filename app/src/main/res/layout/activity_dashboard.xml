@@ -224,6 +224,7 @@
                                         android:weightSum="3">
 
                                         <TextView
+                                            android:id="@+id/invoice_tv"
                                             android:layout_width="match_parent"
                                             android:layout_height="30dp"
                                             android:layout_marginRight="2.5dp"
@@ -235,6 +236,7 @@
                                             android:textSize="15dp" />
 
                                         <TextView
+                                            android:id="@+id/tv_blueInvoice"
                                             android:layout_width="match_parent"
                                             android:layout_height="30dp"
                                             android:layout_marginLeft="1.2dp"
