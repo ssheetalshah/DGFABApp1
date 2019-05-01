@@ -132,7 +132,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 Intent intent = new Intent(DashboardActivity.this, SalesOrderThree.class);
                 startActivity(intent);
             }
-        });
+        }
+        );
         admin_choose = (LinearLayout) findViewById(R.id.admin_choose);
         ll_admin = (LinearLayout) findViewById(R.id.ll_admin);
 

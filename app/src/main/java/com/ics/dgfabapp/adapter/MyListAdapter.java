@@ -59,7 +59,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     public void onBindViewHolder(final ViewHolder holder, int position) {
         final MyListData myListData = listdata[position];
         int wtf = position + 3;
-        if(sessionManager.isLoggedIn().equals("Admin") || sessionManager.isLoggedIn().equals("Sales"))
+        if(sessionManager.isLoggedIn().equals("Admin") || sessionManager.isLoggedIn().equals("Sales") || sessionManager.isLoggedIn().equals("Manufacturer") )
         {
            holder.action_card.setVisibility(View.VISIBLE);
            holder.action.setVisibility(View.GONE);
