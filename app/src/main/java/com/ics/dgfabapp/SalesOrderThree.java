@@ -15,7 +15,7 @@ public class SalesOrderThree extends AppCompatActivity {
         setContentView(R.layout.activity_sales_order_three);
 
         companyNmae = (TextView) findViewById(R.id.companyNmae);
-        String text = "<font color=#000000>Company Name :</font> <font color=#FF929191>Fast Track USA</font>";
+        String text = "<font color=#000000>Company :</font> <font color=#FF929191>Fast Track USA , San diego</font>";
         companyNmae.setText(Html.fromHtml(text));
 
         area = (TextView) findViewById(R.id.area);
@@ -35,7 +35,7 @@ public class SalesOrderThree extends AppCompatActivity {
         prepareOrder.setText(Html.fromHtml(text3));
 
         companyNmae1 = (TextView) findViewById(R.id.companyNmae1);
-        String text11 = "<font color=#000000>Company Name :</font> <font color=#FF929191>Fast Track USA</font>";
+        String text11 = "<font color=#000000>Company :</font> <font color=#FF929191>Fast Track USA , San diego</font>";
         companyNmae1.setText(Html.fromHtml(text11));
 
         area1 = (TextView) findViewById(R.id.area1);

@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Invoice1"></activity>
-        <activity android:name=".SeenProfile"></activity>
-        <activity android:name=".Invoice2"></activity>
-        <activity android:name=".Invoice3">\</activity>
-        <activity android:name=".Boxes_Activities.Company_lIst"></activity>
+        <activity android:name=".CreateOrder"></activity>
+        <activity android:name=".Invoice1" />
+        <activity android:name=".SeenProfile" />
+        <activity android:name=".Invoice2" />
+        <activity android:name=".Invoice3">
+            \
+        </activity>
+        <activity android:name=".Boxes_Activities.Company_lIst" />
         <activity android:name=".Boxes_Activities.Sales_Order" />
         <activity android:name=".Tracked_Order" />
         <activity android:name=".Order_Informations" />
@@ -33,8 +36,9 @@
         <activity android:name=".CompanyList" />
         <activity android:name=".DealersList" />
         <activity android:name=".Call_splash_screen" />
-        <activity android:name=".SalesOrderThree"></activity>
-        <activity android:name=".SalesOrderTwo"></activity>
+        <activity android:name=".SalesOrderThree" />
+        <activity android:name=".SalesOrderTwo" />
+        <activity android:name=".My_tender" />
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
