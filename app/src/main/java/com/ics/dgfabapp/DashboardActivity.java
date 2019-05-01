@@ -259,7 +259,7 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
         recycler_view = (RecyclerView) findViewById(R.id.recycler_view);
 
        //  tooltipView = new TooltipView(btn);
-        if(sessionManager.isLoggedIn().equals("Admin") )
+        if(sessionManager.isLoggedIn().equals("Manufacturer") )
         {
             admin_choose.setVisibility(View.VISIBLE);
             myListData = new MyListData[]
@@ -273,7 +273,7 @@ public class DashboardActivity extends AppCompatActivity  implements   Navigatio
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 
                     };
-        }  if(sessionManager.isLoggedIn().equals("Sales") )
+        }  if(sessionManager.isLoggedIn().equals("Sales")  || sessionManager.isLoggedIn().equals("Dealer") )
         {
             myListData = new MyListData[]
                     {
