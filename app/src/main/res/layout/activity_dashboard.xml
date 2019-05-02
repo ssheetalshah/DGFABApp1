@@ -55,7 +55,6 @@
                     android:layout_below="@+id/toolbar_post"
                     android:layout_margin="5dp"
                     android:orientation="horizontal"
-                    android:visibility="gone"
                     android:weightSum="1">
 
                     <LinearLayout
@@ -76,7 +75,6 @@
                             android:visibility="gone" />
 
                         <Spinner
-                            android:visibility="gone"
                             android:id="@+id/spin_category"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
