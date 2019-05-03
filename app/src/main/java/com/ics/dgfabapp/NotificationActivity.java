@@ -1,0 +1,31 @@
+package com.ics.dgfabapp;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+
+public class NotificationActivity extends AppCompatActivity {
+    Toolbar toolbar_noti;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_notification);
+
+        toolbar_noti = (Toolbar) findViewById(R.id.toolbar_noti);
+        toolbar_noti.setNavigationIcon(R.drawable.home);
+        toolbar_noti.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   stopActivityTask();
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+}

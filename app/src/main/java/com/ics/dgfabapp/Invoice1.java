@@ -16,6 +16,7 @@ public class Invoice1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invoice1);
+
         toolbar_inv1 = (Toolbar) findViewById(R.id.toolbar_inv1);
         toolbar_inv1.setNavigationIcon(R.drawable.home);
         toolbar_inv1.setNavigationOnClickListener(new View.OnClickListener() {

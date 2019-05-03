@@ -19,7 +19,7 @@ public class Sales_Order extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales__order);
 
-        toolbar_sale1 = (Toolbar) findViewById(R.id.toolbar_sale2);
+        toolbar_sale1 = (Toolbar) findViewById(R.id.toolbar_sale1);
         toolbar_sale1.setNavigationIcon(R.drawable.home);
         toolbar_sale1.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
