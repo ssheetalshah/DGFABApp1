@@ -31,6 +31,9 @@ public class SeenProfile extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SeenProfile.this,CreateOrder.class);
                 startActivity(intent);
+//                if ()************accountant login******************************
+//                Intent intent = new Intent(SeenProfile.this,Creat_sales_accountant.class);
+//                startActivity(intent);
             }
         });
         add_com = findViewById(R.id.add_com);
