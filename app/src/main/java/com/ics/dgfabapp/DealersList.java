@@ -19,27 +19,35 @@ public class DealersList extends AppCompatActivity {
     Toolbar toolbar_dealers;
     TextView addDealer;
     FrameLayout frame_deal;
-    LinearLayout to_avli ,hidethatsht,ccccc;
+    LinearLayout to_avli, hidethatsht, ccccc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dealers_list);
 
+
         to_avli = findViewById(R.id.to_avli);
         ccccc = findViewById(R.id.ccccc);
         frame_deal = findViewById(R.id.frame_deal);
         hidethatsht = findViewById(R.id.hidethatsht);
-        addDealer = (TextView)findViewById(R.id.addDealer);
-        toolbar_dealers = (Toolbar)findViewById(R.id.toolbar_dealers);
-      //  toolbar_dealers.setNavigationIcon(R.drawable.arrow);
+        addDealer = (TextView) findViewById(R.id.addDealer);
+        toolbar_dealers = (Toolbar) findViewById(R.id.toolbar_dealers);
+        toolbar_dealers.setNavigationIcon(R.drawable.home);
+        toolbar_dealers.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   stopActivityTask();
+                onBackPressed();
+            }
+        });
         to_avli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            hidethatsht.setVisibility(View.GONE);
+                hidethatsht.setVisibility(View.GONE);
                 addDealer.setVisibility(View.GONE);
-                Intent intent = new Intent(DealersList.this , SeenProfile.class);
-                intent.putExtra("dealname" ,"Best Footwear Dealers" );
+                Intent intent = new Intent(DealersList.this, SeenProfile.class);
+                intent.putExtra("dealname", "Best Footwear Dealers");
                 startActivity(intent);
 //                FragmentManager fragmentManager = getSupportFragmentManager();
 //                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -51,8 +59,8 @@ public class DealersList extends AppCompatActivity {
             public void onClick(View v) {
                 hidethatsht.setVisibility(View.GONE);
                 addDealer.setVisibility(View.GONE);
-                Intent intent = new Intent(DealersList.this , SeenProfile.class);
-                intent.putExtra("dealname" ,"Krishna Clothes" );
+                Intent intent = new Intent(DealersList.this, SeenProfile.class);
+                intent.putExtra("dealname", "Krishna Clothes");
                 startActivity(intent);
 //                FragmentManager fragmentManager = getSupportFragmentManager();
 //                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -72,7 +80,7 @@ public class DealersList extends AppCompatActivity {
         addDealer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DealersList.this,AddDealer.class);
+                Intent intent = new Intent(DealersList.this, AddDealer.class);
                 startActivity(intent);
             }
         });

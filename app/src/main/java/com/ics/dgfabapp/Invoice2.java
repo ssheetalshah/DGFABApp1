@@ -2,18 +2,30 @@ package com.ics.dgfabapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.view.View;
 import android.widget.TextView;
 
 public class Invoice2 extends AppCompatActivity {
-
-    TextView companyNmae, area,orderNo, orderDt, prepareOrder;
-    TextView companyNmae1,area1, orderNo1, orderDt1, prepareOrder1;
+    Toolbar toolbar_inv2;
+    TextView companyNmae, area, orderNo, orderDt, prepareOrder;
+    TextView companyNmae1, area1, orderNo1, orderDt1, prepareOrder1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invoice2);
+
+        toolbar_inv2 = (Toolbar) findViewById(R.id.toolbar_inv2);
+        toolbar_inv2.setNavigationIcon(R.drawable.home);
+        toolbar_inv2.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   stopActivityTask();
+                onBackPressed();
+            }
+        });
 
         companyNmae = (TextView) findViewById(R.id.companyNmae);
         String text = "<font color=#000000>Compan Name :</font> <font color=#FF929191>Fast Track USA, San diego</font>";
@@ -56,6 +68,8 @@ public class Invoice2 extends AppCompatActivity {
         prepareOrder1.setText(Html.fromHtml(text31));
     }
 
-
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }

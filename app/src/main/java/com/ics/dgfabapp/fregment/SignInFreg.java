@@ -33,7 +33,7 @@ public class SignInFreg extends Fragment implements
    // SessionManager sessionManager;
    Spinner spin;
 
-    String[] country = {"Manufacturer", "Dealer", "Buyer"};
+    String[] country = {"Manufacturer", "Dealer", "Buyer","Affiliate Marketing"};
    // String[] country = {"Admin", "Sales", "Dispatch","Accountant","Purchase","Logistic" , "IT"};
     public SessionManager sessionManager;
     private Spinner spin_category;

@@ -82,16 +82,27 @@
                 android:textSize="18dp"
                 android:typeface="serif" />
 
+            <TextView
+                android:text="Dealer"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:typeface="serif"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
             <LinearLayout
                 android:layout_below="@id/user_profile_photo"
                 android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginRight="12dp"
-                android:layout_marginLeft="12dp"
-                android:weightSum="3">
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:weightSum="2">
                 <TextView
+                    android:visibility="gone"
                     android:layout_weight="1"
                     android:id="@+id/close_Deal"
                     android:layout_width="match_parent"
@@ -108,6 +119,7 @@
                     android:id="@+id/create_order"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
                     android:background="@drawable/bt_bg"
                     android:gravity="center"
                     android:text="Create Order"
@@ -119,7 +131,7 @@
                     android:id="@+id/add_com"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/bt_bg"
                     android:gravity="center"
                     android:text="Connections"

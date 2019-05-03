@@ -27,12 +27,20 @@
                 android:textSize="13dp" />
 
         </LinearLayout>
-        <Spinner
-            android:id="@+id/spin_category"
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/bt_bg"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:textSize="13dp"
-            android:entries="@array/emp_details"></Spinner>
+            android:gravity="center"
+            android:layout_height="45dp">
+            <Spinner
+                android:id="@+id/spin_category"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="13dp"
+                android:entries="@array/emp_details"></Spinner>
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

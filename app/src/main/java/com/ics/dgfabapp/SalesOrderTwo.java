@@ -2,10 +2,13 @@ package com.ics.dgfabapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.view.View;
 import android.widget.TextView;
 
 public class SalesOrderTwo extends AppCompatActivity {
+    Toolbar toolbar_sale2;
     TextView companyNmae, area,orderNo, orderDt, prepareOrder;
     TextView companyNmae1,area1, orderNo1, orderDt1, prepareOrder1;
 
@@ -13,6 +16,16 @@ public class SalesOrderTwo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales_order_two);
+
+        toolbar_sale2 = (Toolbar) findViewById(R.id.toolbar_sale2);
+        toolbar_sale2.setNavigationIcon(R.drawable.home);
+        toolbar_sale2.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   stopActivityTask();
+                onBackPressed();
+            }
+        });
 
         companyNmae = (TextView) findViewById(R.id.companyNmae);
         String text = "<font color=#000000>Company :</font> <font color=#FF929191>Fast Track USA , San diego</font>";
@@ -53,5 +66,10 @@ public class SalesOrderTwo extends AppCompatActivity {
         prepareOrder1 = (TextView) findViewById(R.id.prepareOrder1);
         String text31 = "<font color=#000000>Preparing Order By :</font> <font color=#FF929191>John</font>";
         prepareOrder1.setText(Html.fromHtml(text31));
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

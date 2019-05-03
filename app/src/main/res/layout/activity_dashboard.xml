@@ -50,6 +50,8 @@
 
                 <LinearLayout
                     android:id="@+id/admin_choose"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/toolbar_post"
@@ -61,6 +63,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
+
                         android:orientation="horizontal"
                         android:weightSum="1">
 
@@ -80,8 +83,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="0.3"
                             android:background="@drawable/bt_bg"
-                            android:entries="@array/emp_details"
-                            >
+                            android:entries="@array/emp_details">
 
                         </Spinner>
 
@@ -90,6 +92,7 @@
 
                     <android.support.design.widget.FloatingActionButton
                         android:id="@+id/fab"
+                        android:visibility="gone"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_alignParentRight="true"
@@ -285,6 +288,7 @@
                                     android:weightSum="3">
 
                                     <TextView
+                                        android:id="@+id/totalSale"
                                         android:layout_width="match_parent"
                                         android:layout_height="30dp"
                                         android:layout_marginRight="2.5dp"

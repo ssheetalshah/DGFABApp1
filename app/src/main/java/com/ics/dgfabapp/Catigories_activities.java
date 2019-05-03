@@ -3,6 +3,7 @@ package com.ics.dgfabapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -11,6 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class Catigories_activities extends AppCompatActivity {
+    Toolbar toolbar_catAct;
     String namewa;
     TextView nmae;
     LinearLayout lingo;
@@ -23,6 +25,16 @@ public class Catigories_activities extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catigories_activities);
+
+        toolbar_catAct = (Toolbar) findViewById(R.id.toolbar_catAct);
+        toolbar_catAct.setNavigationIcon(R.drawable.home);
+        toolbar_catAct.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   stopActivityTask();
+                onBackPressed();
+            }
+        });
         namewa = getIntent().getStringExtra("namewa");
 
         nmae = (TextView) findViewById(R.id.nmae);
@@ -53,5 +65,10 @@ public class Catigories_activities extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

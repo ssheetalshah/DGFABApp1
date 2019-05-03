@@ -39,7 +39,7 @@ public class BillingHistory extends AppCompatActivity {
         toolbar_billHistory = (Toolbar)findViewById(R.id.toolbar_billHistory);
 
         toolbar_billHistory = (Toolbar) findViewById(R.id.toolbar_billHistory);
-        //toolbar_billHistory.setNavigationIcon(R.drawable.arrow);
+        toolbar_billHistory.setNavigationIcon(R.drawable.home);
         toolbar_billHistory.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -5,21 +5,20 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CompanyList">
+    tools:context=".TotalSalesActivity">
 
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/toolbar_companyList"
+        android:id="@+id/toolbar_sdetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:fitsSystemWindows="true"
-        tools:ignore="MissingConstraints">
+        android:fitsSystemWindows="true">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Company List"
+            android:text="Total Sale"
             android:textColor="#fff"
             android:textSize="15dp"
             android:textStyle="normal"
@@ -28,17 +27,16 @@
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
-        android:padding="5dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <ListView
-            android:id="@+id/listView"
+            android:id="@+id/totalSaleList"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:ignore="MissingConstraints" />
+            android:layout_height="match_parent">
+
+        </ListView>
 
     </LinearLayout>
-
 </LinearLayout>

@@ -5,17 +5,17 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class AddDealer extends AppCompatActivity {
-    Toolbar toolbar_adDeal;
+public class SalesOrderDetail extends AppCompatActivity {
+    Toolbar toolbar_sorddetail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_dealer);
+        setContentView(R.layout.activity_sales_order_detail);
 
-        toolbar_adDeal = (Toolbar) findViewById(R.id.toolbar_adDeal);
-        toolbar_adDeal.setNavigationIcon(R.drawable.home);
-        toolbar_adDeal.setNavigationOnClickListener(new View.OnClickListener() {
+        toolbar_sorddetail = (Toolbar) findViewById(R.id.toolbar_sorddetail);
+        toolbar_sorddetail.setNavigationIcon(R.drawable.home);
+        toolbar_sorddetail.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //   stopActivityTask();

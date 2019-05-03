@@ -3,6 +3,7 @@ package com.ics.dgfabapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,11 +15,22 @@ public class CompanyList extends AppCompatActivity {
     ListView listView;
     TextView textView;
     String[] listItem;
+    Toolbar toolbar_companyList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company_list);
+
+        toolbar_companyList = (Toolbar) findViewById(R.id.toolbar_companyList);
+        toolbar_companyList.setNavigationIcon(R.drawable.home);
+        toolbar_companyList.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   stopActivityTask();
+                onBackPressed();
+            }
+        });
 
         listView=(ListView)findViewById(R.id.listView);
         textView=(TextView)findViewById(R.id.textView);
@@ -38,5 +50,10 @@ public class CompanyList extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

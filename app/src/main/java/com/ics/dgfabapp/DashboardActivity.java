@@ -8,6 +8,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,14 +16,19 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -47,13 +53,17 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     MyListData[] myListData;
     View view;
     Context c;
-    TextView sale_inv,invoice_tv,tv_blueInvoice,tv_invoiceGreen;
+    TextView sale_inv, invoice_tv, tv_blueInvoice, tv_invoiceGreen;
     Button btn;
-   public static String namestatic;
+    public static String namestatic;
     SessionManager sessionManager;
     LinearLayout admin_choose, ll_admin;
     CardView other_details;
-    String spin_category;
+    public static String spin_category;
+    ListView listView;
+    ArrayList<String> list;
+    ArrayAdapter<String> adapter;
+    TextView totalSale;
 
     TextView nonsale, nonsaletime, text_Company, pending_sales, salesord3;
 
@@ -108,6 +118,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         invoice_tv = findViewById(R.id.invoice_tv);
         tv_blueInvoice = findViewById(R.id.tv_blueInvoice);
         tv_invoiceGreen = findViewById(R.id.tv_invoiceGreen);
+        totalSale = findViewById(R.id.totalSale);
         Calendar startDate = Calendar.getInstance();
         startDate.add(Calendar.MONTH, -2);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layoutxyz);
@@ -154,13 +165,39 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             }
         });
         salesord3.setOnClickListener(new View.OnClickListener() {
+                                         @Override
+                                         public void onClick(View v) {
+                                             Intent intent = new Intent(DashboardActivity.this, SalesOrderThree.class);
+                                             startActivity(intent);
+                                         }
+                                     }
+        );
+
+        totalSale.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, SalesOrderThree.class);
+                Intent intent = new Intent(DashboardActivity.this,TotalSalesActivity.class);
                 startActivity(intent);
             }
-        }
-        );
+        });
+
+       /* listView = (ListView) findViewById(R.id.listView);
+
+        list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Pineapple");
+        list.add("Orange");
+        list.add("Lychee");
+        list.add("Gavava");
+        list.add("Peech");
+        list.add("Melon");
+        list.add("Watermelon");
+        list.add("Papaya");
+
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);
+        listView.setAdapter(adapter);*/
+
         admin_choose = (LinearLayout) findViewById(R.id.admin_choose);
         ll_admin = (LinearLayout) findViewById(R.id.ll_admin);
 
@@ -231,56 +268,52 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         //*********************************************************************************
 
 
-                if (spin_category.equals("Sales") || spin_category.equals("Manufacturer") || spin_category.equals("Dealer")) {
-                    other_details.setVisibility(View.GONE);
-                    ll_admin.setVisibility(View.VISIBLE);
-                }
+        if (spin_category.equals("Sales") || spin_category.equals("Manufacturer") || spin_category.equals("Dealer")) {
+            other_details.setVisibility(View.GONE);
+            ll_admin.setVisibility(View.VISIBLE);
+        }
 
-                if (spin_category.equals("Dispatch")) {
-                    other_details.setVisibility(View.VISIBLE);
-                    ll_admin.setVisibility(View.GONE);
+        if (spin_category.equals("Dispatch")) {
+            other_details.setVisibility(View.VISIBLE);
+            ll_admin.setVisibility(View.GONE);
 
-                    nonsale.setText("Action For Dispatch ");
-                    nonsaletime.setText("2 pm");
+            nonsale.setText("Action For Dispatch ");
+            nonsaletime.setText("2 pm");
 
-                }
-                if (spin_category.equals("Accountant")) {
-                    other_details.setVisibility(View.VISIBLE);
-                    ll_admin.setVisibility(View.GONE);
+        }
+        if (spin_category.equals("Accountant")) {
+            other_details.setVisibility(View.VISIBLE);
+            ll_admin.setVisibility(View.GONE);
 
-                    nonsale.setText("Action For Accountant ");
-                    nonsaletime.setText("3 pm");
-                }
-                if (spin_category.equals("Purchase")) {
-                    other_details.setVisibility(View.VISIBLE);
-                    ll_admin.setVisibility(View.GONE);
+            nonsale.setText("Action For Accountant ");
+            nonsaletime.setText("3 pm");
+        }
+        if (spin_category.equals("Purchase")) {
+            other_details.setVisibility(View.VISIBLE);
+            ll_admin.setVisibility(View.GONE);
 
-                    nonsale.setText("Action For Purchase ");
-                    nonsaletime.setText("2.30 pm");
-                }
-                if (spin_category.equals("Logistic")) {
-                    other_details.setVisibility(View.VISIBLE);
-                    ll_admin.setVisibility(View.GONE);
+            nonsale.setText("Action For Purchase ");
+            nonsaletime.setText("2.30 pm");
+        }
+        if (spin_category.equals("Logistic")) {
+            other_details.setVisibility(View.VISIBLE);
+            ll_admin.setVisibility(View.GONE);
 
-                    nonsale.setText("Action For Logistic ");
-                    nonsaletime.setText("1 pm");
-                }
-                if (spin_category.equals("IT")) {
-                    other_details.setVisibility(View.VISIBLE);
-                    ll_admin.setVisibility(View.GONE);
+            nonsale.setText("Action For Logistic ");
+            nonsaletime.setText("1 pm");
+        }
+        if (spin_category.equals("IT")) {
+            other_details.setVisibility(View.VISIBLE);
+            ll_admin.setVisibility(View.GONE);
 
-                    nonsale.setText("Action For IT ");
-                    nonsaletime.setText("4 pm");
-                }
+            nonsale.setText("Action For IT ");
+            nonsaletime.setText("4 pm");
+        }
 
-                if (spin_category.equals("-Select-")) {
-                    other_details.setVisibility(View.GONE);
-                    ll_admin.setVisibility(View.VISIBLE);
-                }
-
-
-
-
+        if (spin_category.equals("-Select-")) {
+            other_details.setVisibility(View.GONE);
+            ll_admin.setVisibility(View.VISIBLE);
+        }
 
 
         //*********************************************************************************************
@@ -389,6 +422,35 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         //   mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.navimenu, menu);
+        MenuItem searchViewItem = menu.findItem(R.id.app_bar_search);
+      /*  final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchViewItem);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                searchView.clearFocus();
+             *//*   if(list.contains(query)){
+                    adapter.getFilter().filter(query);
+                }else{
+                    Toast.makeText(MainActivity.this, "No Match found",Toast.LENGTH_LONG).show();
+                }*//*
+                return false;
+
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                return false;
+            }
+        });*/
+        return super.onCreateOptionsMenu(menu);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

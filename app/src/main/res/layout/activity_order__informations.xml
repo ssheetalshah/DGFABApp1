@@ -4,9 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/toolbar_post"
+        android:id="@+id/toolbarOrdInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
@@ -19,9 +20,10 @@
             android:textColor="#fff"
             android:textSize="15dp"
             android:textStyle="normal"
-            android:typeface="serif"   />
+            android:typeface="serif" />
 
     </android.support.v7.widget.Toolbar>
+
     <LinearLayout
         android:id="@+id/proidsdfsd"
         android:layout_width="match_parent"

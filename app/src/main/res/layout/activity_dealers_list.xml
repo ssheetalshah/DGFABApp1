@@ -37,11 +37,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.50"
                 android:drawableLeft="@drawable/prr"
-                android:drawablePadding="8dp"
+                android:drawablePadding="5dp"
                 android:gravity="start|center"
                 android:text="Add Dealer"
                 android:textColor="#fff"
-                android:textSize="16dp"
+                android:textSize="14dp"
                 android:typeface="serif" />
         </LinearLayout>
 

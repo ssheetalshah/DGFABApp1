@@ -3,6 +3,7 @@ package com.ics.dgfabapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
@@ -14,6 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Products_Act extends AppCompatActivity {
+    Toolbar toolbar_prodact;
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
@@ -22,6 +24,16 @@ public class Products_Act extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_products_);
+
+        toolbar_prodact = (Toolbar) findViewById(R.id.toolbar_prodact);
+        toolbar_prodact.setNavigationIcon(R.drawable.home);
+        toolbar_prodact.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   stopActivityTask();
+                onBackPressed();
+            }
+        });
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.ex_lv);
 

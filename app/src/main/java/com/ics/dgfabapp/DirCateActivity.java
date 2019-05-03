@@ -3,6 +3,7 @@ package com.ics.dgfabapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
@@ -18,19 +19,29 @@ public class DirCateActivity extends AppCompatActivity {
     ExpandableListView ex_lvdir;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
-
+    Toolbar toolbar_datcat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dir_cate);
+
+        toolbar_datcat = (Toolbar) findViewById(R.id.toolbar_datcat);
+        toolbar_datcat.setNavigationIcon(R.drawable.home);
+        toolbar_datcat.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   stopActivityTask();
+                onBackPressed();
+            }
+        });
         // get the listview
         ex_lvdir = (ExpandableListView) findViewById(R.id.ex_lvdir);
 
         // preparing list data
         prepareListData();
 
-       listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
 
         // setting list adapter
         ex_lvdir.setAdapter(listAdapter);
@@ -135,5 +146,10 @@ public class DirCateActivity extends AppCompatActivity {
         listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
         listDataChild.put(listDataHeader.get(1), nowShowing);
         listDataChild.put(listDataHeader.get(2), comingSoon);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
