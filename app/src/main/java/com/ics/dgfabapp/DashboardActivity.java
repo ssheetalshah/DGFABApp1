@@ -112,6 +112,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         setContentView(R.layout.activity_dashboard_navigation);
         sessionManager = new SessionManager(DashboardActivity.this);
         spin_category = getIntent().getStringExtra("spin_category");
+        Toast.makeText(DashboardActivity.this, "sub "+spin_category, Toast.LENGTH_SHORT).show();
 //******************************************************************************************
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -693,6 +694,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             startActivity(intent);
         }else if (id == R.id.nav_department) {
             Intent intent = new Intent(DashboardActivity.this, Department_Activity.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_occassion) {
+            Intent intent = new Intent(DashboardActivity.this, OccassionActivity.class);
             startActivity(intent);
         }
 

@@ -12,8 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ics.dgfabapp.AddProduct;
 import com.ics.dgfabapp.R;
 import com.ics.dgfabapp.adapter.ExpandableListAdapter;
 
@@ -26,6 +28,7 @@ public class ProductFrag extends Fragment {
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
+    TextView add_product;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -42,6 +45,15 @@ public class ProductFrag extends Fragment {
 
         // get the listview
         expListView = (ExpandableListView) view.findViewById(R.id.ex_lv);
+        add_product=view.findViewById(R.id.add_product);
+
+        add_product.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), AddProduct.class);
+                startActivity(intent);
+            }
+        });
 
         // preparing list data
         prepareListData();
