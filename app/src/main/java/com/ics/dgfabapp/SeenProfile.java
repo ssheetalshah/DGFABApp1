@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.ics.dgfabapp.adapter.ProfileAdapter;
 
+import static com.ics.dgfabapp.DashboardActivity.whatsname;
+
 public class SeenProfile extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
@@ -29,11 +31,29 @@ public class SeenProfile extends AppCompatActivity {
         create_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SeenProfile.this,CreateOrder.class);
-                startActivity(intent);
+                if(create_order.getText().toString().equals("Create Sales Order"))
+                {
+                    Intent intent = new Intent(SeenProfile.this , Creat_sales_accountant.class);
+                    startActivity(intent);
+                }else {
+                    Intent intent = new Intent(SeenProfile.this,DirCateActivity.class);
+                    startActivity(intent);
+                }
+
+
 //                if ()************accountant login******************************
 //                Intent intent = new Intent(SeenProfile.this,Creat_sales_accountant.class);
 //                startActivity(intent);
+            }
+        });
+        if(whatsname.equals("Accountant"))
+        {
+            create_order.setText("Create Sales Order");
+        }
+        create_order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
         add_com = findViewById(R.id.add_com);

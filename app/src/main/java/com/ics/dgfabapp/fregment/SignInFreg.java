@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ public class SignInFreg extends Fragment implements
         AdapterView.OnItemSelectedListener {
     Button signIn;
     EditText cusid , pass;
+    LinearLayout seli;
     //  View view;
     Spinner spinalo;
    // SessionManager sessionManager;
@@ -46,7 +48,7 @@ public class SignInFreg extends Fragment implements
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View vx = inflater.inflate(R.layout.fragment_sign_in_freg, container, false);
-        spin_category = (Spinner) vx.findViewById(R.id.spin_category);
+
         return vx;
 
 //        return inflater.inflate(R.layout.fragment_sign_in_freg, container, false);
@@ -60,23 +62,30 @@ public class SignInFreg extends Fragment implements
         //  getActivity().setTitle("BookMark List");
         spin = view.findViewById(R.id.spinalo);
         cusid = view.findViewById(R.id.cusid);
+     //   seli = view.findViewById(R.id.seli);
+        Toast.makeText(getActivity(), "we are in the frag", Toast.LENGTH_SHORT).show();
+        spin_category = (Spinner) view.findViewById(R.id.spin_categorypx);
+
         pass = view.findViewById(R.id.passedt);
-        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(spin.getItemAtPosition(position).equals("Buyer"))
-                {
-                    spin_category.setVisibility(View.GONE);
-                }else {
-                    spin_category.setVisibility(View.VISIBLE);
-                }
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
+//        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                if(spin.getItemAtPosition(position).equals("Buyer"))
+//                {
+//                    Toast.makeText(view.getContext(), "item wa is"+spin_category.getSelectedItem(), Toast.LENGTH_SHORT).show();
+//                    spin_category.setVisibility(View.GONE);
+//                }else {
+//                    spin_category.setVisibility(View.VISIBLE);
+//                    Toast.makeText(view.getContext(), "item wa is"+spin.getSelectedItem(), Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
         sessionManager = new SessionManager(getActivity());
         //Getting the instance of Spinner and applying OnItemSelectedListener on it
 //        spin = (Spinner)view.findViewById(R.id.spin12);
@@ -91,6 +100,14 @@ public class SignInFreg extends Fragment implements
                 sessionManager.setLogin(true,spin.getItemAtPosition(position).toString());
                 cusid.setText(spin.getItemAtPosition(position).toString());
                 pass.setText(spin.getItemAtPosition(position).toString());
+                if(spin.getItemAtPosition(position).equals("Buyer") ||spin.getItemAtPosition(position).equals("Affiliate Marketing") )
+                {
+                    Toast.makeText(view.getContext(), "item wa is"+spin_category.getSelectedItem(), Toast.LENGTH_SHORT).show();
+              //      seli.setVisibility(View.GONE);
+                }else {
+//                    seli.setVisibility(View.VISIBLE);
+                    Toast.makeText(view.getContext(), "item wa is"+spin.getSelectedItem(), Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
