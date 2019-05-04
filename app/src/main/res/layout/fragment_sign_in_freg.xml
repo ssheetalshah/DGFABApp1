@@ -28,16 +28,19 @@
 
         </LinearLayout>
         <LinearLayout
-            android:orientation="vertical"
-            android:background="@drawable/bt_bg"
+            android:layout_marginBottom="15dp"
             android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bt_bg"
             android:gravity="center"
-            android:layout_height="45dp">
+            android:orientation="vertical">
             <Spinner
                 android:id="@+id/spin_category"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:textSize="13dp"
+                style="@style/mySpinnerItemStyle"
+                android:popupBackground="#ffffff"
                 android:entries="@array/emp_details"></Spinner>
         </LinearLayout>
 

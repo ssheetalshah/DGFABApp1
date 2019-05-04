@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Cashier_Activity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_addProd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="Cashier"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:typeface="serif" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cashier"
+        android:scaleType="fitXY"
+        />
+
+
+</LinearLayout>
