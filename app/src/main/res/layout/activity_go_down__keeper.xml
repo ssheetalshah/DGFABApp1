@@ -275,7 +275,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:textStyle="bold"
-                    android:text="Cyhcle Counting"
+                    android:text="Cycle Counting"
                     android:gravity="center"
                     android:layout_gravity="center"
                     android:textAlignment="center"
