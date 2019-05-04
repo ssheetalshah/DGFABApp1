@@ -41,6 +41,22 @@
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
             android:title="Chat" />
+        <item
+            android:id="@+id/nav_Attandence"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Attandance" />
+        <item
+            android:id="@+id/nav_cashier"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Cashier" />
+        <item
+            android:id="@+id/nav_gownkeeper"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Godown Keeper" />
+        <item
+            android:id="@+id/nav_department"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Department" />
 
 
     </group>

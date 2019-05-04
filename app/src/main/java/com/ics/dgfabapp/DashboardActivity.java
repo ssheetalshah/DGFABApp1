@@ -491,6 +491,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         }else if (id == R.id.nav_accountant) {
             Intent intent = new Intent(DashboardActivity.this, Accountant_Cr_Db.class);
             startActivity(intent);
+        }else if (id == R.id.nav_Attandence) {
+            Intent intent = new Intent(DashboardActivity.this, Attandence_Activity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layoutxyz);
