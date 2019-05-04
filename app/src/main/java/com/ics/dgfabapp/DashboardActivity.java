@@ -64,6 +64,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     ArrayList<String> list;
     ArrayAdapter<String> adapter;
     TextView totalSale;
+    Spinner spin_admin_category;
 
     TextView nonsale, nonsaletime, text_Company, pending_sales, salesord3;
 
@@ -119,6 +120,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         tv_blueInvoice = findViewById(R.id.tv_blueInvoice);
         tv_invoiceGreen = findViewById(R.id.tv_invoiceGreen);
         totalSale = findViewById(R.id.totalSale);
+        spin_admin_category=findViewById(R.id.spin_category1);
+
+
         Calendar startDate = Calendar.getInstance();
         startDate.add(Calendar.MONTH, -2);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layoutxyz);
@@ -266,6 +270,72 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                                }
         );
         //*********************************************************************************
+        spin_admin_category.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if (spin_admin_category.getItemAtPosition(position).equals("Sales")) {
+                    other_details.setVisibility(View.GONE);
+                    ll_admin.setVisibility(View.VISIBLE);
+                }
+                if (spin_admin_category.getItemAtPosition(position).equals("Admin")) {
+                    other_details.setVisibility(View.GONE);
+                    ll_admin.setVisibility(View.VISIBLE);
+                }
+
+                    if (spin_admin_category.getItemAtPosition(position).equals("Dispatch")) {
+                        other_details.setVisibility(View.VISIBLE);
+                        ll_admin.setVisibility(View.GONE);
+
+                        nonsale.setText("Action For Dispatch ");
+                        nonsaletime.setText("2 pm");
+
+                    }
+                    if (spin_admin_category.getItemAtPosition(position).equals("Accountant")) {
+                        other_details.setVisibility(View.VISIBLE);
+                        ll_admin.setVisibility(View.GONE);
+
+                        nonsale.setText("Action For Accountant ");
+                        nonsaletime.setText("3 pm");
+                    }
+                    if (spin_admin_category.getItemAtPosition(position).equals("Purchase")) {
+                        other_details.setVisibility(View.VISIBLE);
+                        ll_admin.setVisibility(View.GONE);
+
+                        nonsale.setText("Action For Purchase ");
+                        nonsaletime.setText("2.30 pm");
+                    }
+                    if (spin_admin_category.getItemAtPosition(position).equals("Logistic")) {
+                        other_details.setVisibility(View.VISIBLE);
+                        ll_admin.setVisibility(View.GONE);
+
+                        nonsale.setText("Action For Logistic ");
+                        nonsaletime.setText("1 pm");
+                    }
+                    if (spin_admin_category.getItemAtPosition(position).equals("IT")) {
+                        other_details.setVisibility(View.VISIBLE);
+                        ll_admin.setVisibility(View.GONE);
+
+                        nonsale.setText("Action For IT ");
+                        nonsaletime.setText("4 pm");
+                    }
+
+                    if (spin_admin_category.getItemAtPosition(position).equals("-Select-")) {
+                        other_details.setVisibility(View.GONE);
+                        ll_admin.setVisibility(View.VISIBLE);
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+
+        //*****************************************************************************
 
 
         if (spin_category.equals("Sales") || spin_category.equals("Manufacturer") || spin_category.equals("Dealer")) {
