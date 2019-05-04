@@ -333,4 +333,16 @@
 
 
 
+    <Button
+        android:id="@+id/signIn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+       android:layout_margin="50dp"
+        android:background="@drawable/btn_shape"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
+
+
+
 </LinearLayout>
