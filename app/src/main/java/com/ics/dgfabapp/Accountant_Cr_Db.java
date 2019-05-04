@@ -1,7 +1,9 @@
 package com.ics.dgfabapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebView;
 
@@ -111,6 +113,51 @@ public class Accountant_Cr_Db extends AppCompatActivity {
         webView1 = findViewById(R.id.account1);
         webView1.loadData(html1, "text/html; charset=UTF-8",null);
 
+
+//        webView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(Accountant_Cr_Db.this,Credit_Note.class);
+//                startActivity(intent);
+//            }
+//        });
+
+        webView.setOnTouchListener(new View.OnTouchListener(){
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction()==MotionEvent.ACTION_MOVE){
+                    return false;
+                }
+
+                if (event.getAction()==MotionEvent.ACTION_UP){
+                    Intent intent=new Intent(Accountant_Cr_Db.this,Credit_Note.class);
+                    startActivity(intent);
+
+                }
+
+                return false;
+            }
+        });
+
+
+        webView1.setOnTouchListener(new View.OnTouchListener(){
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction()==MotionEvent.ACTION_MOVE){
+                    return false;
+                }
+
+                if (event.getAction()==MotionEvent.ACTION_UP){
+                    Intent intent=new Intent(Accountant_Cr_Db.this,Debit_note.class);
+                    startActivity(intent);
+
+                }
+
+                return false;
+            }
+        });
 
 
     }
