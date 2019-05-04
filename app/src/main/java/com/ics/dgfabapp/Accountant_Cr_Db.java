@@ -21,7 +21,7 @@ public class Accountant_Cr_Db extends AppCompatActivity {
             "<body>\n" +
             "\n" +
             "<div class=\"container\">\n" +
-            "  <h2>Accounting</h2>\n" +
+            "  <h3>Accounting</h3>\n" +
             "             \n" +
             "  <table class=\"table table-bordered\">\n" +
             "    <thead>\n" +
@@ -66,7 +66,7 @@ public class Accountant_Cr_Db extends AppCompatActivity {
             "<body>\n" +
             "\n" +
             "<div class=\"container\">\n" +
-            "  <h2>Accounting</h2>\n" +
+            "  <h2></h2>\n" +
             "             \n" +
             "  <table class=\"table table-bordered\">\n" +
             "    <thead>\n" +
