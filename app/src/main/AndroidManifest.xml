@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Attandence_Activity"></activity>
+        <activity android:name=".GoDown_Keeper"></activity>
+        <activity android:name=".Cashier_Activity" />
+        <activity android:name=".Attandence_Activity" />
         <activity android:name=".Debit_note" />
         <activity android:name=".Credit_Note" />
         <activity android:name=".Accountant_Cr_Db" />
