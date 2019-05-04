@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.ics.dgfabapp.DashboardActivity;
 import com.ics.dgfabapp.LoginActivity;
+import com.ics.dgfabapp.Main2Activity;
 import com.ics.dgfabapp.NavigationActivity;
 import com.ics.dgfabapp.R;
 import com.ics.dgfabapp.SeasonManager.SessionManager;
@@ -107,9 +108,13 @@ public class SignInFreg extends Fragment implements
                 {
                     Intent intent = new Intent(getActivity(), NavigationActivity.class);
                     startActivity(intent);
+                }
+                if (spin.getSelectedItem().equals("Affiliate Marketing")) {
+                    Intent intent = new Intent(getActivity(), Main2Activity.class);
+                    startActivity(intent);
 
-
-                }else {
+                }
+                else {
                     Intent intent = new Intent(getActivity(), DashboardActivity.class);
                     intent.putExtra("spin_category", spin_category.getSelectedItem().toString());
                     startActivity(intent);

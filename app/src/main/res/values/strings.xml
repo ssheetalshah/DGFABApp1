@@ -30,6 +30,7 @@
 
     <string-array name="emp_details">
         <item>-Select-</item>
+        <item>Admin</item>
         <item>Sales</item>
         <item>Dispatch</item>
         <item>Accountant</item>
