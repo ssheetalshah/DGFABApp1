@@ -36,7 +36,7 @@ public class Accountant_Cr_Db extends AppCompatActivity {
             "    </thead>\n" +
             "    <tbody>\n" +
             "      <tr>\n" +
-            "        <td>Namo Textile Saree Center</td>\n" +
+            "        <td>Kryptonite Constructions</td>\n" +
             "        <td>Rs. 70000</td>\n" +
             "        <td>abc conferm</td>\n" +
 //            "        <td> </td>\n" +
@@ -81,7 +81,7 @@ public class Accountant_Cr_Db extends AppCompatActivity {
             "    </thead>\n" +
             "    <tbody>\n" +
             "      <tr>\n" +
-            "        <td>Birla cement Center</td>\n" +
+            "        <td>Zylker India</td>\n" +
             "        <td>Rs. 50000</td>\n" +
             "        <td>abc xyz</td>\n" +
 //            "        <td> </td>\n" +
