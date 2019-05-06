@@ -28,7 +28,7 @@ public class SeenProfile extends AppCompatActivity {
         viewPager=(ViewPager)findViewById(R.id.pager);
         create_order=(TextView) findViewById(R.id.create_order);
 
-        create_order.setOnClickListener(new View.OnClickListener() {
+      /*  create_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(create_order.getText().toString().equals("Create Sales Order"))
@@ -45,16 +45,17 @@ public class SeenProfile extends AppCompatActivity {
 //                Intent intent = new Intent(SeenProfile.this,Creat_sales_accountant.class);
 //                startActivity(intent);
             }
-        });
-//        try {
-//            if(whatsname.equals("Accountant"))
-//            {
-//                create_order.setText("Create Sales Order");
-//            }
-//        }catch (Exception e)
-//        {
-//            e.printStackTrace();
-//        }
+        });*/
+
+        try {
+            if(whatsname.equals("Accountant"))
+            {
+                create_order.setText("Create Sales Order");
+            }
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
 
         create_order.setOnClickListener(new View.OnClickListener() {
             @Override

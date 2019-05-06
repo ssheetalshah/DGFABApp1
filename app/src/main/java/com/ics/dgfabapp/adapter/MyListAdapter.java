@@ -124,7 +124,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         });
 
         if (position == 0) {
-            holder.callid.setText("Call At 2PM");
+            holder.callid.setText("2 PM");
             holder.phone.setImageResource(R.drawable.phone_red);
             holder.phone.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -147,7 +147,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             });
         }
         if (position == 1) {
-            holder.callid.setText("Message At 2PM");
+            holder.messageId.setText("6 PM");
             holder.chat.setImageResource(R.drawable.message_red);
             holder.chat.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -170,7 +170,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             });
         }
         if (position == 2) {
-            holder.callid.setText("Chat At 2PM");
+            holder.chatId.setText("4 PM");
             holder.tell.setImageResource(R.drawable.chat_red);
             holder.tell.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -194,7 +194,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
 
         }
         if (position == 3) {
-            holder.callid.setText("Meeting At 2PM");
+            holder.meetId.setText("8 PM");
             holder.meet.setImageResource(R.drawable.meeting_red);
             holder.meet.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -215,7 +215,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             });
         }
         if (position == 4) {
-            holder.callid.setText("Meeting At 2PM");
+            holder.meetId.setText("2 PM");
             holder.meet.setImageResource(R.drawable.meeting_red);
             holder.meet.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -280,7 +280,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         private LinearLayout libelow;
         CardView action_card, action;
         ImageView phone, meet, chat, tell;
-        TextView callid;
+        TextView callid,meetId,chatId,messageId;
         TextView nonsale, nonsaletime;
 
         //   SessionManager sessionManager;
@@ -297,6 +297,9 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             this.textView2df = itemView.findViewById(R.id.textView2df);
             this.textView2sdf = itemView.findViewById(R.id.textView2sdf);
             callid = itemView.findViewById(R.id.callid);
+            meetId = itemView.findViewById(R.id.meetId);
+            chatId = itemView.findViewById(R.id.chatId);
+            messageId = itemView.findViewById(R.id.messageId);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout);
             libelow = (LinearLayout) itemView.findViewById(R.id.libelow);
             this.phone = (ImageView) itemView.findViewById(R.id.phone);

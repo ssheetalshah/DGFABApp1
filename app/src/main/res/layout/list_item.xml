@@ -142,17 +142,17 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_weight="1.3"
-                    android:gravity="start"
-                    android:layout_gravity="start"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1.3"
+                    android:gravity="start">
 
                     <ImageView
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/add_icon"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp" />
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/add_icon" />
 
                 </LinearLayout>
 
@@ -165,52 +165,118 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="3dp"
+                    android:gravity="center"
                     android:orientation="horizontal"
                     android:weightSum="5">
 
 
                     <TextView
-                        android:id="@+id/callid"
-                        android:gravity="center"
-                        android:textColor="#000"
-                        android:textSize="12dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="sdfsdf" />
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#000"
+                        android:textSize="12dp" />
 
-                    <ImageView
-                        android:id="@+id/phone"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="28dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/phone" />
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/meet"
+                        <ImageView
+                            android:id="@+id/phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:src="@drawable/phone" />
+
+                        <TextView
+                            android:id="@+id/callid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="#000"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="28dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/meetingg" />
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/tell"
+                        <ImageView
+                            android:id="@+id/meet"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:src="@drawable/meetingg" />
+
+                        <TextView
+                            android:id="@+id/meetId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="#000"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="28dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/chating" />
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/chat"
+                        <ImageView
+                            android:id="@+id/tell"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/chating" />
+
+                        <TextView
+                            android:visibility="visible"
+                            android:id="@+id/chatId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="#000"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="28dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/message" />
+                        android:orientation="vertical">
 
+                        <ImageView
+                            android:id="@+id/chat"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/message" />
+
+                        <TextView
+                            android:id="@+id/messageId"
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="#000"
+                            android:textSize="10dp" />
+                    </LinearLayout>
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
