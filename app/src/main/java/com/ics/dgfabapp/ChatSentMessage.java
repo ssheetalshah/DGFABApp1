@@ -15,7 +15,7 @@ public class ChatSentMessage extends AppCompatActivity {
 
         name = (TextView)findViewById(R.id.name);
         data = getIntent().getExtras().getString("Name");
-        //data = getIntent().getExtras().getString("Name");
+      data = getIntent().getExtras().getString("Name");
         name.setText(data);
     }
 }
