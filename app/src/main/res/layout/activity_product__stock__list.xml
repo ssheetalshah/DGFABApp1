@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start|center"
-            android:text="Ocassion"
+            android:text="Product Stock"
             android:textColor="#fff"
             android:textSize="18dp"
             android:typeface="serif" />
@@ -227,15 +227,15 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/add_pro"
+        android:id="@+id/transfer_stock"
         android:layout_marginTop="20dp"
         android:textColor="#fff"
         android:textAllCaps="false"
-       android:layout_margin="30dp"
+        android:layout_margin="30dp"
         android:background="@drawable/btn_shape"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit" />
+        android:text="Transfer Stock" />
 
 
 </LinearLayout>
