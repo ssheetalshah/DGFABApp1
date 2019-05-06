@@ -28,33 +28,33 @@ public class SeenProfile extends AppCompatActivity {
         viewPager=(ViewPager)findViewById(R.id.pager);
         create_order=(TextView) findViewById(R.id.create_order);
 
-        create_order.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(create_order.getText().toString().equals("Create Sales Order"))
-                {
-                    Intent intent = new Intent(SeenProfile.this , Creat_sales_accountant.class);
-                    startActivity(intent);
-                }else {
-                    Intent intent = new Intent(SeenProfile.this,DirCateActivity.class);
-                    startActivity(intent);
-                }
-
-
-//                if ()************accountant login******************************
-//                Intent intent = new Intent(SeenProfile.this,Creat_sales_accountant.class);
-//                startActivity(intent);
-            }
-        });
-//        try {
-//            if(whatsname.equals("Accountant"))
-//            {
-//                create_order.setText("Create Sales Order");
+//        create_order.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(create_order.getText().toString().equals("Create Sales Order"))
+//                {
+//                    Intent intent = new Intent(SeenProfile.this , Creat_sales_accountant.class);
+//                    startActivity(intent);
+//                }else {
+//                    Intent intent = new Intent(SeenProfile.this,DirCateActivity.class);
+//                    startActivity(intent);
+//                }
+//
+//
+////                if ()************accountant login******************************
+////                Intent intent = new Intent(SeenProfile.this,Creat_sales_accountant.class);
+////                startActivity(intent);
 //            }
-//        }catch (Exception e)
-//        {
-//            e.printStackTrace();
-//        }
+//        });
+        try {
+            if(whatsname.equals("Accountant"))
+            {
+                create_order.setText("Create Sales Order");
+            }
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
 
         create_order.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +63,7 @@ public class SeenProfile extends AppCompatActivity {
                     if(whatsname.equals("Accountant")) {
                         Intent intent = new Intent(SeenProfile.this, DirCateActivity.class);
                         startActivity(intent);
+                        whatsname ="";
                     }
                 }catch (Exception e)
                 {
@@ -84,6 +85,7 @@ public class SeenProfile extends AppCompatActivity {
         add_com.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 add_com.setText("Connected");
             }
         });

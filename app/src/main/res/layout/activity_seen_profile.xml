@@ -122,6 +122,7 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/bt_bg"
                     android:gravity="center"
+                    android:drawableRight="@drawable/add"
                     android:text="Create Order"
                     android:textColor="@color/colorPrimary"
                     android:textSize="12dp"
