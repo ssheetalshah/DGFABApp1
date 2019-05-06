@@ -62,6 +62,11 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="Ocassion" />
 
+        <item
+            android:id="@+id/nav_stock_Clear"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Product Stock" />
+
 
     </group>
 

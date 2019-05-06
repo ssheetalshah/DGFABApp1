@@ -698,6 +698,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         }else if (id == R.id.nav_occassion) {
             Intent intent = new Intent(DashboardActivity.this, OccassionActivity.class);
             startActivity(intent);
+        }else if (id == R.id.nav_stock_Clear) {
+            Intent intent = new Intent(DashboardActivity.this, Product_Stock_clearence.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layoutxyz);
