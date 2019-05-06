@@ -207,6 +207,16 @@
         </android.support.v7.widget.CardView>
     </LinearLayout>
 
+    <Button
+        android:id="@+id/add_pro"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+       android:layout_margin="30dp"
+        android:background="@drawable/btn_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
 
 
 </LinearLayout>
