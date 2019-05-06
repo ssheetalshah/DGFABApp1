@@ -60,7 +60,7 @@ public class Catigories_activities extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 // TODO Auto-generated method stub
-                Intent intent = new Intent(Catigories_activities.this, CreateOrder.class);
+                Intent intent = new Intent(Catigories_activities.this, Creat_sales_accountant.class);
                 intent.putExtra("namewa", namewa);
                 startActivity(intent);
             }

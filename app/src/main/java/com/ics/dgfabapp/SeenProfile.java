@@ -46,14 +46,30 @@ public class SeenProfile extends AppCompatActivity {
 //                startActivity(intent);
             }
         });
-        if(whatsname.equals("Accountant"))
-        {
-            create_order.setText("Create Sales Order");
-        }
+//        try {
+//            if(whatsname.equals("Accountant"))
+//            {
+//                create_order.setText("Create Sales Order");
+//            }
+//        }catch (Exception e)
+//        {
+//            e.printStackTrace();
+//        }
+
         create_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                try {
+                    if(whatsname.equals("Accountant")) {
+                        Intent intent = new Intent(SeenProfile.this, DirCateActivity.class);
+                        startActivity(intent);
+                    }
+                }catch (Exception e)
+                {
+                    Intent intent = new Intent(SeenProfile.this, CreateOrder.class);
+                    startActivity(intent);
+                    e.printStackTrace();
+                }
             }
         });
         add_com = findViewById(R.id.add_com);
