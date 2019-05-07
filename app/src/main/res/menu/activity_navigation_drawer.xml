@@ -72,6 +72,23 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="GRN" />
 
+        <item
+            android:id="@+id/nav_master"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Master" />
+        <item
+            android:id="@+id/nav_voucher"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Voucher" />
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Report" />
+        <item
+            android:id="@+id/nav_utility"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Utility" />
+
     </group>
 
     <item android:title="Communicate">
