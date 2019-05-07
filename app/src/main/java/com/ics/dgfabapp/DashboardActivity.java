@@ -755,7 +755,12 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_wallet) {
+        }if(id == R.id.nav_follow)
+        {
+          Intent intent = new Intent(DashboardActivity.this , Followers.class);
+          startActivity(intent);
+        }
+        else if (id == R.id.nav_wallet) {
             Intent intent = new Intent(DashboardActivity.this, WalletActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_gallery) {
