@@ -5,17 +5,17 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class OccassionActivity extends AppCompatActivity {
-    Toolbar toolbar_occu;
+public class GRNActivity extends AppCompatActivity {
+    Toolbar toolbar_grn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_occassion);
+        setContentView(R.layout.activity_grn);
 
-        toolbar_occu = (android.support.v7.widget.Toolbar)findViewById(R.id.toolbar_occu);
-        toolbar_occu.setNavigationIcon(R.drawable.home);
-        toolbar_occu.setNavigationOnClickListener(new View.OnClickListener() {
+        toolbar_grn = (Toolbar)findViewById(R.id.toolbar_grn);
+        toolbar_grn.setNavigationIcon(R.drawable.home);
+        toolbar_grn.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();

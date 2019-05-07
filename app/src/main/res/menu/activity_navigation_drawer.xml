@@ -6,19 +6,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="Home" />
         <item
             android:id="@+id/nav_wallet"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="Wallet" />
         <item
             android:id="@+id/nav_addprod"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="Add Product" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="Profile" />
         <item
             android:id="@+id/nav_order"
@@ -39,34 +39,38 @@
             android:title="My Tender" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="Chat" />
         <item
             android:id="@+id/nav_Attandence"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="Attandance" />
         <item
             android:id="@+id/nav_cashier"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="Cashier" />
         <item
             android:id="@+id/nav_gownkeeper"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="Godown Keeper" />
         <item
             android:id="@+id/nav_department"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="Department" />
         <item
             android:id="@+id/nav_occassion"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="Ocassion" />
 
         <item
             android:id="@+id/nav_stock_Clear"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="Product Stock" />
 
+        <item
+            android:id="@+id/nav_grn"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="GRN" />
 
     </group>
 
@@ -74,11 +78,11 @@
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_menu_slideshow"
                 android:title="Billing History" />
             <item
                 android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_menu_slideshow"
                 android:title="Logout" />
         </menu>
     </item>

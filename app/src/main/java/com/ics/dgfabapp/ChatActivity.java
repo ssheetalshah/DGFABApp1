@@ -21,9 +21,11 @@ public class ChatActivity extends AppCompatActivity {
 
         ll_chat = findViewById(R.id.chat_next1);
         student_name_chat = findViewById(R.id.student_name_chat);
-        student_nacdme_chat = findViewById(R.id.student_nacdme_chat);
         S = student_name_chat.getText().toString();
+
+        student_nacdme_chat = findViewById(R.id.student_nacdme_chat);
         S1 = student_nacdme_chat.getText().toString();
+
         toolbar_chat = (Toolbar) findViewById(R.id.toolbar_chat);
         toolbar_chat.setNavigationIcon(R.drawable.home);
         toolbar_chat.setNavigationOnClickListener(new View.OnClickListener() {
