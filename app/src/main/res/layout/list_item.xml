@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/relativeLayout"
@@ -33,7 +32,7 @@
 
 
             <LinearLayout
-                android:id="@+id/libelow"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -58,6 +57,7 @@
                     android:weightSum="1">
 
                     <LinearLayout
+                        android:id="@+id/libelow"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -149,6 +149,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:id="@+id/aid"
                         android:layout_marginTop="5dp"
                         android:src="@drawable/add_icon"
                         android:layout_width="match_parent"

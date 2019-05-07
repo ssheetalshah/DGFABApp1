@@ -53,6 +53,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     MyListData[] myListData;
     View view;
     public static String whatsname;
+    Menu nav_Menu;
     Context c;
     TextView sale_inv, invoice_tv, tv_blueInvoice, tv_invoiceGreen;
     Button btn;
@@ -117,7 +118,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         sale_inv = findViewById(R.id.sale_inv);
-
         /* start 2 months ago from now */
         pending_sales = findViewById(R.id.pending_sales);
         salesord3 = findViewById(R.id.salesord3);
@@ -154,37 +154,47 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         if(spin_category.equals("Admin"))
         {
             spin_categorypx.setSelection(1);
-        } else{
+        } else
+            {
             if(spin_category.equals("Sales"))
             {
                 spin_categorypx.setSelection(2);
                 spin_category =  spin_categorypx.getSelectedItem().toString();
+                spin_categorypx.setVisibility(View.INVISIBLE);
             //    spin_categorypx.setVisibility(View.GONE);
-            } if(spin_category.equals("Dispatch"))
+            }
+            if(spin_category.equals("Dispatch"))
             {
                 spin_categorypx.setSelection(3);
                 spin_category =  spin_categorypx.getSelectedItem().toString();
+                spin_categorypx.setVisibility(View.INVISIBLE);
              //   spin_categorypx.setVisibility(View.GONE);
-            } if(spin_category.equals("Accountant"))
+            }
+            if(spin_category.equals("Accountant"))
             {
                 spin_categorypx.setSelection(4);
                 spin_category =  spin_categorypx.getSelectedItem().toString();
              //   spin_categorypx.setVisibility(View.GONE);
                 whatsname = "Accountant";
-            } if(spin_category.equals("Purchase"))
+                spin_categorypx.setVisibility(View.INVISIBLE);
+            }
+            if(spin_category.equals("Purchase"))
             {
                 spin_categorypx.setSelection(5);
                 spin_category =  spin_categorypx.getSelectedItem().toString();
              //   spin_categorypx.setVisibility(View.GONE);
+                spin_categorypx.setVisibility(View.INVISIBLE);
             } if(spin_category.equals("Logistic"))
             {
                 spin_categorypx.setSelection(6);
                 spin_category =  spin_categorypx.getSelectedItem().toString();
+                spin_categorypx.setVisibility(View.INVISIBLE);
               //  spin_categorypx.setVisibility(View.GONE);
             } if(spin_category.equals("IT"))
             {
                 spin_categorypx.setSelection(7);
                 spin_category =  spin_categorypx.getSelectedItem().toString();
+                spin_categorypx.setVisibility(View.INVISIBLE);
 
             }
         //
@@ -220,28 +230,24 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 if (spin_categorypx.getSelectedItem().equals("Accountant")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
-
                     nonsale.setText("Action For Accountant ");
                     nonsaletime.setText("3 pm");
                 }
                 if ( spin_categorypx.getSelectedItem().equals("Purchase")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
-
                     nonsale.setText("Action For Purchase ");
                     nonsaletime.setText("2.30 pm");
                 }
                 if (spin_categorypx.getSelectedItem().equals("Logistic")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
-
                     nonsale.setText("Action For Logistic ");
                     nonsaletime.setText("1 pm");
                 }
                 if ( spin_categorypx.getSelectedItem().equals("IT")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
-
                     nonsale.setText("Action For IT ");
                     nonsaletime.setText("4 pm");
                 }
@@ -258,7 +264,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             }
         });
 
-        spin_categorypx.setVisibility(View.INVISIBLE);
+
         sale_inv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -332,8 +338,10 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
 
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_viewabc);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView = (NavigationView) findViewById(R.id.nav_viewabc);
+         nav_Menu = navigationView.getMenu();
         /* end after 2 months from now */
         Calendar endDate = Calendar.getInstance();
         endDate.add(Calendar.MONTH, 2);
@@ -399,6 +407,14 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 if (spin_admin_category.getItemAtPosition(position).equals("Sales")) {
                     other_details.setVisibility(View.GONE);
                     ll_admin.setVisibility(View.VISIBLE);
+                    Toast.makeText(c, "sales", Toast.LENGTH_SHORT).show();
+                    nav_Menu.findItem(R.id.nav_accountant).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_Attandence).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_cashier).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_department).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_gownkeeper).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_occassion).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_stock_Clear).setVisible(false);
                 }
                 if (spin_admin_category.getItemAtPosition(position).equals("Admin")) {
                     other_details.setVisibility(View.GONE);
@@ -512,8 +528,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
         recycler_view = (RecyclerView) findViewById(R.id.recycler_view);
 
+
         //  tooltipView = new TooltipView(btn);
-        if (sessionManager.isLoggedIn().equals("Manufacturer")) {
+        if (sessionManager.isLoggedIn().equals("Manufacturer") || sessionManager.isLoggedIn().equals("Dealer") ) {
             admin_choose.setVisibility(View.VISIBLE);
             myListData = new MyListData[]
                     {
@@ -527,7 +544,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
                     };
         }
-        if (sessionManager.isLoggedIn().equals("Sales") || sessionManager.isLoggedIn().equals("Dealer")) {
+        if (sessionManager.isLoggedIn().equals("Sales")) {
             myListData = new MyListData[]
                     {
                             new MyListData("Nike INC", R.drawable.prof, "Indore"),
@@ -539,15 +556,18 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 
                     };
+
+        //    nav_Menu.findItem(R.id.nav_).setVisible(false);
+
         }
         if (sessionManager.isLoggedIn().equals("Dispatch")) {
             myListData = new MyListData[]
                     {
-                            new MyListData("Nike INC", R.drawable.prof, "Indore"),
-                            new MyListData("Lakme Cosmetics", R.drawable.prof, "Bhopal"),
-                            new MyListData("Fast Track", R.drawable.prof, "USA"),
-                            new MyListData("Ansian Paints", R.drawable.prof, "Bombay"),
-                            new MyListData("Peter England", R.drawable.prof, "Bangalore"),
+                            new MyListData("Om Logistics LTD.", R.drawable.prof, "Indore"),
+                            new MyListData("Girnar Logistics Pvt. Ltd.", R.drawable.prof, "Bhopal"),
+                            new MyListData("Inland World Logistics", R.drawable.prof, "USA"),
+                            new MyListData("B.R.C. Logistics", R.drawable.prof, "Bombay"),
+                            new MyListData("CCI Logistics Ltd", R.drawable.prof, "Bangalore"),
 //                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 
@@ -556,11 +576,11 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         if (sessionManager.isLoggedIn().equals("Accountant")) {
             myListData = new MyListData[]
                     {
-                            new MyListData("Nike INC", R.drawable.prof, "Indore"),
-                            new MyListData("Lakme Cosmetics", R.drawable.prof, "Bhopal"),
-                            new MyListData("Fast Track", R.drawable.prof, "USA"),
-                            new MyListData("Ansian Paints", R.drawable.prof, "Bombay"),
-                            new MyListData("Peter England", R.drawable.prof, "Bangalore"),
+                            new MyListData("Parag Sharma", R.drawable.prof, "Indore"),
+                            new MyListData("Sheetal Somesh", R.drawable.prof, "Bhopal"),
+                            new MyListData("Vivek Kale", R.drawable.prof, "USA"),
+                            new MyListData("Krishna", R.drawable.prof, "Bombay"),
+
 //                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 
@@ -582,11 +602,10 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         if (sessionManager.isLoggedIn().equals("Logistic")) {
             myListData = new MyListData[]
                     {
-                            new MyListData("Nike INC", R.drawable.prof, "Indore"),
-                            new MyListData("Lakme Cosmetics", R.drawable.prof, "Bhopal"),
-                            new MyListData("Fast Track", R.drawable.prof, "USA"),
-                            new MyListData("Ansian Paints", R.drawable.prof, "Bombay"),
-                            new MyListData("Peter England", R.drawable.prof, "Bangalore"),
+                            new MyListData("Nilesh", R.drawable.prof, "Indore"),
+                            new MyListData("Pankaj ", R.drawable.prof, "Bhopal"),
+                            new MyListData("Raghvendra", R.drawable.prof, "USA"),
+                            new MyListData("Raj", R.drawable.prof, "Bombay")
 //                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 

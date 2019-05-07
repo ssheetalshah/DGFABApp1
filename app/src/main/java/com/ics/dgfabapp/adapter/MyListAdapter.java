@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.ics.dgfabapp.Calender_Activity;
 import com.ics.dgfabapp.Call_splash_screen;
 import com.ics.dgfabapp.ChatActivity;
 import com.ics.dgfabapp.NavigationActivity;
@@ -235,6 +236,13 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
                 }
             });
         }
+        holder.aid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext() , Calender_Activity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
       /*  holder.textView2sdf.setText(String.valueOf(wtf).concat("PM"));
 //        if(position ==0)
 //        {
@@ -279,7 +287,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         public RelativeLayout relativeLayout;
         private LinearLayout libelow;
         CardView action_card, action;
-        ImageView phone, meet, chat, tell;
+        ImageView phone, meet, chat, tell,aid;
         TextView callid;
         TextView nonsale, nonsaletime;
 
@@ -309,6 +317,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             this.nonsale = itemView.findViewById(R.id.nonsale);
             action = itemView.findViewById(R.id.action);
             textView2 = itemView.findViewById(R.id.textView2);
+            aid = itemView.findViewById(R.id.aid);
             //   View yourView = findViewById(R.id.your_view);
 
         }
