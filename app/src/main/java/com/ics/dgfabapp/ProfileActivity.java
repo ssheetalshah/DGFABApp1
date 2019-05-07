@@ -5,6 +5,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,11 +17,23 @@ public class ProfileActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
     TextView add_com;
+    Toolbar toolbar_prff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        toolbar_prff = (Toolbar)findViewById(R.id.toolbar_prff);
+        toolbar_prff.setNavigationIcon(R.drawable.home);
+        toolbar_prff.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   stopActivityTask();
+                onBackPressed();
+            }
+        });
+
         tabLayout=(TabLayout)findViewById(R.id.tab_layout);
         viewPager=(ViewPager)findViewById(R.id.pager);
         add_com = findViewById(R.id.add_com);
@@ -94,5 +107,10 @@ public class ProfileActivity extends AppCompatActivity {
 
             }
         });*/
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
