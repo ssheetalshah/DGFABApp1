@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_master"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="Master"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:typeface="serif" />
+
+    </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_atten"
@@ -25,74 +42,68 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="none"
-        >
+        android:scrollbars="none">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-
-            >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
 
-                >
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Account Master"
-                    android:textColor="@color/colorPrimaryDark"
                     android:textAlignment="center"
-                    android:textSize="15dp"
-                    />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15dp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_height="45dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginTop="20dp"
+                android:background="@drawable/bt_bg"
+                android:orientation="vertical">
 
-                >
-            <SearchView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:queryHint="Search"
-                >
+                <SearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:queryHint="Search">
 
-            </SearchView>
+                </SearchView>
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
 
                 <LinearLayout
-                    android:weightSum="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <LinearLayout
-                        android:layout_weight="0.3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
                         android:orientation="horizontal">
 
                         <TextView
@@ -104,11 +115,12 @@
                             android:textSize="14sp" />
 
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
@@ -122,10 +134,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
@@ -139,10 +151,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
@@ -158,34 +170,35 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:weightSum="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <LinearLayout
-                        android:layout_weight="0.3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:textAlignment="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="1."
+                            android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
@@ -198,10 +211,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
@@ -214,17 +227,17 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:textAlignment="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="2000"
+                            android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
@@ -233,34 +246,35 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:weightSum="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <LinearLayout
-                        android:layout_weight="0.3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:textAlignment="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="2."
+                            android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
@@ -273,10 +287,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
@@ -289,17 +303,17 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:textAlignment="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="50000"
+                            android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
@@ -308,34 +322,35 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:weightSum="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <LinearLayout
-                        android:layout_weight="0.3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:textAlignment="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="3."
+                            android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
@@ -348,10 +363,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
@@ -364,17 +379,17 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:textAlignment="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="200,000"
+                            android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
@@ -383,34 +398,35 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:weightSum="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <LinearLayout
-                        android:layout_weight="0.3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:textAlignment="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="4."
+                            android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
@@ -423,10 +439,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
@@ -439,17 +455,17 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:textAlignment="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="47000"
+                            android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
@@ -458,34 +474,35 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:weightSum="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <LinearLayout
-                        android:layout_weight="0.3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:textAlignment="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="5."
+                            android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
@@ -498,10 +515,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
@@ -514,17 +531,17 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_weight="0.25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
+                        android:layout_weight="0.25"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:textAlignment="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="568,000"
+                            android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
@@ -532,14 +549,6 @@
 
                 </LinearLayout>
             </LinearLayout>
-
-
-
-
-
-
-
-
 
 
         </LinearLayout>

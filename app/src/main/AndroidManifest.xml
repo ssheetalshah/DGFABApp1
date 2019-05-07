@@ -25,6 +25,7 @@
         <activity android:name=".Cashier_Activity" />
         <activity android:name=".Attandence_Activity" />
         <activity android:name=".Debit_note" />
+        <activity android:name=".BillingHistory"></activity>
         <activity android:name=".Credit_Note" />
         <activity android:name=".Accountant_Cr_Db" />
         <activity android:name=".Creat_sales_accountant" />
