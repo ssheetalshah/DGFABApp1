@@ -71,7 +71,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     TextView totalSale;
     Spinner spin_admin_category;
 
-    TextView nonsale, nonsaletime, text_Company, pending_sales, salesord3;
+    TextView nonsale, nonsaletime, text_Company, pending_sales, salesord3,text_Company_name;
 
     private HorizontalCalendar horizontalCalendar;
 
@@ -125,6 +125,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         salesord3 = findViewById(R.id.salesord3);
         spin_categorypx = findViewById(R.id.spin_category1);
         text_Company = findViewById(R.id.sale_inv);
+        text_Company_name = findViewById(R.id.text_Company);
         invoice_tv = findViewById(R.id.invoice_tv);
         tv_blueInvoice = findViewById(R.id.tv_blueInvoice);
         orderli = findViewById(R.id.orderli);
@@ -276,6 +277,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     recycler_view.setVisibility(View.GONE);
                     nonsale.setText("Action For Dispatch");
                     nonsaletime.setText("2 pm");
+                    text_Company_name.setText("Manohar lal");
                     nav_Menu.findItem(R.id.nav_accountant).setVisible(false);
                     nav_Menu.findItem(R.id.nav_Attandence).setVisible(false);
                     nav_Menu.findItem(R.id.nav_cashier).setVisible(false);
@@ -290,6 +292,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     ll_admin.setVisibility(View.GONE);
                     nonsale.setText("Action For Accountant ");
                     nonsaletime.setText("3 pm");
+                    text_Company_name.setText("Ramdeen Pal");
                     nav_Menu.findItem(R.id.nav_accountant).setVisible(false);
                     nav_Menu.findItem(R.id.nav_Attandence).setVisible(false);
                     nav_Menu.findItem(R.id.nav_cashier).setVisible(false);
@@ -304,6 +307,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     ll_admin.setVisibility(View.GONE);
                     nonsale.setText("Action For Purchase ");
                     nonsaletime.setText("2.30 pm");
+                    text_Company_name.setText("Shri hari");
                     nav_Menu.findItem(R.id.nav_accountant).setVisible(false);
                     nav_Menu.findItem(R.id.nav_Attandence).setVisible(false);
                     nav_Menu.findItem(R.id.nav_cashier).setVisible(false);
@@ -317,6 +321,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     ll_admin.setVisibility(View.GONE);
                     nonsale.setText("Action For Logistic ");
                     nonsaletime.setText("1 pm");
+                    text_Company_name.setText("Manohar lal");
                     nav_Menu.findItem(R.id.nav_accountant).setVisible(false);
                     nav_Menu.findItem(R.id.nav_Attandence).setVisible(false);
                     nav_Menu.findItem(R.id.nav_cashier).setVisible(false);
@@ -329,6 +334,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     ll_admin.setVisibility(View.GONE);
                     nonsale.setText("Action For IT ");
                     nonsaletime.setText("4 pm");
+                    text_Company_name.setText("Sharma Engineer");
                     nav_Menu.findItem(R.id.nav_accountant).setVisible(false);
                     nav_Menu.findItem(R.id.nav_Attandence).setVisible(false);
                     nav_Menu.findItem(R.id.nav_cashier).setVisible(false);
@@ -510,6 +516,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
                     nonsale.setText("Action For Dispatch ");
                     nonsaletime.setText("2 pm");
+                    text_Company_name.setText("Manohar lal");
 
                 }
                 if (spin_admin_category.getItemAtPosition(position).equals("Accountant")) {
@@ -518,6 +525,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
                     nonsale.setText("Action For Accountant ");
                     nonsaletime.setText("3 pm");
+                    text_Company_name.setText("Aditya");
                 }
                 if (spin_admin_category.getItemAtPosition(position).equals("Purchase")) {
                     other_details.setVisibility(View.VISIBLE);
@@ -525,6 +533,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
                     nonsale.setText("Action For Purchase ");
                     nonsaletime.setText("2.30 pm");
+                    text_Company_name.setText("Ram pal");
                 }
                 if (spin_admin_category.getItemAtPosition(position).equals("Logistic")) {
                     other_details.setVisibility(View.VISIBLE);
@@ -532,6 +541,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
                     nonsale.setText("Action For Logistic ");
                     nonsaletime.setText("1 pm");
+                    text_Company_name.setText("S K Raman");
                 }
                 if (spin_admin_category.getItemAtPosition(position).equals("IT")) {
                     other_details.setVisibility(View.VISIBLE);
@@ -539,6 +549,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
                     nonsale.setText("Action For IT ");
                     nonsaletime.setText("4 pm");
+                    text_Company_name.setText("Sharma Engineer");
                 }
 
                 if (spin_admin_category.getItemAtPosition(position).equals("-Select-")) {
