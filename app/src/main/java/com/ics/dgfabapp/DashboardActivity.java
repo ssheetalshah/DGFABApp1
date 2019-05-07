@@ -27,6 +27,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -47,13 +48,17 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     RecyclerView recycler_view;
     MyListData[] myListData;
+    CircleImageView dunb_image;
     View view;
     public static String whatsname;
     Menu nav_Menu;
+    ImageView aid2;
     Context c;
     TextView sale_inv, invoice_tv, tv_blueInvoice, tv_invoiceGreen;
     Button btn;
@@ -114,16 +119,17 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         sessionManager = new SessionManager(DashboardActivity.this);
         spin_category = getIntent().getStringExtra("spin_category");
         Toast.makeText(DashboardActivity.this, "sub " + spin_category, Toast.LENGTH_SHORT).show();
-
+        dunb_image = findViewById(R.id.dunb_image);
     //******************************************************************************************
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         sale_inv = findViewById(R.id.sale_inv);
+        aid2 = findViewById(R.id.aid2);
         /* start 2 months ago from now */
         pending_sales = findViewById(R.id.pending_sales);
         salesord3 = findViewById(R.id.salesord3);
         spin_categorypx = findViewById(R.id.spin_category1);
+        spin_admin_category = findViewById(R.id.spin_category1);
         text_Company = findViewById(R.id.sale_inv);
         text_Company_name = findViewById(R.id.text_Company);
         invoice_tv = findViewById(R.id.invoice_tv);
@@ -135,11 +141,28 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         navigationView = (NavigationView) findViewById(R.id.nav_viewabc);
         nav_Menu = navigationView.getMenu();
         ll_admin = (LinearLayout) findViewById(R.id.ll_admin);
-        orderli.setOnClickListener(new View.OnClickListener() {
+        aid2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this , Calender_Activity.class);
+                startActivity(intent);
+            }
+        });
+        dunb_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(), "sgdfdgdfgdfg", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(DashboardActivity.this, SeenProfile.class);
+                intent.putExtra("dealname", "Nike Inc");
+
+                v.getContext().startActivity(intent);
+            }
+        });
+        orderli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), "sgdfdgdfgdfg", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(DashboardActivity.this, Call_splash_screen.class);
                 intent.putExtra("dealname", "Nike Inc");
 
                 v.getContext().startActivity(intent);
@@ -157,7 +180,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         nonsaletime = (TextView) findViewById(R.id.nonsaletime);
         tv_invoiceGreen = findViewById(R.id.tv_invoiceGreen);
         totalSale = findViewById(R.id.totalSale);
-        spin_admin_category = findViewById(R.id.spin_category1);
+
         if (spin_category.equals("Admin")) {
             spin_categorypx.setSelection(1);
         } else {
