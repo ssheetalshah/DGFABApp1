@@ -14,13 +14,13 @@ public class Attandence_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_attandence_);
 
         toolbar_atten = (Toolbar) findViewById(R.id.toolbar_atten);
-        toolbar_atten.setNavigationIcon(R.drawable.home);
+      /*  toolbar_atten.setNavigationIcon(R.drawable.home);
         toolbar_atten.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
-        });
+        });*/
     }
 
     @Override
