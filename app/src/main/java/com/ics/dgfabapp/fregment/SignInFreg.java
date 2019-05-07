@@ -30,13 +30,13 @@ public class SignInFreg extends Fragment implements
         AdapterView.OnItemSelectedListener {
     Button signIn;
     EditText cusid , pass;
+    public static String AllKinds;
     LinearLayout seli;
     //  View view;
     Spinner spinalo;
    // SessionManager sessionManager;
    Spinner spin;
-
-    String[] country = {"Manufacturer", "Dealer", "Buyer","Affiliate Marketing" ,"Tally","Recheck"};
+    String[] country = {"Manufacturer", "Dealer", "Buyer","Affiliate Marketing" ,"Tally","Godown Keeper"};
    // String[] country = {"Admin", "Sales", "Dispatch","Accountant","Purchase","Logistic" , "IT"};
     public SessionManager sessionManager;
     private Spinner spin_category;
@@ -66,7 +66,6 @@ public class SignInFreg extends Fragment implements
      //   seli = view.findViewById(R.id.seli);
         Toast.makeText(getActivity(), "we are in the frag", Toast.LENGTH_SHORT).show();
         spin_category = (Spinner) view.findViewById(R.id.spin_categorypx);
-
         pass = view.findViewById(R.id.passedt);
 
 //        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

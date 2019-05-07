@@ -31,6 +31,7 @@
         <activity android:name=".TotalSalesActivity" />
         <activity android:name=".SalesOrderDetail" />
         <activity android:name=".CreateOrder" />
+        <activity android:name=".Calender_Activity"></activity>
         <activity android:name=".Invoice1" />
         <activity android:name=".SeenProfile" />
         <activity android:name=".Invoice2" />

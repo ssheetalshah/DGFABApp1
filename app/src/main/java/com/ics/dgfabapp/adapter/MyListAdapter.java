@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.ics.dgfabapp.Calender_Activity;
 import com.ics.dgfabapp.Call_splash_screen;
 import com.ics.dgfabapp.ChatActivity;
 import com.ics.dgfabapp.NavigationActivity;
@@ -124,7 +125,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         });
 
         if (position == 0) {
-            holder.callid.setText("2 PM");
+            holder.callid.setText("Call At 2PM");
             holder.phone.setImageResource(R.drawable.phone_red);
             holder.phone.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -147,7 +148,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             });
         }
         if (position == 1) {
-            holder.messageId.setText("6 PM");
+            holder.callid.setText("Message At 2PM");
             holder.chat.setImageResource(R.drawable.message_red);
             holder.chat.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -170,7 +171,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             });
         }
         if (position == 2) {
-            holder.chatId.setText("4 PM");
+            holder.callid.setText("Chat At 2PM");
             holder.tell.setImageResource(R.drawable.chat_red);
             holder.tell.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -194,7 +195,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
 
         }
         if (position == 3) {
-            holder.meetId.setText("8 PM");
+            holder.callid.setText("Meeting At 2PM");
             holder.meet.setImageResource(R.drawable.meeting_red);
             holder.meet.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -215,7 +216,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             });
         }
         if (position == 4) {
-            holder.meetId.setText("2 PM");
+            holder.callid.setText("Meeting At 2PM");
             holder.meet.setImageResource(R.drawable.meeting_red);
             holder.meet.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -235,6 +236,13 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
                 }
             });
         }
+        holder.aid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext() , Calender_Activity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
       /*  holder.textView2sdf.setText(String.valueOf(wtf).concat("PM"));
 //        if(position ==0)
 //        {
@@ -279,8 +287,8 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         public RelativeLayout relativeLayout;
         private LinearLayout libelow;
         CardView action_card, action;
-        ImageView phone, meet, chat, tell;
-        TextView callid,meetId,chatId,messageId;
+        ImageView phone, meet, chat, tell,aid;
+        TextView callid;
         TextView nonsale, nonsaletime;
 
         //   SessionManager sessionManager;
@@ -297,9 +305,6 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             this.textView2df = itemView.findViewById(R.id.textView2df);
             this.textView2sdf = itemView.findViewById(R.id.textView2sdf);
             callid = itemView.findViewById(R.id.callid);
-            meetId = itemView.findViewById(R.id.meetId);
-            chatId = itemView.findViewById(R.id.chatId);
-            messageId = itemView.findViewById(R.id.messageId);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout);
             libelow = (LinearLayout) itemView.findViewById(R.id.libelow);
             this.phone = (ImageView) itemView.findViewById(R.id.phone);
@@ -312,6 +317,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             this.nonsale = itemView.findViewById(R.id.nonsale);
             action = itemView.findViewById(R.id.action);
             textView2 = itemView.findViewById(R.id.textView2);
+            aid = itemView.findViewById(R.id.aid);
             //   View yourView = findViewById(R.id.your_view);
 
         }
