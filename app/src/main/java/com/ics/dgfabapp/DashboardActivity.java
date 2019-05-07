@@ -828,8 +828,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             Intent intent = new Intent(DashboardActivity.this, Voucher_Activity.class);
             startActivity(intent);
         }else if (id == R.id.nav_report) {
-//            Intent intent = new Intent(DashboardActivity.this, Report_Activity.class);
-//            startActivity(intent);
+            Intent intent = new Intent(DashboardActivity.this, Report_Activity.class);
+            startActivity(intent);
         }else if (id == R.id.nav_utility) {
             Intent intent = new Intent(DashboardActivity.this, Utility_Activity.class);
             startActivity(intent);
