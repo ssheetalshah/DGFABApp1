@@ -281,7 +281,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
                     recycler_view.setVisibility(View.GONE);
-                    nonsale.setText("Action For Dispatch ");
+                    nonsale.setText("Action For Dispatch");
                     nonsaletime.setText("2 pm");
                     nav_Menu.findItem(R.id.nav_accountant).setVisible(false);
                     nav_Menu.findItem(R.id.nav_Attandence).setVisible(false);
@@ -297,6 +297,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     ll_admin.setVisibility(View.GONE);
                     nonsale.setText("Action For Accountant ");
                     nonsaletime.setText("3 pm");
+                    nav_Menu.findItem(R.id.nav_accountant).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_Attandence).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_cashier).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_department).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_gownkeeper).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_occassion).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_stock_Clear).setVisible(false);
 
                 }
                 if ( spin_categorypx.getSelectedItem().equals("Purchase")) {
@@ -304,6 +311,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     ll_admin.setVisibility(View.GONE);
                     nonsale.setText("Action For Purchase ");
                     nonsaletime.setText("2.30 pm");
+                    nav_Menu.findItem(R.id.nav_accountant).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_Attandence).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_cashier).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_department).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_gownkeeper).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_occassion).setVisible(false);
+                    nav_Menu.findItem(R.id.nav_stock_Clear).setVisible(false);
                 }
                 if (spin_categorypx.getSelectedItem().equals("Logistic")) {
                     other_details.setVisibility(View.VISIBLE);
@@ -314,7 +328,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     nav_Menu.findItem(R.id.nav_Attandence).setVisible(false);
                     nav_Menu.findItem(R.id.nav_cashier).setVisible(false);
                     nav_Menu.findItem(R.id.nav_department).setVisible(false);
-
                     nav_Menu.findItem(R.id.nav_occassion).setVisible(false);
                     nav_Menu.findItem(R.id.nav_stock_Clear).setVisible(false);
                 }
@@ -327,7 +340,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     nav_Menu.findItem(R.id.nav_Attandence).setVisible(false);
                     nav_Menu.findItem(R.id.nav_cashier).setVisible(false);
                     nav_Menu.findItem(R.id.nav_department).setVisible(false);
-
+                    nav_Menu.findItem(R.id.nav_grn).setVisible(false);
                     nav_Menu.findItem(R.id.nav_occassion).setVisible(false);
                     nav_Menu.findItem(R.id.nav_stock_Clear).setVisible(false);
                 }

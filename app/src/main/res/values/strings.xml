@@ -25,7 +25,6 @@
 
     <string-array name="array_category">
         <item>-Select-</item>
-
     </string-array>
 
     <string-array name="emp_details">
@@ -37,8 +36,7 @@
         <item>Purchase</item>
         <item>Logistic</item>
         <item>IT</item>
-        <item>Tally</item>
-        <item>Recheck</item>
+        <item>Tally/Recheck</item>
 
     </string-array>
 
