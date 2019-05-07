@@ -3,11 +3,13 @@ package com.ics.dgfabapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebView;
 
 public class Accountant_Cr_Db extends AppCompatActivity {
+    Toolbar toolbar_accutant;
 
     WebView webView, webView1;
     String html = " <!DOCTYPE html>\n" +
@@ -101,17 +103,26 @@ public class Accountant_Cr_Db extends AppCompatActivity {
             "</html>";
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accountant__cr__db);
 
+        toolbar_accutant = (Toolbar) findViewById(R.id.toolbar_accutant);
+        toolbar_accutant.setNavigationIcon(R.drawable.home);
+        toolbar_accutant.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   stopActivityTask();
+                onBackPressed();
+            }
+        });
+
         webView = findViewById(R.id.account);
-        webView.loadData(html, "text/html; charset=UTF-8",null);
+        webView.loadData(html, "text/html; charset=UTF-8", null);
 
         webView1 = findViewById(R.id.account1);
-        webView1.loadData(html1, "text/html; charset=UTF-8",null);
+        webView1.loadData(html1, "text/html; charset=UTF-8", null);
 
 
 //        webView.setOnClickListener(new View.OnClickListener() {
@@ -122,16 +133,16 @@ public class Accountant_Cr_Db extends AppCompatActivity {
 //            }
 //        });
 
-        webView.setOnTouchListener(new View.OnTouchListener(){
+        webView.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction()==MotionEvent.ACTION_MOVE){
+                if (event.getAction() == MotionEvent.ACTION_MOVE) {
                     return false;
                 }
 
-                if (event.getAction()==MotionEvent.ACTION_UP){
-                    Intent intent=new Intent(Accountant_Cr_Db.this,Credit_Note.class);
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    Intent intent = new Intent(Accountant_Cr_Db.this, Credit_Note.class);
                     startActivity(intent);
 
                 }
@@ -141,16 +152,16 @@ public class Accountant_Cr_Db extends AppCompatActivity {
         });
 
 
-        webView1.setOnTouchListener(new View.OnTouchListener(){
+        webView1.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction()==MotionEvent.ACTION_MOVE){
+                if (event.getAction() == MotionEvent.ACTION_MOVE) {
                     return false;
                 }
 
-                if (event.getAction()==MotionEvent.ACTION_UP){
-                    Intent intent=new Intent(Accountant_Cr_Db.this,Debit_note.class);
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    Intent intent = new Intent(Accountant_Cr_Db.this, Debit_note.class);
                     startActivity(intent);
 
                 }
@@ -158,7 +169,10 @@ public class Accountant_Cr_Db extends AppCompatActivity {
                 return false;
             }
         });
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
