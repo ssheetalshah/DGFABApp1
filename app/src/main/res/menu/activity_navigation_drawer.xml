@@ -88,6 +88,15 @@
             android:id="@+id/nav_utility"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Utility" />
+        <item
+            android:id="@+id/nav_sales_order"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Sales Order" />
+
+        <item
+            android:id="@+id/nav_gst_audit"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Gst Audit" />
 
     </group>
 

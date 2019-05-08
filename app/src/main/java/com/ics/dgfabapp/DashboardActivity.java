@@ -797,7 +797,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.app_bar_search) {
-
             return true;
         }
 
@@ -883,6 +882,12 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             startActivity(intent);
         }else if (id == R.id.nav_utility) {
             Intent intent = new Intent(DashboardActivity.this, Utility_Activity.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_sales_order) {
+            Intent intent = new Intent(DashboardActivity.this, Sales_order_list.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_gst_audit) {
+            Intent intent = new Intent(DashboardActivity.this, Gst_Audit_Activity.class);
             startActivity(intent);
         }
 
