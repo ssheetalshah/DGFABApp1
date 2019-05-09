@@ -570,6 +570,8 @@
                         </android.support.v7.widget.CardView>
 
                         <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/act245"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -613,7 +615,7 @@
                                             android:layout_height="match_parent"
                                             android:layout_marginTop="5dp"
                                             android:layout_marginBottom="3dp"
-                                            android:text="Nike Inc."
+                                            android:text="Shivam Pachori"
                                             android:textColor="#000"
                                             android:textSize="13dp" />
                                         <LinearLayout
@@ -651,7 +653,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="50dp"
-                                        android:text="jhjhhj"
+                                        android:text="Action for"
                                         android:textStyle="bold|normal" />
 
                                     <TextView
@@ -659,7 +661,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="50dp"
-                                        android:text="jhjhhj"
+                                        android:text="Sales"
                                         android:textStyle="bold|normal" />
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
