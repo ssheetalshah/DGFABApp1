@@ -203,14 +203,14 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_report).setVisible(false);
                 nav_Menu.findItem(R.id.nav_voucher).setVisible(false);
                 nav_Menu.findItem(R.id.nav_grn).setVisible(false);
-                nav_Menu.findItem(R.id.nav_cdnote).setVisible(false);
-                nav_Menu.findItem(R.id.nav_debitdote).setVisible(false);
-                nav_Menu.findItem(R.id.nav_purod).setVisible(false);
+                nav_Menu.findItem(R.id.nav_cdnoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
                 nav_Menu.findItem(R.id.nav_grn).setVisible(false);
-                nav_Menu.findItem(R.id.nav_cdnote).setVisible(false);
-                nav_Menu.findItem(R.id.nav_debitdote).setVisible(false);
-                nav_Menu.findItem(R.id.nav_purod).setVisible(false);
+                nav_Menu.findItem(R.id.nav_cdnoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
 //                nav_Menu.findItem(R.id.nav_slideshow).setVisible(false);
                 //    spin_categorypx.setVisibility(View.GONE);
@@ -236,9 +236,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_utility).setVisible(false);
                 nav_Menu.findItem(R.id.nav_slideshow).setVisible(false);
                 nav_Menu.findItem(R.id.nav_grn).setVisible(false);
-                nav_Menu.findItem(R.id.nav_cdnote).setVisible(false);
-                nav_Menu.findItem(R.id.nav_debitdote).setVisible(false);
-                nav_Menu.findItem(R.id.nav_purod).setVisible(false);
+                nav_Menu.findItem(R.id.nav_cdnoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
                 //   spin_categorypx.setVisibility(View.GONE);
             }
@@ -289,9 +289,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_utility).setVisible(false);
                 nav_Menu.findItem(R.id.nav_slideshow).setVisible(false);
                 nav_Menu.findItem(R.id.nav_grn).setVisible(false);
-                nav_Menu.findItem(R.id.nav_cdnote).setVisible(false);
-                nav_Menu.findItem(R.id.nav_debitdote).setVisible(false);
-                nav_Menu.findItem(R.id.nav_purod).setVisible(false);
+                nav_Menu.findItem(R.id.nav_cdnoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
 
             }
@@ -343,9 +343,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_utility).setVisible(false);
                 nav_Menu.findItem(R.id.nav_slideshow).setVisible(false);
                 nav_Menu.findItem(R.id.nav_grn).setVisible(false);
-                nav_Menu.findItem(R.id.nav_cdnote).setVisible(false);
-                nav_Menu.findItem(R.id.nav_debitdote).setVisible(false);
-                nav_Menu.findItem(R.id.nav_purod).setVisible(false);
+                nav_Menu.findItem(R.id.nav_cdnoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
             }
             //
@@ -366,9 +366,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_order).setVisible(false);
                 nav_Menu.findItem(R.id.nav_slideshow).setVisible(false);
                 nav_Menu.findItem(R.id.nav_grn).setVisible(false);
-                nav_Menu.findItem(R.id.nav_cdnote).setVisible(false);
-                nav_Menu.findItem(R.id.nav_debitdote).setVisible(false);
-                nav_Menu.findItem(R.id.nav_purod).setVisible(false);
+                nav_Menu.findItem(R.id.nav_cdnoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
             }
             //
@@ -925,13 +925,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         }else if (id == R.id.nav_gst_audit) {
             Intent intent = new Intent(DashboardActivity.this, Gst_Audit_Activity.class);
             startActivity(intent);
-        }else if (id == R.id.nav_purod) {
+        }else if (id == R.id.nav_purodd) {
             Intent intent = new Intent(DashboardActivity.this, DebitNote.class);
             startActivity(intent);
-        }else if (id == R.id.nav_debitdote) {
+        }else if (id == R.id.nav_debitdoted) {
             Intent intent = new Intent(DashboardActivity.this, DebitNoteActivity.class);
             startActivity(intent);
-        }else if (id == R.id.nav_cdnote) {
+        }else if (id == R.id.nav_cdnoted) {
             Intent intent = new Intent(DashboardActivity.this, CreditNoteActivity.class);
             startActivity(intent);
         }
