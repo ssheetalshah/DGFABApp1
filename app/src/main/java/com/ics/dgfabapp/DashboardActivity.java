@@ -120,7 +120,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         spin_category = getIntent().getStringExtra("spin_category");
         Toast.makeText(DashboardActivity.this, "sub " + spin_category, Toast.LENGTH_SHORT).show();
         dunb_image = findViewById(R.id.dunb_image);
-    //******************************************************************************************
+        //******************************************************************************************
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         sale_inv = findViewById(R.id.sale_inv);
@@ -361,7 +361,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
                     recycler_view.setVisibility(View.GONE);
-                    nonsale.setText("Action For Dispatch");
+                    nonsale.setText("Logistic");
                     nonsaletime.setText("2 pm");
                     text_Company_name.setText("Manohar lal");
 
@@ -370,7 +370,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 if (spin_categorypx.getSelectedItem().equals("Accountant")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);
-                    nonsale.setText("Action For Accountant ");
+                    nonsale.setText("Accountant ");
                     nonsaletime.setText("3 pm");
                     text_Company_name.setText("Ramdeen Pal");
 

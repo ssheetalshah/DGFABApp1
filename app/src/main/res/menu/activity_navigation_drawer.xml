@@ -53,10 +53,12 @@
             android:id="@+id/nav_gownkeeper"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Godown Keeper" />
+
         <item
             android:id="@+id/nav_department"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Department" />
+
         <item
             android:id="@+id/nav_occassion"
             android:icon="@drawable/ic_menu_slideshow"
