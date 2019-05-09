@@ -926,7 +926,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             Intent intent = new Intent(DashboardActivity.this, Gst_Audit_Activity.class);
             startActivity(intent);
         }else if (id == R.id.nav_purodd) {
-            Intent intent = new Intent(DashboardActivity.this, DebitNote.class);
+            Intent intent = new Intent(DashboardActivity.this, Creat_sales_accountant.class);
             startActivity(intent);
         }else if (id == R.id.nav_debitdoted) {
             Intent intent = new Intent(DashboardActivity.this, DebitNoteActivity.class);

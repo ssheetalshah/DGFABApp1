@@ -101,19 +101,20 @@
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:weightSum="4">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.3"
-                        android:orientation="horizontal">
+                        android:layout_weight="1.1"
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/pa_date"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="       "
+                            android:text="S No."
+                            android:gravity="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
@@ -123,14 +124,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
-                        android:orientation="horizontal">
+                        android:layout_weight="0.9"
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/pa_name"
-                            android:layout_width="wrap_content"
+                            android:gravity="start"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Name"
+                            android:text="Company Name"
                             android:textColor="@color/colorPrimary"
                             android:textSize="14sp" />
 
@@ -140,14 +142,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
+                        android:layout_weight="1"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/pa_class"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Under"
+                            android:text="GST"
+                            android:gravity="start"
                             android:textColor="@color/colorPrimary"
                             android:textSize="14sp" />
 
@@ -157,14 +160,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
+                        android:layout_weight="1"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/pa_section"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Amount"
+                            android:text="Address"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="start"
                             android:textColor="@color/colorPrimary"
                             android:textSize="14sp" />
 
@@ -179,18 +184,19 @@
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:weightSum="4">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.3"
+                        android:layout_weight="1.1"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="1."
+                            android:text="1"
+                            android:gravity="center"
                             android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
@@ -201,46 +207,50 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Cash"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Cash-in-hand"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
+                        android:layout_weight="0.9"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="2000"
-                            android:textAlignment="center"
+                            android:text="Nike Inc"
+                            android:gravity="start"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="18 %"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Indore"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="start"
+                            android:textAlignment="textStart"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
@@ -255,18 +265,18 @@
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:weightSum="4">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.3"
+                        android:layout_weight="1.1"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="2."
+                            android:text="2"
                             android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
@@ -277,46 +287,47 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Profit &amp; loss Account"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Capital Account"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
+                        android:layout_weight="0.9"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="50000"
-                            android:textAlignment="center"
+                            android:text="Fast Track"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="18 %"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mumbai"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="start"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
@@ -331,18 +342,18 @@
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:weightSum="4">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.3"
+                        android:layout_weight="1.1"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="3."
+                            android:text="3"
                             android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
@@ -353,46 +364,47 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Bk Capital"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Fixed Assets"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
+                        android:layout_weight="0.9"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="200,000"
-                            android:textAlignment="center"
+                            android:text="Peter england"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="18 %"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bhopal"
+                            android:gravity="start"
+                            android:layout_marginLeft="10dp"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
@@ -407,18 +419,18 @@
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:weightSum="4">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.3"
+                        android:layout_weight="1.1"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="4."
+                            android:text="4"
                             android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
@@ -429,46 +441,47 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Off Premises"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sundry Debtors"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
+                        android:layout_weight="0.9"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="47000"
-                            android:textAlignment="center"
+                            android:text="Lakme Cosmatics"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="18 %"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mumbai"
+                            android:gravity="start"
+                            android:layout_marginLeft="10dp"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
@@ -483,18 +496,18 @@
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:weightSum="4">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.3"
+                        android:layout_weight="1.1"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="5."
+                            android:text="5"
                             android:textAlignment="center"
                             android:textColor="#000"
                             android:textSize="14sp" />
@@ -505,46 +518,47 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sbi Cc"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Bank OD A/c"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_weight="0.25"
+                        android:layout_weight="0.9"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="568,000"
-                            android:textAlignment="center"
+                            android:text="Peter England"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="18 %"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="USA"
+                            android:gravity="start"
+                            android:layout_marginLeft="10dp"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
