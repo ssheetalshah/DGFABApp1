@@ -11,14 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DebitNote"></activity>
+        <activity android:name=".DebitNote" />
         <activity android:name=".Create_New_Grn" />
         <activity android:name=".Create_New_audit" />
         <activity android:name=".Gst_Audit_Activity" />
-        <activity android:name=".CreditNoteActivity"></activity>
-        <activity android:name=".DebitNoteActivity"></activity>
-        <activity android:name=".EditGrn"></activity>
-        <activity android:name=".GRNActivity"></activity>
+        <activity android:name=".CreditNoteActivity" />
+        <activity android:name=".DebitNoteActivity" />
+        <activity android:name=".EditGrn" />
+        <activity android:name=".GRNActivity" />
         <activity android:name=".Create_Account_company" />
         <activity android:name=".Sales_order_list" />
         <activity android:name=".Report_Activity" />
@@ -74,6 +74,7 @@
         <activity android:name=".Voucher_Activity" />
         <activity android:name=".Reciept_Activity" />
         <activity android:name=".Utility_Activity" />
+        <activity android:name=".InvoiceRaiseActivity"></activity>
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
@@ -85,6 +86,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

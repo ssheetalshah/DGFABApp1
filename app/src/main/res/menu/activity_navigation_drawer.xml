@@ -84,7 +84,7 @@
 
         <item
             android:id="@+id/nav_grn"
-            android:icon="@drawable/gm"
+            android:icon="@drawable/goodreceiver"
             android:title="GRN" />
 
         <item
@@ -112,6 +112,10 @@
             android:id="@+id/nav_gst_audit"
             android:icon="@drawable/gstaudit"
             android:title="Gst Audit" />
+        <item
+            android:id="@+id/nav_invoice"
+            android:icon="@drawable/invoice"
+            android:title="Invoice Raise" />
 
     </group>
 
