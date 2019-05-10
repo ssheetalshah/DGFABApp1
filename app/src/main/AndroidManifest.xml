@@ -75,6 +75,7 @@
         <activity android:name=".Reciept_Activity" />
         <activity android:name=".Utility_Activity" />
         <activity android:name=".InvoiceRaiseActivity"></activity>
+        <activity android:name=".Followers"></activity>
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
