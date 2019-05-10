@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".DebitNote" />
         <activity android:name=".Create_New_Grn" />
+        <activity android:name=".InvoiceRaiseActivity"></activity>
         <activity android:name=".Create_New_audit" />
         <activity android:name=".Gst_Audit_Activity" />
         <activity android:name=".CreditNoteActivity" />

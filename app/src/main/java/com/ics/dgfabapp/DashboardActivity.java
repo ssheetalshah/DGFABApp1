@@ -214,6 +214,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
+                nav_Menu.findItem(R.id.nav_invoice).setVisible(false);
 //                nav_Menu.findItem(R.id.nav_slideshow).setVisible(false);
                 //    spin_categorypx.setVisibility(View.GONE);
             }
@@ -242,6 +243,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
+                nav_Menu.findItem(R.id.nav_invoice).setVisible(false);
                 callid.setText("2 PM");
                 //   spin_categorypx.setVisibility(View.GONE);
             }
@@ -296,6 +298,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
+                nav_Menu.findItem(R.id.nav_invoice).setVisible(false);
                 callid.setText("4 PM");
             }
 //            if (spin_category.equals("Logistic")) {
@@ -350,12 +353,15 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
+                nav_Menu.findItem(R.id.nav_invoice).setVisible(false);
                 callid.setText("5 PM");
             }
             //
 
             if (spin_category.equals("Tally/Recheck")) {
                 spin_categorypx.setSelection(7);
+                recycler_view = findViewById(R.id.recycler_view);
+                recycler_view.setVisibility(View.GONE);
                 spin_category = spin_categorypx.getSelectedItem().toString();
                 spin_categorypx.setVisibility(View.INVISIBLE);
                 nav_Menu.findItem(R.id.nav_accountant).setVisible(false);
@@ -374,7 +380,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
+                nav_Menu.findItem(R.id.nav_invoice).setVisible(false);
                 callid.setText("6 PM");
+                nonsale.setText("Action for Accountant");
             }
             //
         }
@@ -941,6 +949,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             startActivity(intent);
         }else if (id == R.id.nav_cdnoted) {
             Intent intent = new Intent(DashboardActivity.this, CreditNoteActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_invoice) {
+            Intent intent = new Intent(DashboardActivity.this, InvoiceRaiseActivity.class);
             startActivity(intent);
         }
 
