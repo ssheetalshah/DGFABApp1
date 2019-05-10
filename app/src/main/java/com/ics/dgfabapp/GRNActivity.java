@@ -17,6 +17,7 @@ public class GRNActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grn);
+
         edt1 = findViewById(R.id.edt1);
         edt2 = findViewById(R.id.edt2);
         edt3 = findViewById(R.id.edt3);
