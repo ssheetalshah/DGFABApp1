@@ -12,7 +12,7 @@
         android:id="@+id/toolbar_Invp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#2196F3">
+        android:background="@color/colorPrimary">
 
         <TextView
             android:layout_width="match_parent"
@@ -25,15 +25,47 @@
 
     </android.support.v7.widget.Toolbar>
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bt_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <Spinner
+            android:id="@+id/repNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+    </LinearLayout>
+
     <ScrollView
+        android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/invoiceview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="10dp">
+
+            <TextView
+                android:text="Invoice"
+                android:textColor="#000"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="3dp"
+                android:typeface="monospace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:weightSum="1"
