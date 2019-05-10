@@ -56,6 +56,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     MyListData[] myListData;
     CircleImageView dunb_image;
     View view;
+    TextView callid;
     public static String whatsname;
     Menu nav_Menu;
     ImageView aid2;
@@ -126,6 +127,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         sale_inv = findViewById(R.id.sale_inv);
         act245 = findViewById(R.id.act245);
         aid2 = findViewById(R.id.aid2);
+        callid = findViewById(R.id.callid);
         /* start 2 months ago from now */
         pending_sales = findViewById(R.id.pending_sales);
         salesord3 = findViewById(R.id.salesord3);
@@ -240,6 +242,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
+                callid.setText("2 PM");
                 //   spin_categorypx.setVisibility(View.GONE);
             }
             if (spin_category.equals("Accountant")) {
@@ -259,13 +262,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_order).setVisible(false);
                 nav_Menu.findItem(R.id.nav_report).setVisible(false);
                 nav_Menu.findItem(R.id.nav_voucher).setVisible(false);
-                nav_Menu.findItem(R.id.nav_grn).setVisible(false);
+                nav_Menu.findItem(R.id.nav_grn).setVisible(true);
                 nav_Menu.findItem(R.id.nav_master).setVisible(false);
                 nav_Menu.findItem(R.id.nav_utility).setVisible(false);
                 nav_Menu.findItem(R.id.nav_slideshow).setVisible(false);
                 nav_Menu.findItem(R.id.nav_accountant).setVisible(true);
                 nav_Menu.findItem(R.id.nav_cashier).setVisible(true);
-
+                callid.setText("3 PM");
             }
             if (spin_category.equals("Purchase")) {
                 spin_categorypx.setSelection(5);
@@ -293,7 +296,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
-
+                callid.setText("4 PM");
             }
 //            if (spin_category.equals("Logistic")) {
 //                spin_categorypx.setSelection(6);
@@ -347,6 +350,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
+                callid.setText("5 PM");
             }
             //
 
@@ -370,6 +374,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
+                callid.setText("6 PM");
             }
             //
         }
@@ -420,14 +425,14 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     text_Company_name.setText("Shri hari");
 
                 }
-                if (spin_categorypx.getSelectedItem().equals("Logistic")) {
-                    other_details.setVisibility(View.VISIBLE);
-                    ll_admin.setVisibility(View.GONE);
-                    nonsale.setText("Action For Logistic ");
-                    nonsaletime.setText("1 pm");
-                    text_Company_name.setText("Manohar lal");
-
-                }
+//                if (spin_categorypx.getSelectedItem().equals("Logistic")) {
+//                    other_details.setVisibility(View.VISIBLE);
+//                    ll_admin.setVisibility(View.GONE);
+//                    nonsale.setText("Action For Logistic ");
+//                    nonsaletime.setText("1 pm");
+//                    text_Company_name.setText("Manohar lal");
+//
+//                }
                 if (spin_categorypx.getSelectedItem().equals("IT")) {
                     other_details.setVisibility(View.VISIBLE);
                     ll_admin.setVisibility(View.GONE);

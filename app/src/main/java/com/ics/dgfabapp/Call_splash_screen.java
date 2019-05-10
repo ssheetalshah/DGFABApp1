@@ -22,8 +22,8 @@ public class Call_splash_screen extends AppCompatActivity {
                 // This method will be executed once the timer is over
                 // Start your app main activity
                 try{
-                    Intent intent = new Intent(Call_splash_screen.this, DashboardActivity.class);
-                    startActivity(intent);
+//                    Intent intent = new Intent(Call_splash_screen.this, DashboardActivity.class);
+//                    startActivity(intent);
                     finish();
                 }catch (Exception e) {
                 }

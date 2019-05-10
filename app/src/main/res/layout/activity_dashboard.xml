@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rl"
@@ -370,9 +371,8 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="50dp"
                                         android:layout_weight="0.80"
-                                        android:src="@drawable/prof"
-                                        app:civ_border_color="#000"
-                                        app:civ_border_width="0.5dp" />
+                                        android:src="@drawable/briefcase"
+                                        app:civ_border_color="#000" />
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
@@ -438,6 +438,7 @@
                                             android:textStyle="bold|normal" />
 
                                         <TextView
+                                            android:visibility="gone"
                                             android:id="@+id/nonsaletime"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
@@ -484,12 +485,13 @@
                                                 android:src="@drawable/phone" />
 
                                             <TextView
+
                                                 android:id="@+id/callid"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
                                                 android:gravity="center"
-                                                android:text=""
+                                                android:text="4 PM"
                                                 android:textColor="#000"
                                                 android:textSize="11dp" />
 
@@ -572,7 +574,6 @@
                         <LinearLayout
                             android:visibility="gone"
                             android:id="@+id/act245"
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -590,9 +591,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="50dp"
                                     android:layout_weight="0.80"
-                                    android:src="@drawable/prof"
-                                    app:civ_border_color="#000"
-                                    app:civ_border_width="0.5dp" />
+                                    android:src="@drawable/briefcase"
+                                    app:civ_border_color="#000" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -709,7 +709,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1"
                                             android:gravity="center"
-                                            android:text=""
+                                            android:text="4 PM"
                                             android:textColor="#000"
                                             android:textSize="11dp" />
 

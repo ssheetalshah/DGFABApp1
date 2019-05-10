@@ -11,7 +11,7 @@ public class DebitNoteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_debit_note2);
+        setContentView(R.layout.activity_debit_note);
 
         toolbar_deb = (Toolbar)findViewById(R.id.toolbar_deb);
         toolbar_deb.setNavigationIcon(R.drawable.home);

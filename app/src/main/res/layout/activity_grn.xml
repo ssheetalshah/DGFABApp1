@@ -7,7 +7,8 @@
     android:orientation="vertical"
     tools:context=".GRNActivity">
 
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/toolbar_grn"
         android:layout_width="match_parent"
@@ -188,6 +189,8 @@
             <!---->
 
             <LinearLayout
+
+                android:id="@+id/grn"
                 android:weightSum="8"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
@@ -264,6 +267,8 @@
 
             <!---->
             <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/gr1"
                 android:weightSum="8"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
@@ -339,6 +344,8 @@
             <!---->
 
             <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/grn2"
                 android:weightSum="8"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"

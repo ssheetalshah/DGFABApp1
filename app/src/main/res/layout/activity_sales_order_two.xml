@@ -73,21 +73,25 @@
                     android:layout_height="wrap_content" />
 
                 <LinearLayout
-                    android:weightSum="1"
+                    android:weightSum="3"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <ImageView
                         android:layout_gravity="center"
-                        android:layout_weight="0.88"
+                        android:layout_weight="1"
                         android:src="@drawable/prepare"
                         android:layout_width="match_parent"
                         android:layout_height="20dp" />
                     <TextView
-                        android:layout_weight="0.12"
+                        android:layout_weight="1"
                         android:id="@+id/prepareOrder"
                         android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <CheckBox
+                        android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
@@ -136,21 +140,25 @@
                     android:layout_height="wrap_content" />
 
                 <LinearLayout
-                    android:weightSum="1"
+                    android:weightSum="3"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <ImageView
                         android:layout_gravity="center"
-                        android:layout_weight="0.88"
+                        android:layout_weight="1"
                         android:src="@drawable/prepare"
                         android:layout_width="match_parent"
                         android:layout_height="20dp" />
                     <TextView
-                        android:layout_weight="0.12"
+                        android:layout_weight="1"
                         android:id="@+id/prepareOrder1"
                         android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <CheckBox
+                        android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
@@ -158,7 +166,10 @@
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
-
+    <Button
+        android:text="Send to Prepared"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
     </LinearLayout>
 
 </LinearLayout>
