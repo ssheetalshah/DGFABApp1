@@ -6,111 +6,111 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/home"
             android:title="Home" />
         <item
             android:id="@+id/nav_wallet"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/wall"
             android:title="Wallet" />
         <item
             android:id="@+id/nav_addprod"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/add_icon"
             android:title="Add Product" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/proofl"
             android:title="Profile" />
         <item
             android:id="@+id/nav_order"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/order"
             android:title="Order" />
 
         <item
             android:id="@+id/nav_accountant"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/accountant"
             android:title="Accountant" />
         <item
             android:id="@+id/nav_follow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/foll"
             android:title="Followers" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/tender"
             android:title="My Tender" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/chating"
             android:title="Chat" />
         <item
             android:id="@+id/nav_Attandence"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/atten"
             android:title="Attandance" />
         <item
             android:id="@+id/nav_cashier"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/cashierr"
             android:title="Cashier" />
 
         <item
             android:id="@+id/nav_cdnoted"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/creditnote"
             android:title="Credit note" />
         <item
             android:id="@+id/nav_gownkeeper"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/godown"
             android:title="Godown Keeper" />
         <item
             android:id="@+id/nav_debitdoted"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/debitnote"
             android:title="DebitNote" />
     <item
             android:id="@+id/nav_purodd"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/order"
             android:title="Purchase Order" />
 
         <item
             android:id="@+id/nav_department"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/department"
             android:title="Department" />
 
         <item
             android:id="@+id/nav_occassion"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/auction"
             android:title="Auction" />
 
         <item
             android:id="@+id/nav_stock_Clear"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/productstock"
             android:title="Product Stock" />
 
         <item
             android:id="@+id/nav_grn"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/gm"
             android:title="GRN" />
 
         <item
             android:id="@+id/nav_master"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/acountmaster"
             android:title="Account Master" />
         <item
             android:id="@+id/nav_voucher"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/voucher"
             android:title="Voucher" />
         <item
             android:id="@+id/nav_report"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/report"
             android:title="Report" />
         <item
             android:id="@+id/nav_utility"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/uitility"
             android:title="Utility" />
         <item
             android:id="@+id/nav_sales_order"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/salesorder"
             android:title="Sales Order" />
 
         <item
             android:id="@+id/nav_gst_audit"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/gstaudit"
             android:title="Gst Audit" />
 
     </group>
@@ -119,11 +119,11 @@
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_slideshow"
+                android:icon="@drawable/billinghistory"
                 android:title="Billing History" />
             <item
                 android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_slideshow"
+                android:icon="@drawable/logout"
                 android:title="Logout" />
         </menu>
     </item>
