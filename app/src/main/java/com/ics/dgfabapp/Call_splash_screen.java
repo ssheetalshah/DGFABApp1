@@ -9,6 +9,7 @@ public class Call_splash_screen extends AppCompatActivity {
 
 
     private static int SPLASH_TIME_OUT = 2000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,11 +22,11 @@ public class Call_splash_screen extends AppCompatActivity {
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-                try{
+                try {
 //                    Intent intent = new Intent(Call_splash_screen.this, DashboardActivity.class);
 //                    startActivity(intent);
                     finish();
-                }catch (Exception e) {
+                } catch (Exception e) {
                 }
 //                    Intent i = new Intent(SplashActivity.this, LoginActivity.class);
 //                    startActivity(i);
@@ -34,7 +35,6 @@ public class Call_splash_screen extends AppCompatActivity {
 //                    finish();
             }
         }, SPLASH_TIME_OUT);
-
 
 
     }

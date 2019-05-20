@@ -29,14 +29,14 @@ public class Main2Activity extends AppCompatActivity
         setSupportActionBar(toolbar);
         // getSupportActionBar().hide();
 
-        btn_new_affiliate= (Button) findViewById(R.id.btn_post);
+        btn_new_affiliate = (Button) findViewById(R.id.btn_post);
 
         Main2Activity.this.setTitle("DGFAB");
 
         btn_new_affiliate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Main2Activity.this,New_Affiliate_Program.class);
+                Intent intent = new Intent(Main2Activity.this, New_Affiliate_Program.class);
                 startActivity(intent);
             }
         });
@@ -100,24 +100,24 @@ public class Main2Activity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            Intent i=new Intent(Main2Activity.this, Main2Activity.class);
+            Intent i = new Intent(Main2Activity.this, Main2Activity.class);
             startActivity(i);
             finish();
 
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
-            Intent i=new Intent(Main2Activity.this, TotalAffiliateOrder.class);
+            Intent i = new Intent(Main2Activity.this, TotalAffiliateOrder.class);
             startActivity(i);
             //finish();
 
         } else if (id == R.id.nav_slideshow) {
-            Intent i=new Intent(Main2Activity.this, New_Affiliate_Program.class);
+            Intent i = new Intent(Main2Activity.this, New_Affiliate_Program.class);
             startActivity(i);
 
 
         } else if (id == R.id.nav_manage) {
-            Intent i=new Intent(Main2Activity.this, ProfileActivity.class);
+            Intent i = new Intent(Main2Activity.this, ProfileActivity.class);
             startActivity(i);
 
         } else if (id == R.id.nav_share) {

@@ -13,7 +13,7 @@ public class Creat_sales_accountant extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creat_sales_accountant);
 
-        toolbar_createSales = (Toolbar)findViewById(R.id.toolbar_createSales);
+        toolbar_createSales = (Toolbar) findViewById(R.id.toolbar_createSales);
         toolbar_createSales.setNavigationIcon(R.drawable.home);
         toolbar_createSales.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

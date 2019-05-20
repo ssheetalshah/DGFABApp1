@@ -11,8 +11,5 @@ public class Choose_Manu_dealer_Stock_Clear extends AppCompatActivity {
         setContentView(R.layout.activity_choose__manu_dealer__stock__clear);
 
 
-
-
-
     }
 }

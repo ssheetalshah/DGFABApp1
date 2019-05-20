@@ -6,7 +6,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class Calender_Activity extends AppCompatActivity {
-Button setcal;
+    Button setcal;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

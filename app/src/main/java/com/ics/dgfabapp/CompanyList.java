@@ -32,8 +32,8 @@ public class CompanyList extends AppCompatActivity {
             }
         });
 
-        listView=(ListView)findViewById(R.id.listView);
-        textView=(TextView)findViewById(R.id.textView);
+        listView = (ListView) findViewById(R.id.listView);
+        textView = (TextView) findViewById(R.id.textView);
         listItem = getResources().getStringArray(R.array.array_technology);
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, listItem);
@@ -43,10 +43,10 @@ public class CompanyList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 // TODO Auto-generated method stub
-                String value=adapter.getItem(position);
-                Intent intent = new Intent(CompanyList.this,LoginActivity.class);
+                String value = adapter.getItem(position);
+                Intent intent = new Intent(CompanyList.this, LoginActivity.class);
                 startActivity(intent);
-                Toast.makeText(getApplicationContext(),value, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), value, Toast.LENGTH_SHORT).show();
 
             }
         });

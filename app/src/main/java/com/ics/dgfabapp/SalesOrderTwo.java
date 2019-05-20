@@ -1,7 +1,9 @@
 package com.ics.dgfabapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.View;
@@ -9,6 +11,7 @@ import android.widget.TextView;
 
 public class SalesOrderTwo extends AppCompatActivity {
     Toolbar toolbar_sale2;
+    CardView card1,card2;
     TextView companyNmae, area,orderNo, orderDt, prepareOrder;
     TextView companyNmae1,area1, orderNo1, orderDt1, prepareOrder1;
 
@@ -66,6 +69,30 @@ public class SalesOrderTwo extends AppCompatActivity {
         prepareOrder1 = (TextView) findViewById(R.id.prepareOrder1);
         String text31 = "<font color=#000000>Preparing Order By :</font> <font color=#FF929191>John</font>";
         prepareOrder1.setText(Html.fromHtml(text31));
+
+        card1  = (CardView)findViewById(R.id.card1);
+        card2  = (CardView)findViewById(R.id.card2);
+
+        card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SalesOrderTwo.this,SalesOrderDetail.class);
+                intent.putExtra("CompanyNmae",companyNmae.getText().toString());
+                intent.putExtra("OrderNo",orderNo.getText().toString());
+                startActivity(intent);
+            }
+        });
+
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SalesOrderTwo.this,SalesOrderDetail.class);
+                intent.putExtra("CompanyNmae",companyNmae1.getText().toString());
+                intent.putExtra("OrderNo",orderNo1.getText().toString());
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

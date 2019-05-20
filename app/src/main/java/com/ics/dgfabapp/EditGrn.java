@@ -13,7 +13,7 @@ public class EditGrn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_grn);
 
-        toolbar_edit = (Toolbar)findViewById(R.id.toolbar_edit);
+        toolbar_edit = (Toolbar) findViewById(R.id.toolbar_edit);
         toolbar_edit.setNavigationIcon(R.drawable.home);
         toolbar_edit.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

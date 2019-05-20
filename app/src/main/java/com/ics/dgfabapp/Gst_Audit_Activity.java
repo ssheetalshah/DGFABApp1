@@ -16,7 +16,7 @@ public class Gst_Audit_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gst__audit_);
 
-        toolbar_gstaudit = (Toolbar)findViewById(R.id.toolbar_gstaudit);
+        toolbar_gstaudit = (Toolbar) findViewById(R.id.toolbar_gstaudit);
         toolbar_gstaudit.setNavigationIcon(R.drawable.home);
         toolbar_gstaudit.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

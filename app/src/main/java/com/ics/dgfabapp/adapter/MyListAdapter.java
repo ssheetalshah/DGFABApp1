@@ -20,6 +20,7 @@ import com.ics.dgfabapp.Calender_Activity;
 import com.ics.dgfabapp.Call_splash_screen;
 import com.ics.dgfabapp.ChatActivity;
 import com.ics.dgfabapp.ChatSentMessage;
+import com.ics.dgfabapp.MeetingDetail;
 import com.ics.dgfabapp.NavigationActivity;
 import com.ics.dgfabapp.R;
 import com.ics.dgfabapp.SeasonManager.SessionManager;
@@ -199,7 +200,17 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         if (position == 3) {
             holder.meetId.setText("Meeting At 4 PM");
             holder.meet.setImageResource(R.drawable.meeting_red);
-            holder.meet.setOnClickListener(new View.OnClickListener() {
+
+            holder.meetdet.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), MeetingDetail.class);
+                    intent.putExtra("Meeting", holder.meetId.getText().toString());
+                    intent.putExtra("Name", holder.textView.getText().toString());
+                    v.getContext().startActivity(intent);
+                }
+            });
+          /*  holder.meet.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     new SimpleTooltip.Builder(v.getContext())
@@ -215,12 +226,22 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
                             .show();
 
                 }
-            });
+            });*/
         }
         if (position == 4) {
             holder.meetId.setText("Meeting At 3 PM");
             holder.meet.setImageResource(R.drawable.meeting_red);
-            holder.meet.setOnClickListener(new View.OnClickListener() {
+
+            holder.meetdet.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), MeetingDetail.class);
+                    intent.putExtra("Meeting", holder.meetId.getText().toString());
+                    intent.putExtra("Name", holder.textView.getText().toString());
+                    v.getContext().startActivity(intent);
+                }
+            });
+          /*  holder.meet.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     new SimpleTooltip.Builder(v.getContext())
@@ -236,12 +257,12 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
                             .show();
 
                 }
-            });
+            });*/
         }
         holder.aid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext() , Calender_Activity.class);
+                Intent intent = new Intent(v.getContext(), Calender_Activity.class);
                 v.getContext().startActivity(intent);
             }
         });
@@ -289,10 +310,10 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         public RelativeLayout relativeLayout;
         private LinearLayout libelow;
         CardView action_card, action;
-        ImageView phone, meet, chat, tell,aid;
-        TextView callid,meetId,chatId,messageId;
+        ImageView phone, meet, chat, tell, aid;
+        TextView callid, meetId, chatId, messageId;
         TextView nonsale, nonsaletime;
-
+        LinearLayout meetdet;
         //   SessionManager sessionManager;
         TextView textView2df, textbrand, textView2sdf, textbrandgh, textView2;
 
@@ -308,6 +329,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             this.textView2sdf = itemView.findViewById(R.id.textView2sdf);
             callid = itemView.findViewById(R.id.callid);
             meetId = itemView.findViewById(R.id.meetId);
+            meetdet = itemView.findViewById(R.id.meetdet);
             chatId = itemView.findViewById(R.id.chatId);
             messageId = itemView.findViewById(R.id.messageId);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout);

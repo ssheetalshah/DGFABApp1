@@ -7,6 +7,7 @@ import android.widget.Button;
 
 public class DebitNote extends AppCompatActivity {
     Button signIn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

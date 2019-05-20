@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".SalesOrderDetail">
+    tools:context=".MeetingDetail">
 
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/toolbar_sorddetail"
+        android:id="@+id/toolbar_metdetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sales Order Detail"
+            android:text="Meeting Detail"
             android:textColor="#fff"
             android:textSize="15dp"
             android:textStyle="normal"
@@ -78,19 +78,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.50"
-                        android:text="Order No"
+                        android:text="Meeting With"
                         android:textColor="#000" />
 
                     <TextView
-                        android:id="@+id/ord"
+                        android:id="@+id/getNo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.50"
-                        android:text="00012" />
+                        android:text="Aryan Sharma" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
@@ -102,14 +101,60 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.50"
-                        android:text="Date/Time"
+                        android:text="Meeting Date"
                         android:textColor="#000" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.50"
-                        android:text="02-05-2019 , 6 PM" />
+                        android:text="02-05-2019" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:textSize="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="Meeting Time"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:id="@+id/getTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="6 PM" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:textSize="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="Meeting Place"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:id="@+id/getplace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="Tower Square, Indore" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -131,10 +176,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.50"
-                        android:text="Nobody does what you do better than you, but … what is it that you do again? You might have trouble describing your business in one sentence, or you find yourself at a loss for words when it comes to writing a company description. Knowing how to write a company description for a business plan helps you communicate with lenders, investors, employees, and potential customers." />
+                        android:text="Nobody does what you do better than you, but … what is it that you do again? You might have trouble describing your business in one sentence, or you find yourself at a loss for words when it comes to writing a company description. Knowing how to write a company description for a business plan helps you communicate with lenders." />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -158,9 +204,10 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/btn_ok"
                 android:gravity="center"
                 android:layout_marginBottom="10dp"
-                android:text="Print"
+                android:text="Ok"
                 android:textColor="#fff"
                 android:textAllCaps="false"
                 android:textSize="16dp"

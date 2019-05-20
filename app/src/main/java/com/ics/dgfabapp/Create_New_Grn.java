@@ -11,8 +11,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Create_New_Grn  extends AppCompatActivity implements AdapterView.OnItemSelectedListener  {
-    String[] country = { "0001", "0002", "0003", "0004", "0005"};
+public class Create_New_Grn extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    String[] country = {"0001", "0002", "0003", "0004", "0005"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class Create_New_Grn  extends AppCompatActivity implements AdapterView.On
         recpNo.setOnItemSelectedListener(this);
 
         //Creating the ArrayAdapter instance having the country list
-        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,country);
+        ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item, country);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Setting the ArrayAdapter data on the Spinner
         recpNo.setAdapter(aa);
@@ -34,8 +34,9 @@ public class Create_New_Grn  extends AppCompatActivity implements AdapterView.On
     //Performing action onItemSelected and onNothing selected
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
-        Toast.makeText(getApplicationContext(),country[position] , Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), country[position], Toast.LENGTH_LONG).show();
     }
+
     @Override
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
