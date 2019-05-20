@@ -58,7 +58,7 @@
                     android:text="S No."
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="12dp" />
 
             </LinearLayout>
 
@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:text="Ord. Date"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="14sp" />
+                    android:textSize="12dp" />
 
             </LinearLayout>
 
@@ -93,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:text="Bill. Date"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="14sp" />
+                    android:textSize="12dp" />
 
             </LinearLayout>
             <LinearLayout
@@ -109,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:text="Dis. Date"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="14sp" />
+                    android:textSize="12dp" />
 
             </LinearLayout>
 
@@ -129,7 +129,7 @@
                     android:text="Docket No"
                     android:gravity="center"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="14sp" />
+                    android:textSize="12dp" />
 
             </LinearLayout>
             <LinearLayout
@@ -146,7 +146,7 @@
                     android:text="transport name"
                     android:gravity="center"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="14sp" />
+                    android:textSize="12dp" />
 
             </LinearLayout>
             <LinearLayout
@@ -164,7 +164,7 @@
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="14sp" />
+                    android:textSize="12dp" />
 
             </LinearLayout>
 
@@ -192,7 +192,7 @@
                     android:gravity="center"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -206,10 +206,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="01/04/2019"
+                    android:text="01/04/19"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -223,10 +223,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="07/04/2019"
+                    android:text="07/04/19"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
             <LinearLayout
@@ -239,10 +239,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="12/04/2019"
+                    android:text="12/04/19"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -260,7 +260,7 @@
                     android:gravity="center"
                     android:text="ASR1234"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
             <LinearLayout
@@ -276,7 +276,7 @@
                     android:text="BlueDart"
                     android:gravity="center"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -294,7 +294,7 @@
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -322,7 +322,7 @@
                     android:gravity="center"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -336,10 +336,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="03/04/2019"
+                    android:text="03/04/19"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -353,10 +353,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="06/04/2019"
+                    android:text="06/04/19"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
             <LinearLayout
@@ -369,10 +369,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="09/05/2019"
+                    android:text="09/05/19"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -390,7 +390,7 @@
                     android:gravity="center"
                     android:text="POR123"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
             <LinearLayout
@@ -406,7 +406,7 @@
                     android:text="Overnight"
                     android:gravity="center"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -424,7 +424,7 @@
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -451,7 +451,7 @@
                     android:text="3"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -465,10 +465,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="05/04/2019"
+                    android:text="05/04/19"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -482,10 +482,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="09/04/2019"
+                    android:text="09/04/19"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
             <LinearLayout
@@ -498,10 +498,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="15/04/2019"
+                    android:text="15/04/19"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -519,7 +519,7 @@
                     android:gravity="center"
                     android:text="LK1234"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
             <LinearLayout
@@ -535,7 +535,7 @@
                     android:text="BlueDart"
                     android:gravity="center"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -553,7 +553,7 @@
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -580,7 +580,7 @@
                     android:gravity="center"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -594,10 +594,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="01/04/2019"
+                    android:text="01/04/19"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -611,10 +611,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="01/04/2019"
+                    android:text="01/04/19"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
             <LinearLayout
@@ -627,10 +627,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="01/04/2019"
+                    android:text="01/04/19"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -648,7 +648,7 @@
                     android:gravity="center"
                     android:text="ER897"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
             <LinearLayout
@@ -664,7 +664,7 @@
                     android:text="AICTSL"
                     android:gravity="center"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
@@ -682,7 +682,7 @@
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="11dp" />
 
             </LinearLayout>
 
