@@ -195,6 +195,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
         nonsale = (TextView) findViewById(R.id.nonsale);
         nonsale2 = (TextView) findViewById(R.id.nonsale2);
+        nonsaletime = (TextView) findViewById(R.id.nonsaletime);
         nonsaletime2 = (TextView) findViewById(R.id.nonsaletime2);
         tv_invoiceGreen = findViewById(R.id.tv_invoiceGreen);
         totalSale = findViewById(R.id.totalSale);
