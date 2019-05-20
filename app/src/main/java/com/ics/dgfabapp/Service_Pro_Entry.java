@@ -9,16 +9,16 @@ import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
 
-public class Invoice3 extends AppCompatActivity {
+public class Service_Pro_Entry extends AppCompatActivity {
     CardView crd1, crd2;
     Toolbar toolbar_inv3;
     TextView companyNmae, area, orderNo, orderDt, prepareOrder;
     TextView companyNmae1, area1, orderNo1, orderDt1, prepareOrder1;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_invoice3);
+        setContentView(R.layout.activity_service__pro__entry);
+
 
         toolbar_inv3 = (Toolbar) findViewById(R.id.toolbar_inv3);
         toolbar_inv3.setNavigationIcon(R.drawable.home);
@@ -46,7 +46,7 @@ public class Invoice3 extends AppCompatActivity {
         orderDt.setText(Html.fromHtml(text2));
 
         prepareOrder = (TextView) findViewById(R.id.prepareOrder);
-        String text3 = "<font color=#000000>Service By :</font> <font color=#FF929191>100 </font>";
+        String text3 = "<font color=#000000>Dispatch By :</font> <font color=#FF929191>100 </font>";
         prepareOrder.setText(Html.fromHtml(text3));
 
         companyNmae1 = (TextView) findViewById(R.id.companyNmae1);
@@ -66,7 +66,7 @@ public class Invoice3 extends AppCompatActivity {
         orderDt1.setText(Html.fromHtml(text21));
 
         prepareOrder1 = (TextView) findViewById(R.id.prepareOrder1);
-        String text31 = "<font color=#000000>Service By:</font> <font color=#FF929191>5</font>";
+        String text31 = "<font color=#000000>Dispatch By:</font> <font color=#FF929191>5</font>";
         prepareOrder1.setText(Html.fromHtml(text31));
 
         crd1 = (CardView)findViewById(R.id.crd1);
@@ -75,7 +75,7 @@ public class Invoice3 extends AppCompatActivity {
         crd1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Invoice3.this, InvoiceDetail.class);
+                Intent intent = new Intent(Service_Pro_Entry.this, InvoiceDetail.class);
                 intent.putExtra("CompanyNmae", companyNmae.getText().toString());
                 intent.putExtra("OrderNo", orderNo.getText().toString());
                 intent.putExtra("Pref",prepareOrder.getText().toString());
@@ -85,7 +85,7 @@ public class Invoice3 extends AppCompatActivity {
         crd2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Invoice3.this, InvoiceDetail.class);
+                Intent intent = new Intent(Service_Pro_Entry.this, InvoiceDetail.class);
                 intent.putExtra("CompanyNmae", companyNmae1.getText().toString());
                 intent.putExtra("OrderNo", orderNo1.getText().toString());
                 intent.putExtra("Pref",prepareOrder1.getText().toString());

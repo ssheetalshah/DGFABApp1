@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MeetingDetail"></activity>
+        <activity android:name=".Service_Pro_Entry"></activity>
+        <activity android:name=".MeetingDetail" />
         <activity android:name=".InvoiceDetail" />
         <activity android:name=".Dispatch_Entry" />
         <activity android:name=".Bank_Reco" />
