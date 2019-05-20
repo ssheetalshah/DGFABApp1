@@ -40,8 +40,7 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChatActivity.this, ChatSentMessage.class);
-                intent.putExtra("Name", S);
-                intent.putExtra("Name", S1);
+                intent.putExtra("dealername", S);
                 startActivity(intent);
             }
         });
