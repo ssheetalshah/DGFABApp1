@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.ics.dgfabapp.Calender_Activity;
 import com.ics.dgfabapp.Call_splash_screen;
 import com.ics.dgfabapp.ChatActivity;
+import com.ics.dgfabapp.ChatSentMessage;
 import com.ics.dgfabapp.NavigationActivity;
 import com.ics.dgfabapp.R;
 import com.ics.dgfabapp.SeasonManager.SessionManager;
@@ -119,7 +120,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         holder.chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), ChatActivity.class);
+                Intent intent = new Intent(v.getContext(), ChatSentMessage.class);
                 v.getContext().startActivity(intent);
             }
         });
@@ -164,7 +165,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
                             .animated(false)
                             .build()
                             .show();
-                    Intent intent = new Intent(v.getContext(), ChatActivity.class);
+                    Intent intent = new Intent(v.getContext(), ChatSentMessage.class);
                     v.getContext().startActivity(intent);
 
                 }
@@ -188,7 +189,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
                             .animated(false)
                             .build()
                             .show();
-                    Intent intent = new Intent(v.getContext(), ChatActivity.class);
+                    Intent intent = new Intent(v.getContext(), ChatSentMessage.class);
                     v.getContext().startActivity(intent);
                 }
             });

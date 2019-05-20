@@ -14,8 +14,14 @@ public class ChatSentMessage extends AppCompatActivity {
         setContentView(R.layout.activity_chat_sent_message);
 
         name = (TextView)findViewById(R.id.name);
-        data = getIntent().getExtras().getString("Name");
-      data = getIntent().getExtras().getString("Name");
-        name.setText(data);
+//        if (!(getIntent().getExtras().isEmpty())){
+//            data = getIntent().getExtras().getString("Name");
+//            data = getIntent().getExtras().getString("Name");
+//            name.setText(data);
+//        }else {
+//
+//        }
+
+
     }
 }
