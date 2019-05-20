@@ -77,6 +77,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     TextView totalSale;
     Spinner spin_admin_category;
 
+
+    TextView Nav_text_name, Nav_text_email;
+
     TextView nonsale, nonsaletime, text_Company, pending_sales, salesord3,text_Company_name;
 
     private HorizontalCalendar horizontalCalendar;
@@ -113,10 +116,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     };
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_navigation);
+
+
         sessionManager = new SessionManager(DashboardActivity.this);
         spin_category = getIntent().getStringExtra("spin_category");
         Toast.makeText(DashboardActivity.this, "sub " + spin_category, Toast.LENGTH_SHORT).show();
@@ -139,10 +145,17 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         tv_blueInvoice = findViewById(R.id.tv_blueInvoice);
         orderli = findViewById(R.id.orderli);
         admin_choose = (LinearLayout) findViewById(R.id.admin_choose);
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_viewabc);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView = (NavigationView) findViewById(R.id.nav_viewabc);
         nav_Menu = navigationView.getMenu();
+
+        navigationView.setItemIconTintList(null);
+
+        View headerView = navigationView.getHeaderView(0);
+        Nav_text_name=headerView.findViewById(R.id.nav_name);
+        Nav_text_email=headerView.findViewById(R.id.nav_email);
 
         ll_admin = (LinearLayout) findViewById(R.id.ll_admin);
         aid2.setOnClickListener(new View.OnClickListener() {
@@ -190,6 +203,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
             nav_Menu.findItem(R.id.nav_dispatc_entry).setVisible(true);
             nav_Menu.findItem(R.id.nav_ser_pro_entry).setVisible(true);
+
+            Nav_text_name.setText("Amrit");
+            Nav_text_email.setText("amrit@gmail.com");
         } else {
             if (spin_category.equals("Sales")) {
                 spin_categorypx.setSelection(2);
@@ -218,6 +234,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
                 nav_Menu.findItem(R.id.nav_invoice).setVisible(false);
+
+                Nav_text_name.setText("Mahajan");
+                Nav_text_email.setText("ma856@gmail.com");
 
 //                nav_Menu.findItem(R.id.nav_slideshow).setVisible(false);
                 //    spin_categorypx.setVisibility(View.GONE);
@@ -253,6 +272,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_bank_reco).setVisible(false);
                 nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
                 callid.setText("2 PM");
+
+                Nav_text_name.setText("Anurag");
+                Nav_text_email.setText("anur89@gmail.com");
                 //   spin_categorypx.setVisibility(View.GONE);
             }
             if (spin_category.equals("Accountant")) {
@@ -280,6 +302,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_cashier).setVisible(true);
                 nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
                 callid.setText("3 PM");
+
+                Nav_text_name.setText("Tarun");
+                Nav_text_email.setText("tarun56@gmail.com");
             }
             if (spin_category.equals("Purchase")) {
                 spin_categorypx.setSelection(5);
@@ -311,6 +336,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_bank_reco).setVisible(false);
                 nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
                 callid.setText("4 PM");
+
+                Nav_text_name.setText("Pooran");
+                Nav_text_email.setText("pooran85@gmail.com");
             }
 //            if (spin_category.equals("Logistic")) {
 //                spin_categorypx.setSelection(6);
@@ -368,6 +396,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_bank_reco).setVisible(false);
                 nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
                 callid.setText("5 PM");
+
+                Nav_text_name.setText("Lalwani");
+                Nav_text_email.setText("lalwan78@gmail.com");
             }
             //
 
@@ -398,6 +429,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
                 callid.setText("6 PM");
                 nonsale.setText("Action for Accountant");
+                Nav_text_name.setText("Mahesh Rai");
+                Nav_text_email.setText("mahenrai@gmail.com");
+
             }
             //service/production
 
@@ -436,6 +470,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
                 callid.setText("6 PM");
                 nonsale.setText("Action for service/production");
+
+                Nav_text_name.setText("Garima");
+                Nav_text_email.setText("garima56@gmail.com");
             }
 
 
@@ -591,6 +628,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         navigationView.setNavigationItemSelectedListener(this);
         navigationView = (NavigationView) findViewById(R.id.nav_viewabc);
         nav_Menu = navigationView.getMenu();
+
+       // View headerView = navigationView.getHeaderView(0);
+
+
+
+
+
         /* end after 2 months from now */
         Calendar endDate = Calendar.getInstance();
         endDate.add(Calendar.MONTH, 2);
