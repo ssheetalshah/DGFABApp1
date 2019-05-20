@@ -187,6 +187,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
         if (spin_category.equals("Admin/Owner")) {
             spin_categorypx.setSelection(1);
+
+            nav_Menu.findItem(R.id.nav_dispatc_entry).setVisible(true);
+            nav_Menu.findItem(R.id.nav_ser_pro_entry).setVisible(true);
         } else {
             if (spin_category.equals("Sales")) {
                 spin_categorypx.setSelection(2);
@@ -215,6 +218,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
                 nav_Menu.findItem(R.id.nav_invoice).setVisible(false);
+
 //                nav_Menu.findItem(R.id.nav_slideshow).setVisible(false);
                 //    spin_categorypx.setVisibility(View.GONE);
             }
