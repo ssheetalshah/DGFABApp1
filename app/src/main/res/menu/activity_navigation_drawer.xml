@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/home"
+            android:icon="@drawable/homee"
             android:title="Home" />
         <item
             android:id="@+id/nav_wallet"
@@ -118,22 +118,22 @@
             android:title="Gst Audit" />
         <item
             android:id="@+id/nav_invoice"
-            android:icon="@drawable/invoice"
+            android:icon="@drawable/invraise"
             android:title="Invoice Raise" />
 
         <item
             android:id="@+id/nav_bank_reco"
-            android:icon="@drawable/invoice"
+            android:icon="@drawable/bank"
             android:title="Bank Reco" />
         <item
             android:visible="false"
             android:id="@+id/nav_dispatc_entry"
-            android:icon="@drawable/invoice"
+            android:icon="@drawable/dispatch"
             android:title="Dispatch Entry" />
         <item
             android:visible="false"
             android:id="@+id/nav_ser_pro_entry"
-            android:icon="@drawable/invoice"
+            android:icon="@drawable/service"
             android:title="Service/Production Entry" />
 
     </group>
