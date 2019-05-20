@@ -81,7 +81,6 @@
         <activity android:name=".Voucher_Activity" />
         <activity android:name=".Reciept_Activity" />
         <activity android:name=".Utility_Activity" />
-        <activity android:name=".InvoiceRaiseActivity" />
         <activity android:name=".Followers" />
         <activity
             android:name=".NavigationActivity"
