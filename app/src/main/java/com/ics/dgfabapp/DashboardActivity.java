@@ -185,7 +185,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         tv_invoiceGreen = findViewById(R.id.tv_invoiceGreen);
         totalSale = findViewById(R.id.totalSale);
 
-        if (spin_category.equals("Admin")) {
+        if (spin_category.equals("Admin/Owner")) {
             spin_categorypx.setSelection(1);
         } else {
             if (spin_category.equals("Sales")) {
@@ -244,6 +244,10 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
                 nav_Menu.findItem(R.id.nav_invoice).setVisible(false);
+                nav_Menu.findItem(R.id.nav_sales_order).setVisible(false);
+                nav_Menu.findItem(R.id.nav_dispatc_entry).setVisible(true);
+                nav_Menu.findItem(R.id.nav_bank_reco).setVisible(false);
+                nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
                 callid.setText("2 PM");
                 //   spin_categorypx.setVisibility(View.GONE);
             }
@@ -270,6 +274,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_slideshow).setVisible(false);
                 nav_Menu.findItem(R.id.nav_accountant).setVisible(true);
                 nav_Menu.findItem(R.id.nav_cashier).setVisible(true);
+                nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
                 callid.setText("3 PM");
             }
             if (spin_category.equals("Purchase")) {
@@ -299,6 +304,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
                 nav_Menu.findItem(R.id.nav_invoice).setVisible(false);
+                nav_Menu.findItem(R.id.nav_bank_reco).setVisible(false);
+                nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
                 callid.setText("4 PM");
             }
 //            if (spin_category.equals("Logistic")) {
@@ -354,6 +361,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
                 nav_Menu.findItem(R.id.nav_invoice).setVisible(false);
+                nav_Menu.findItem(R.id.nav_bank_reco).setVisible(false);
+                nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
                 callid.setText("5 PM");
             }
             //
@@ -381,10 +390,51 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
                 nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
                 nav_Menu.findItem(R.id.nav_invoice).setVisible(false);
+                nav_Menu.findItem(R.id.nav_bank_reco).setVisible(false);
+                nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
                 callid.setText("6 PM");
                 nonsale.setText("Action for Accountant");
             }
-            //
+            //service/production
+
+            if (spin_category.equals("service/production")) {
+                spin_categorypx.setSelection(8);
+                recycler_view = findViewById(R.id.recycler_view);
+                recycler_view.setVisibility(View.GONE);
+                spin_category = spin_categorypx.getSelectedItem().toString();
+                spin_categorypx.setVisibility(View.INVISIBLE);
+                nav_Menu.findItem(R.id.nav_accountant).setVisible(false);
+                nav_Menu.findItem(R.id.nav_Attandence).setVisible(false);
+                nav_Menu.findItem(R.id.nav_cashier).setVisible(false);
+                nav_Menu.findItem(R.id.nav_department).setVisible(false);
+                nav_Menu.findItem(R.id.nav_gownkeeper).setVisible(false);
+                nav_Menu.findItem(R.id.nav_occassion).setVisible(false);
+                nav_Menu.findItem(R.id.nav_stock_Clear).setVisible(false);
+                nav_Menu.findItem(R.id.nav_wallet).setVisible(false);
+                nav_Menu.findItem(R.id.nav_addprod).setVisible(false);
+                nav_Menu.findItem(R.id.nav_order).setVisible(false);
+                nav_Menu.findItem(R.id.nav_report).setVisible(false);
+                nav_Menu.findItem(R.id.nav_voucher).setVisible(false);
+                nav_Menu.findItem(R.id.nav_grn).setVisible(false);
+                nav_Menu.findItem(R.id.nav_master).setVisible(false);
+                nav_Menu.findItem(R.id.nav_utility).setVisible(false);
+                nav_Menu.findItem(R.id.nav_slideshow).setVisible(false);
+                nav_Menu.findItem(R.id.nav_grn).setVisible(false);
+                nav_Menu.findItem(R.id.nav_cdnoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_debitdoted).setVisible(false);
+                nav_Menu.findItem(R.id.nav_purodd).setVisible(false);
+                nav_Menu.findItem(R.id.nav_gst_audit).setVisible(false);
+                nav_Menu.findItem(R.id.nav_invoice).setVisible(false);
+                nav_Menu.findItem(R.id.nav_sales_order).setVisible(false);
+                nav_Menu.findItem(R.id.nav_dispatc_entry).setVisible(false);
+                nav_Menu.findItem(R.id.nav_ser_pro_entry).setVisible(true);
+                nav_Menu.findItem(R.id.nav_bank_reco).setVisible(false);
+                nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
+                callid.setText("6 PM");
+                nonsale.setText("Action for service/production");
+            }
+
+
         }
 
         Calendar startDate = Calendar.getInstance();
@@ -450,7 +500,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
                 }
 
-                if (spin_category.equals("-Select-") || spin_category.equals("Admin")) {
+                if (spin_category.equals("-Select-") || spin_category.equals("Admin/Owner")) {
                     other_details.setVisibility(View.GONE);
                     ll_admin.setVisibility(View.VISIBLE);
                 }
@@ -605,7 +655,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 //                    Toast.makeText(c, "sales", Toast.LENGTH_SHORT).show();
 
                 }
-                if (spin_admin_category.getItemAtPosition(position).equals("Admin")) {
+                if (spin_admin_category.getItemAtPosition(position).equals("Admin/Owner")) {
                     other_details.setVisibility(View.GONE);
                     ll_admin.setVisibility(View.VISIBLE);
                 }
@@ -875,7 +925,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         } else if (id == R.id.nav_wallet) {
             Intent intent = new Intent(DashboardActivity.this, WalletActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_gallery) {
+        }
+        else if (id == R.id.nav_create_staff) {
+            Intent intent = new Intent(DashboardActivity.this, Creat_staff.class);
+            startActivity(intent);
+        }
+
+        else if (id == R.id.nav_gallery) {
             Intent intent = new Intent(DashboardActivity.this, ProfileActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_order) {
@@ -952,6 +1008,12 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             startActivity(intent);
         }else if (id == R.id.nav_invoice) {
             Intent intent = new Intent(DashboardActivity.this, InvoiceRaiseActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_bank_reco) {
+            Intent intent = new Intent(DashboardActivity.this, Bank_Reco.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_dispatc_entry) {
+            Intent intent = new Intent(DashboardActivity.this, Dispatch_Entry.class);
             startActivity(intent);
         }
 

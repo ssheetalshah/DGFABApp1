@@ -13,6 +13,10 @@
             android:icon="@drawable/wall"
             android:title="Wallet" />
         <item
+            android:id="@+id/nav_create_staff"
+            android:icon="@drawable/wall"
+            android:title="Create Staff" />
+        <item
             android:id="@+id/nav_addprod"
             android:icon="@drawable/add_icon"
             android:title="Add Product" />
@@ -116,6 +120,21 @@
             android:id="@+id/nav_invoice"
             android:icon="@drawable/invoice"
             android:title="Invoice Raise" />
+
+        <item
+            android:id="@+id/nav_bank_reco"
+            android:icon="@drawable/invoice"
+            android:title="Bank Reco" />
+        <item
+            android:visible="false"
+            android:id="@+id/nav_dispatc_entry"
+            android:icon="@drawable/invoice"
+            android:title="Dispatch Entry" />
+        <item
+            android:visible="false"
+            android:id="@+id/nav_ser_pro_entry"
+            android:icon="@drawable/invoice"
+            android:title="Service/Production Entry" />
 
     </group>
 

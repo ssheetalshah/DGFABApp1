@@ -11,9 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Dispatch_Entry"></activity>
+        <activity android:name=".Bank_Reco" />
+        <activity android:name=".Creat_staff" />
+        <activity android:name=".Total_Sales_details" />
         <activity android:name=".DebitNote" />
         <activity android:name=".Create_New_Grn" />
-        <activity android:name=".InvoiceRaiseActivity"></activity>
+        <activity android:name=".InvoiceRaiseActivity" />
         <activity android:name=".Create_New_audit" />
         <activity android:name=".Gst_Audit_Activity" />
         <activity android:name=".CreditNoteActivity" />
@@ -75,8 +79,8 @@
         <activity android:name=".Voucher_Activity" />
         <activity android:name=".Reciept_Activity" />
         <activity android:name=".Utility_Activity" />
-        <activity android:name=".InvoiceRaiseActivity"></activity>
-        <activity android:name=".Followers"></activity>
+        <activity android:name=".InvoiceRaiseActivity" />
+        <activity android:name=".Followers" />
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
@@ -88,7 +92,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.ics.dgfabapp;
 
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,6 +50,10 @@ public class TotalSalesActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 DataModel dataModel= dataModels.get(position);
+
+            Intent intent=new Intent(TotalSalesActivity.this, Total_Sales_details.class);
+            startActivity(intent);
+
 
                 Snackbar.make(view, dataModel.getName()+"\n"+dataModel.getType()+" API: "+dataModel.getVersion_number(), Snackbar.LENGTH_LONG)
                         .setAction("No action", null).show();
