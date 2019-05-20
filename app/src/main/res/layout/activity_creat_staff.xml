@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Creat_staff">
-
 
 
     <android.support.v7.widget.Toolbar
@@ -27,205 +25,218 @@
 
     </android.support.v7.widget.Toolbar>
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-            android:drawablePadding="5dp"
-            android:text="Employee Name"
-            android:textColor="#000"
-            android:textSize="14dp" />
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <EditText
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:drawablePadding="5dp"
+                android:text="Employee Name"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_bg"
+                android:editable="false"
+                android:enabled="false"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bt_bg"
-            android:editable="false"
-            android:enabled="false"
-            android:inputType="textPersonName" />
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
 
-        <TextView
+                android:drawablePadding="5dp"
+                android:text="Emp Mobile No"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/dgsdfghjghj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_bg"
+                android:editable="false"
+                android:enabled="false"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            android:drawablePadding="5dp"
-            android:text="Emp Mobile No"
-            android:textColor="#000"
-            android:textSize="14dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
 
-        <EditText
-            android:id="@+id/dgsdfghjghj"
+                android:drawablePadding="5dp"
+                android:text="Emp Address"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_bg"
+                android:editable="false"
+                android:enabled="false"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bt_bg"
-            android:editable="false"
-            android:enabled="false"
-            android:inputType="textPersonName" />
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
 
-        <TextView
+                android:drawablePadding="5dp"
+                android:text="Emp Department"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_bg"
+                android:editable="false"
+                android:enabled="false"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            android:drawablePadding="5dp"
-            android:text="Emp Address"
-            android:textColor="#000"
-            android:textSize="14dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
 
-        <EditText
+                android:drawablePadding="5dp"
+                android:text="Emp ID"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_bg"
+                android:editable="false"
+                android:enabled="false"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bt_bg"
-            android:editable="false"
-            android:enabled="false"
-            android:inputType="textPersonName" />
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:orientation="vertical">
+                android:drawablePadding="5dp"
+                android:text="Emp User Name"
+                android:textColor="#000"
+                android:textSize="14dp" />
 
-        <TextView
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_bg"
+                android:editable="false"
+                android:enabled="false"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            android:drawablePadding="5dp"
-            android:text="Emp Department"
-            android:textColor="#000"
-            android:textSize="14dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
 
-        <EditText
+                android:drawablePadding="5dp"
+                android:text="Emp Password"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_bg"
+                android:editable="false"
+                android:enabled="false"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_ok"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bt_bg"
-            android:editable="false"
-            android:enabled="false"
-            android:inputType="textPersonName" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-
-            android:drawablePadding="5dp"
-            android:text="Emp ID"
-            android:textColor="#000"
-            android:textSize="14dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bt_bg"
-            android:editable="false"
-            android:enabled="false"
-            android:inputType="textPersonName" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-
-            android:drawablePadding="5dp"
-            android:text="Emp User Name"
-            android:textColor="#000"
-            android:textSize="14dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bt_bg"
-            android:editable="false"
-            android:enabled="false"
-            android:inputType="textPersonName" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-
-            android:drawablePadding="5dp"
-            android:text="Emp Password"
-            android:textColor="#000"
-            android:textSize="14dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bt_bg"
-            android:editable="false"
-            android:enabled="false"
-            android:inputType="textPersonName" />
-
-    </LinearLayout>
-
-
-
-    <Button
-        android:id="@+id/btn_ok"
-        android:gravity="center"
-        android:layout_marginBottom="10dp"
-        android:text="Submit"
-        android:textColor="#fff"
-        android:textAllCaps="false"
-        android:textSize="16dp"
-        android:layout_margin="20dp"
-        android:background="@drawable/btn_shape"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+            android:layout_margin="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_shape"
+            android:gravity="center"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
