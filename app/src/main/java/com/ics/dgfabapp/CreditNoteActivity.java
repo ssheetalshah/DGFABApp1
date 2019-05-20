@@ -13,7 +13,7 @@ public class CreditNoteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_credit_note);
 
-        toolbar_crd = (Toolbar)findViewById(R.id.toolbar_crd);
+        toolbar_crd = (Toolbar) findViewById(R.id.toolbar_crd);
         toolbar_crd.setNavigationIcon(R.drawable.home);
         toolbar_crd.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

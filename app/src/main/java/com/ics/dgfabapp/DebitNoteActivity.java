@@ -13,7 +13,7 @@ public class DebitNoteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_debit_note);
 
-        toolbar_deb = (Toolbar)findViewById(R.id.toolbar_deb);
+        toolbar_deb = (Toolbar) findViewById(R.id.toolbar_deb);
         toolbar_deb.setNavigationIcon(R.drawable.home);
         toolbar_deb.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

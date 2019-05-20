@@ -13,7 +13,7 @@ public class Department_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_department_);
 
-        toolbar_dept = (Toolbar)findViewById(R.id.toolbar_dept);
+        toolbar_dept = (Toolbar) findViewById(R.id.toolbar_dept);
         toolbar_dept.setNavigationIcon(R.drawable.home);
         toolbar_dept.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

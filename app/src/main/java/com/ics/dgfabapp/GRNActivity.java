@@ -13,10 +13,11 @@ import android.widget.TextView;
 
 public class GRNActivity extends AppCompatActivity {
     TextView create_grn;
-    ImageView edt1,edt2,edt3;
+    ImageView edt1, edt2, edt3;
     Toolbar toolbar_grn;
-    LinearLayout grn , grn1,grn2;
+    LinearLayout grn, grn1, grn2;
     Spinner recpNo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,28 +29,24 @@ public class GRNActivity extends AppCompatActivity {
         grn1 = findViewById(R.id.gr1);
         grn2 = findViewById(R.id.grn2);
         recpNo = findViewById(R.id.recpNo);
-        create_grn =findViewById(R.id.create_grn);
+        create_grn = findViewById(R.id.create_grn);
 
         recpNo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position ==1){
+                if (position == 1) {
                     grn.setVisibility(View.VISIBLE);
                     grn1.setVisibility(View.GONE);
                     grn2.setVisibility(View.GONE);
-                }
-                 else if(position ==2)
-                {
+                } else if (position == 2) {
                     grn.setVisibility(View.GONE);
                     grn1.setVisibility(View.VISIBLE);
                     grn2.setVisibility(View.GONE);
-                }
-                else if(position ==3)
-                {
+                } else if (position == 3) {
                     grn.setVisibility(View.GONE);
                     grn1.setVisibility(View.GONE);
                     grn2.setVisibility(View.VISIBLE);
-                }else {
+                } else {
                     grn.setVisibility(View.VISIBLE);
                     grn1.setVisibility(View.VISIBLE);
                     grn2.setVisibility(View.VISIBLE);
@@ -61,7 +58,7 @@ public class GRNActivity extends AppCompatActivity {
 
             }
         });
-        toolbar_grn = (Toolbar)findViewById(R.id.toolbar_grn);
+        toolbar_grn = (Toolbar) findViewById(R.id.toolbar_grn);
         toolbar_grn.setNavigationIcon(R.drawable.home);
         toolbar_grn.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,13 +73,15 @@ public class GRNActivity extends AppCompatActivity {
                 Intent intent = new Intent(GRNActivity.this, EditGrn.class);
                 startActivity(intent);
             }
-        });edt2.setOnClickListener(new View.OnClickListener() {
+        });
+        edt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(GRNActivity.this, EditGrn.class);
                 startActivity(intent);
             }
-        });edt3.setOnClickListener(new View.OnClickListener() {
+        });
+        edt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(GRNActivity.this, EditGrn.class);

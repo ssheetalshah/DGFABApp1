@@ -66,7 +66,7 @@
                         <TextView
                             android:id="@+id/textView"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="3dp"
                             android:text="aaaa"
@@ -209,6 +209,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/meetdet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

@@ -1,13 +1,16 @@
 package com.ics.dgfabapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
 
 public class Invoice2 extends AppCompatActivity {
+    CardView crd1, crd2;
     Toolbar toolbar_inv2;
     TextView companyNmae, area, orderNo, orderDt, prepareOrder;
     TextView companyNmae1, area1, orderNo1, orderDt1, prepareOrder1;
@@ -66,6 +69,29 @@ public class Invoice2 extends AppCompatActivity {
         prepareOrder1 = (TextView) findViewById(R.id.prepareOrder1);
         String text31 = "<font color=#000000>Preparing By :</font> <font color=#FF929191>5</font>";
         prepareOrder1.setText(Html.fromHtml(text31));
+
+        crd1 = (CardView)findViewById(R.id.crd1);
+        crd2 = (CardView)findViewById(R.id.crd2);
+        crd1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Invoice2.this,InvoiceDetail.class);
+                intent.putExtra("CompanyNmae",companyNmae.getText().toString());
+                intent.putExtra("OrderNo",orderNo.getText().toString());
+                intent.putExtra("Pref",prepareOrder.getText().toString());
+                startActivity(intent);
+            }
+        });
+        crd2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Invoice2.this,InvoiceDetail.class);
+                intent.putExtra("CompanyNmae",companyNmae1.getText().toString());
+                intent.putExtra("OrderNo",orderNo1.getText().toString());
+                intent.putExtra("Pref",prepareOrder1.getText().toString());
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

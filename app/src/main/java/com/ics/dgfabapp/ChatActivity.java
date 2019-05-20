@@ -11,8 +11,8 @@ import android.widget.TextView;
 public class ChatActivity extends AppCompatActivity {
     LinearLayout ll_chat;
     Toolbar toolbar_chat;
-    TextView student_name_chat,student_nacdme_chat;
-    String S,S1;
+    TextView student_name_chat, student_nacdme_chat;
+    String S, S1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

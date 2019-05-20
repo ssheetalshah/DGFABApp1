@@ -15,7 +15,7 @@ public class InvoiceRaiseActivity extends AppCompatActivity implements AdapterVi
     Toolbar toolbar_Invp;
     LinearLayout invoiceview;
     Spinner repNo;
-    String[] country = {"-Select-","00011", "00012", "00013", "00014", "00015","00016", "00017", "00018", "00019", "00020"};
+    String[] country = {"-Select-", "00011", "00012", "00013", "00014", "00015", "00016", "00017", "00018", "00019", "00020"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class InvoiceRaiseActivity extends AppCompatActivity implements AdapterVi
         });
 
         //Getting the instance of Spinner and applying OnItemSelectedListener on it
-         repNo = (Spinner) findViewById(R.id.repNo);
+        repNo = (Spinner) findViewById(R.id.repNo);
         invoiceview = (LinearLayout) findViewById(R.id.invoiceview);
         repNo.setOnItemSelectedListener(this);
        /* if (repNo.equals("-Select-")){
@@ -43,8 +43,7 @@ public class InvoiceRaiseActivity extends AppCompatActivity implements AdapterVi
             invoiceview.setVisibility(View.VISIBLE);
         }*/
 
-
-        //Creating the ArrayAdapter instance having the country list
+       //Creating the ArrayAdapter instance having the country list
         ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item, country);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Setting the ArrayAdapter data on the Spinner
@@ -55,7 +54,7 @@ public class InvoiceRaiseActivity extends AppCompatActivity implements AdapterVi
     //Performing action onItemSelected and onNothing selected
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
-      Toast.makeText(getApplicationContext(), country[position], Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), country[position], Toast.LENGTH_LONG).show();
 
     }
 

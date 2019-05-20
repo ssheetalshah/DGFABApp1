@@ -10,6 +10,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -36,7 +37,7 @@ public class BillingHistory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_billing_history);
 
-        toolbar_billHistory = (Toolbar)findViewById(R.id.toolbar_billHistory);
+        toolbar_billHistory = (Toolbar) findViewById(R.id.toolbar_billHistory);
 
         toolbar_billHistory = (Toolbar) findViewById(R.id.toolbar_billHistory);
         toolbar_billHistory.setNavigationIcon(R.drawable.home);

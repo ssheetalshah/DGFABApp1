@@ -14,7 +14,7 @@ public class Followers extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_followers);
 
-        toolbar_follow = (Toolbar)findViewById(R.id.toolbar_follow);
+        toolbar_follow = (Toolbar) findViewById(R.id.toolbar_follow);
         toolbar_follow.setNavigationIcon(R.drawable.home);
         toolbar_follow.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

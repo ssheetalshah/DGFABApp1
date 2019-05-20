@@ -13,7 +13,7 @@ public class GoDown_Keeper extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_go_down__keeper);
 
-        toolbar_godown = (Toolbar)findViewById(R.id.toolbar_godown);
+        toolbar_godown = (Toolbar) findViewById(R.id.toolbar_godown);
         toolbar_godown.setNavigationIcon(R.drawable.home);
         toolbar_godown.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

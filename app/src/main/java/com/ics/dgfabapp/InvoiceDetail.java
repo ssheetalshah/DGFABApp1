@@ -6,21 +6,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-public class SalesOrderDetail extends AppCompatActivity {
-    Toolbar toolbar_sorddetail;
-    TextView getName,ord;
+public class InvoiceDetail extends AppCompatActivity {
+    TextView getName,getNo,getTime;
+    Toolbar toolbar_invdetail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sales_order_detail);
+        setContentView(R.layout.activity_invoice_detail);
 
-        getName = (TextView)findViewById(R.id.getName);
-        ord = (TextView)findViewById(R.id.ord);
-
-        toolbar_sorddetail = (Toolbar) findViewById(R.id.toolbar_sorddetail);
-        toolbar_sorddetail.setNavigationIcon(R.drawable.home);
-        toolbar_sorddetail.setNavigationOnClickListener(new View.OnClickListener() {
+        toolbar_invdetail = (Toolbar) findViewById(R.id.toolbar_invdetail);
+        toolbar_invdetail.setNavigationIcon(R.drawable.home);
+        toolbar_invdetail.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //   stopActivityTask();
@@ -28,11 +25,18 @@ public class SalesOrderDetail extends AppCompatActivity {
             }
         });
 
+        getName = (TextView)findViewById(R.id.getName);
+        getNo = (TextView)findViewById(R.id.getNo);
+        getTime = (TextView)findViewById(R.id.getTime);
+
         String my_string=getIntent().getStringExtra("CompanyNmae");
         getName.setText(my_string);
 
         String my_string1=getIntent().getStringExtra("OrderNo");
-        ord.setText(my_string1);
+        getNo.setText(my_string1);
+
+        String my_string2=getIntent().getStringExtra("Pref");
+        getTime.setText(my_string2);
     }
 
     @Override
