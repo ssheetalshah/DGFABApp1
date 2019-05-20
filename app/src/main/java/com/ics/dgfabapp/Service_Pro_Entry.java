@@ -46,7 +46,7 @@ public class Service_Pro_Entry extends AppCompatActivity {
         orderDt.setText(Html.fromHtml(text2));
 
         prepareOrder = (TextView) findViewById(R.id.prepareOrder);
-        String text3 = "<font color=#000000>Dispatch By :</font> <font color=#FF929191>100 </font>";
+        String text3 = "<font color=#000000>Service By :</font> <font color=#FF929191>100 </font>";
         prepareOrder.setText(Html.fromHtml(text3));
 
         companyNmae1 = (TextView) findViewById(R.id.companyNmae1);
@@ -66,7 +66,7 @@ public class Service_Pro_Entry extends AppCompatActivity {
         orderDt1.setText(Html.fromHtml(text21));
 
         prepareOrder1 = (TextView) findViewById(R.id.prepareOrder1);
-        String text31 = "<font color=#000000>Dispatch By:</font> <font color=#FF929191>5</font>";
+        String text31 = "<font color=#000000>Service By:</font> <font color=#FF929191>5</font>";
         prepareOrder1.setText(Html.fromHtml(text31));
 
         crd1 = (CardView)findViewById(R.id.crd1);
