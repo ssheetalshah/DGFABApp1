@@ -78,7 +78,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     Spinner spin_admin_category;
 
 
-    TextView Nav_text_name, Nav_text_email;
+    TextView Nav_text_name, Nav_text_email,nonsale2,nonsaletime2;
 
     TextView nonsale, nonsaletime, text_Company, pending_sales, salesord3,text_Company_name;
 
@@ -194,7 +194,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         other_details = (CardView) findViewById(R.id.other_details);
 
         nonsale = (TextView) findViewById(R.id.nonsale);
-        nonsaletime = (TextView) findViewById(R.id.nonsaletime);
+        nonsale2 = (TextView) findViewById(R.id.nonsale2);
+        nonsaletime2 = (TextView) findViewById(R.id.nonsaletime2);
         tv_invoiceGreen = findViewById(R.id.tv_invoiceGreen);
         totalSale = findViewById(R.id.totalSale);
 
@@ -280,7 +281,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             if (spin_category.equals("Accountant")) {
                 spin_categorypx.setSelection(4);
                 spin_category = spin_categorypx.getSelectedItem().toString();
-                act245.setVisibility(View.VISIBLE);
+
                 //   spin_categorypx.setVisibility(View.GONE);
                 whatsname = "Accountant";
                 spin_categorypx.setVisibility(View.INVISIBLE);
@@ -441,6 +442,10 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 recycler_view.setVisibility(View.GONE);
                 spin_category = spin_categorypx.getSelectedItem().toString();
                 spin_categorypx.setVisibility(View.INVISIBLE);
+                act245.setVisibility(View.VISIBLE);
+                nonsale2.setText("Call or Chat from Dispatch");
+                nonsaletime2.setText("1.00 pm");
+
                 nav_Menu.findItem(R.id.nav_accountant).setVisible(false);
                 nav_Menu.findItem(R.id.nav_Attandence).setVisible(false);
                 nav_Menu.findItem(R.id.nav_cashier).setVisible(false);
@@ -468,8 +473,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_ser_pro_entry).setVisible(true);
                 nav_Menu.findItem(R.id.nav_bank_reco).setVisible(false);
                 nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
-                callid.setText("6 PM");
-                nonsale.setText("Action for service/production");
+                callid.setText("2 PM");
+                nonsale.setText("Chat or  Call From Accountant");
 
                 Nav_text_name.setText("Garima");
                 Nav_text_email.setText("garima56@gmail.com");
