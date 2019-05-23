@@ -30,28 +30,29 @@ public class TotalSalesActivity extends AppCompatActivity {
 
         dataModels= new ArrayList<>();
 
-        dataModels.add(new DataModel("Fast Track USA , San diego", "Amount : 20,000", "1","September 23, 2008"));
-        dataModels.add(new DataModel("Krishna Clothes , Indore", "Amount : 50,000", "2","February 9, 2009"));
-        dataModels.add(new DataModel("Fast Track USA", "Amount : 1,00,000", "3","April 27, 2009"));
-        dataModels.add(new DataModel("Lakme Cosmetics , Bhopal","Amount : 25,000","4","September 15, 2009"));
-        dataModels.add(new DataModel("Peter England , Banglore", "Amount : 10,000", "5","October 26, 2009"));
-        dataModels.add(new DataModel("D'cot , Indore", "Amount : 30,000", "8","May 20, 2010"));
-        dataModels.add(new DataModel("Peter England , Banglore", "Amount : 20,000", "9","December 6, 2010"));
-        dataModels.add(new DataModel("Krishna Clothes , Indore","Amount : 50,000","11","February 22, 2011"));
-        dataModels.add(new DataModel("Lakme Cosmetics , Bhopal", "Amount : 1,20,000", "14","October 18, 2011"));
-        dataModels.add(new DataModel("Peter England , Banglore", "Amount : 60,000", "16","July 9, 2012"));
-        dataModels.add(new DataModel("Peter England , Banglore", "Amount : 90,000", "19","October 31, 2013"));
+        dataModels.add(new DataModel("Inv no : 0001 , Fast Track USA , San diego", "Amount : 20,000", "Dispatch Date : 22-05-2019","Docket no : ASR1234"));
+        dataModels.add(new DataModel("Inv no : 0002 , Krishna Clothes , Indore", "Amount : 50,000", "Dispatch Date : 30-05-2019","Docket no : POR3455"));
+        dataModels.add(new DataModel("Inv no : 0003 , Fast Track USA", "Amount : 1,00,000", "Dispatch Date : 12-06-2019","Docket no : ERR1234"));
+        dataModels.add(new DataModel("Inv no : 0004 , Lakme Cosmetics , Bhopal","Amount : 25,000","Dispatch Date : 02-07-2019","Docket no : PKM3456"));
+        dataModels.add(new DataModel("Inv no : 0005 , Peter England , Banglore", "Amount : 10,000", "Dispatch Date : 22-05-2019","Docket no : ASR1234"));
+        dataModels.add(new DataModel("Inv no : 0006 , D'cot , Indore", "Amount : 30,000", "Dispatch Date : 30-05-2019","Docket no : POR3455"));
+        dataModels.add(new DataModel("Inv no : 0007 , Peter England , Banglore", "Amount : 20,000", "Dispatch Date : 22-05-2019","Docket no : ERR1234"));
+        dataModels.add(new DataModel("Inv no : 0008 , Krishna Clothes , Indore","Amount : 50,000","Dispatch Date :12-06-2019","Docket no : PKM3456"));
+        dataModels.add(new DataModel("Inv no : 0009 , Lakme Cosmetics , Bhopal", "Amount : 1,20,000", "Dispatch Date : 22-05-2019","Docket no : ASR1234"));
+        dataModels.add(new DataModel("Inv no : 0001 , Peter England , Banglore", "Amount : 60,000", "Dispatch Date : 22-05-2019","Docket no : POR3455"));
+        dataModels.add(new DataModel("Inv no : 0002 , Peter England , Banglore", "Amount : 90,000", "Dispatch Date : 22-05-2019","Docket no : DMR7899"));
 
         adapter= new CustomAdapter(dataModels,getApplicationContext());
 
         listView.setAdapter(adapter);
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 DataModel dataModel= dataModels.get(position);
 
-            Intent intent=new Intent(TotalSalesActivity.this, Total_Sales_details.class);
+            Intent intent=new Intent(TotalSalesActivity.this, InvoiceActivity.class);
             startActivity(intent);
 
 
