@@ -19,7 +19,7 @@ public class Show_buyer_product extends AppCompatActivity {
         proid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Show_buyer_product.this, Addto_cart.class);
+                Intent intent = new Intent(Show_buyer_product.this, Check_out.class);
                 startActivity(intent);
             }
         });

@@ -109,7 +109,7 @@ public class NavigationActivity extends AppCompatActivity
         proid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NavigationActivity.this, Addto_cart.class);
+                Intent intent = new Intent(NavigationActivity.this,Check_out.class);
                 startActivity(intent);
             }
         });
