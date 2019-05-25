@@ -11,6 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.ics.dgfabapp.SeasonManager.AppPreference;
+
 public class Catigories_activities extends AppCompatActivity {
     Toolbar toolbar_catAct;
     String namewa;
@@ -56,13 +58,22 @@ public class Catigories_activities extends AppCompatActivity {
         mlist = (ListView) findViewById(R.id.mlist);
         mlist.setAdapter(adapter);
 
+
         mlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 // TODO Auto-generated method stub
+                if (AppPreference.getRefid(Catigories_activities.this).equals("1")){
+                    Intent intent = new Intent(Catigories_activities.this, Show_buyer_product.class);
+                    startActivity(intent);
+
+                }else {
+
+
                 Intent intent = new Intent(Catigories_activities.this, Creat_sales_accountant.class);
                 intent.putExtra("namewa", namewa);
                 startActivity(intent);
+                }
             }
         });
     }

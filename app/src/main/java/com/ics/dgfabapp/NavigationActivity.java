@@ -24,8 +24,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ics.dgfabapp.SeasonManager.AppPreference;
 import com.ics.dgfabapp.adapter.MyAdapterrr;
 import com.ics.dgfabapp.adapter.MyListAdapter;
 import com.ics.dgfabapp.model.MyListData;
@@ -49,6 +51,7 @@ public class NavigationActivity extends AppCompatActivity
     private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
     Button btn;
     LinearLayout sad;
+    TextView product_category;
     //    HeaderAdapter madapter;
     private RecyclerView rv_autoScroll;
     private final Runnable SCROLLING_RUNNABLE = new Runnable() {
@@ -95,14 +98,27 @@ public class NavigationActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        product_category=findViewById(R.id.product_category);
+
         builder = new AlertDialog.Builder(this);
         proid = findViewById(R.id.proid);
         proid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(NavigationActivity.this, Addto_cart.class);
+                startActivity(intent);
+            }
+        });
+
+        product_category.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppPreference.setRefid(NavigationActivity.this,"1");
+                Intent intent = new Intent(NavigationActivity.this, DirCateActivity.class);
                 startActivity(intent);
             }
         });

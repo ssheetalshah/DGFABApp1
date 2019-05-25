@@ -34,6 +34,7 @@ public class SessionManager {
     public static final String COUS_KEY = "cous";
     private static final String IS_SKIPPED = "IsSlipped";
     private static final String WAITER_NAME = "waiter_name";
+    private static final String CAT_PRO = "cat_pro";
 
 
     // Constructor
@@ -133,4 +134,7 @@ public class SessionManager {
     public int getCoustId() {
         return pref.getInt(KEY_ID, 0);
     }
+
+
+
 }

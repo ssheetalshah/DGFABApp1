@@ -12,10 +12,11 @@
         android:fitsSystemWindows="true">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Checkout"
             android:textColor="#fff"
+            android:drawableRight="@drawable/add_to_cart"
             android:textSize="15dp"
             android:textStyle="normal"
             android:typeface="serif"   />
@@ -107,6 +108,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/ll_ppp"
             android:padding="20dp"
             android:layout_below="@+id/dfh"
 
@@ -121,6 +123,23 @@
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_below="@+id/ll_ppp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:textColor="#fff"
+                android:id="@+id/place_add_to_cart"
+                android:text="Add to cart"
+                android:background="@color/design_default_color_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
     </RelativeLayout>
 
 </LinearLayout>
