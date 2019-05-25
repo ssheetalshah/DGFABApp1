@@ -220,7 +220,26 @@
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
+<LinearLayout
+    android:weightSum="2"
+    android:gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/sort"
+        android:text="Sort"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/filter"
+        android:text="Filter"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
+
+</LinearLayout>
 
 
 
