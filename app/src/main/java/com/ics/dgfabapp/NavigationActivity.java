@@ -98,6 +98,15 @@ public class NavigationActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         builder = new AlertDialog.Builder(this);
+        proid = findViewById(R.id.proid);
+        proid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NavigationActivity.this, Addto_cart.class);
+                startActivity(intent);
+            }
+        });
+
         //    c = NavigationActivity.this.view.getContext();
     /*    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

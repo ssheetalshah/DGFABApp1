@@ -15,6 +15,9 @@
         <activity android:name=".Service_Pro_Entry" />
         <activity android:name=".MeetingDetail" />
         <activity android:name=".InvoiceDetail" />
+        <activity android:name=".Addto_cart"></activity>
+        <activity android:name=".Check_out"></activity>
+        <activity android:name=".Order_Placed"></activity>
         <activity android:name=".Dispatch_Entry" />
         <activity android:name=".Bank_Reco" />
         <activity android:name=".Creat_staff" />

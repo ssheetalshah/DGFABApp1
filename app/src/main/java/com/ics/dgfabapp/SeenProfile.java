@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ics.dgfabapp.adapter.ProfileAdapter;
 
@@ -27,17 +28,35 @@ public class SeenProfile extends AppCompatActivity {
         tabLayout=(TabLayout)findViewById(R.id.tab_layout);
         viewPager=(ViewPager)findViewById(R.id.pager);
         create_order=(TextView) findViewById(R.id.create_order);
-
+        create_order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    if(whatsname.equals("Accountant")) {
+                        Intent intent = new Intent(SeenProfile.this, DirCateActivity.class);
+                        startActivity(intent);
+                        whatsname ="";
+                    }
+                }catch (Exception e)
+                {
+                    Intent intent = new Intent(SeenProfile.this, CreateOrder.class);
+                    startActivity(intent);
+                    e.printStackTrace();
+                }
+            }
+        });
 //        create_order.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                if(create_order.getText().toString().equals("Create Sales Order"))
 //                {
+//                    Toast.makeText(SeenProfile.this, "Create Sales Order", Toast.LENGTH_SHORT).show();
 //                    Intent intent = new Intent(SeenProfile.this , Creat_sales_accountant.class);
 //                    startActivity(intent);
 //                }else {
 //                    Intent intent = new Intent(SeenProfile.this,DirCateActivity.class);
 //                    startActivity(intent);
+//                    Toast.makeText(SeenProfile.this, "not Sales Order", Toast.LENGTH_SHORT).show();
 //                }
 //
 //
@@ -56,23 +75,7 @@ public class SeenProfile extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        create_order.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    if(whatsname.equals("Accountant")) {
-                        Intent intent = new Intent(SeenProfile.this, DirCateActivity.class);
-                        startActivity(intent);
-                        whatsname ="";
-                    }
-                }catch (Exception e)
-                {
-                    Intent intent = new Intent(SeenProfile.this, CreateOrder.class);
-                    startActivity(intent);
-                    e.printStackTrace();
-                }
-            }
-        });
+
         add_com = findViewById(R.id.add_com);
         tabLayout.addTab(tabLayout.newTab().setText("OverView"));
         tabLayout.addTab(tabLayout.newTab().setText("Products"));

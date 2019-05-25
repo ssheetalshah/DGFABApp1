@@ -151,7 +151,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         navigationView = (NavigationView) findViewById(R.id.nav_viewabc);
         nav_Menu = navigationView.getMenu();
 
-       // navigationView.setItemIconTintList(null);
+        // navigationView.setItemIconTintList(null);
 
         View headerView = navigationView.getHeaderView(0);
         Nav_text_name=headerView.findViewById(R.id.nav_name);
@@ -635,7 +635,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         navigationView = (NavigationView) findViewById(R.id.nav_viewabc);
         nav_Menu = navigationView.getMenu();
 
-       // View headerView = navigationView.getHeaderView(0);
+        // View headerView = navigationView.getHeaderView(0);
 
 
 
@@ -712,6 +712,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 if (spin_admin_category.getItemAtPosition(position).equals("Admin/Owner")) {
                     other_details.setVisibility(View.GONE);
                     ll_admin.setVisibility(View.VISIBLE);
+
                 }
 
                 if (spin_admin_category.getItemAtPosition(position).equals("Dispatch")) {
