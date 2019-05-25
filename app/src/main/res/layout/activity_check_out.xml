@@ -104,7 +104,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Your order will be ship-ed after order has been done by nearest dealer :" />
+                android:text="@string/action_pro" />
 
         </LinearLayout>
         <LinearLayout
