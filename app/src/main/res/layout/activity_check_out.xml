@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/toolbar_checkout"
         android:layout_width="match_parent"
@@ -70,8 +71,8 @@
                 android:textColor="#040404"
                 android:textSize="15dip"
                 android:typeface="sans" />
-
             <LinearLayout
+
                 android:elevation="4dp"
                 android:background="#fff"
                 android:padding="3dp"

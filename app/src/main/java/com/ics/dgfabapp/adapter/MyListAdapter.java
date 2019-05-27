@@ -301,7 +301,12 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return listdata.length;
+        try {
+            return listdata.length;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

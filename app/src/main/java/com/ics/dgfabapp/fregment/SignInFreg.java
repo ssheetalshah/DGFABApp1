@@ -130,7 +130,7 @@ public class SignInFreg extends Fragment implements
                     startActivity(intent);
 
                 }
-                else {
+                if(spin.getSelectedItem().equals("Manufacturer") ||spin.getSelectedItem().equals("Dealer") ) {
                     Intent intent = new Intent(getActivity(), DashboardActivity.class);
                     intent.putExtra("spin_category", spin_category.getSelectedItem().toString());
                     startActivity(intent);
