@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Show_buyer_product"></activity>
+        <activity android:name=".Add_Product_Clothes"></activity>
         <activity android:name=".Add_Product_Cosmetics"></activity>
+        <activity android:name=".Add_Product_Bags"></activity>
         <activity android:name=".InvoiceActivity"></activity>
         <activity android:name=".Service_Pro_Entry" />
         <activity android:name=".MeetingDetail" />
