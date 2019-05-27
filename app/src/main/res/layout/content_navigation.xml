@@ -204,9 +204,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:orientation="vertical"
-
-                            >
+                            android:orientation="vertical">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -229,6 +227,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="170dp"
                     android:layout_marginTop="5dp"
+                    android:elevation="4dp"
                     android:orientation="horizontal"
                     android:weightSum="1">
 
@@ -241,11 +240,11 @@
 
 
                 <TextView
-                    android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_margin="10dp"
+                    android:layout_marginTop="5dp"
                     android:gravity="left"
                     android:text="Top Products"
                     android:textColor="#000"
@@ -255,28 +254,28 @@
                     android:id="@+id/proid"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:background="#fff"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:weightSum="1">
 
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.25">
+                        android:layout_margin="5dp"
+                        android:layout_weight="0.50"
+                        android:elevation="4dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:weightSum="1">
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="100dp"
+                                android:layout_height="80dp"
+                                android:layout_margin="8dp"
                                 android:layout_gravity="center"
-                                android:layout_margin="15dp"
                                 android:layout_weight="0.5"
                                 android:src="@drawable/five" />
 
@@ -291,21 +290,73 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:gravity="center"
                                     android:text="Medicine Syrup"
                                     android:textColor="#000"
-                                    android:textSize="16dp"
-
-                                    />
+                                    android:textSize="14dp" />
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="0.5"
+                                    android:gravity="center"
                                     android:text="Rs. 100"
                                     android:textColor="#000"
-                                    android:textSize="12dp"
+                                    android:textSize="12dp" />
 
-                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <!--6667777788-->
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="0.50"
+                        android:elevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_margin="8dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/fastband" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.5"
+                                android:orientation="vertical"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Fitness Band"
+                                    android:textColor="#000"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:text="Rs. 1,999"
+                                    android:textColor="#000"
+                                    android:textSize="12dp" />
 
                             </LinearLayout>
 
@@ -316,30 +367,80 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:background="#fff"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:weightSum="1">
 
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.25"
-
-                        >
+                        android:layout_margin="5dp"
+                        android:layout_weight="0.50">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:weightSum="1">
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="100dp"
+                                android:layout_height="80dp"
+                                android:layout_margin="8dp"
                                 android:layout_gravity="center"
-                                android:layout_margin="15dp"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/earphon" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.5"
+                                android:orientation="vertical"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Ear Phone"
+                                    android:textColor="#000"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:text="Rs. 3000"
+                                    android:textColor="#000"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <!--hhhhhhhhhhhhhhhhhhhhhhh-->
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="0.50">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_margin="8dp"
+                                android:layout_gravity="center"
                                 android:layout_weight="0.5"
                                 android:src="@drawable/mobl" />
 
@@ -354,19 +455,19 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:gravity="center"
                                     android:text="Mobile"
                                     android:textColor="#000"
-                                    android:textSize="16dp" />
+                                    android:textSize="14dp" />
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="0.5"
+                                    android:gravity="center"
                                     android:text="Rs. 5000"
                                     android:textColor="#000"
-                                    android:textSize="12dp"
-
-                                    />
+                                    android:textSize="12dp" />
 
                             </LinearLayout>
 
@@ -377,30 +478,30 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
                     android:background="#fff"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:weightSum="1">
 
                     <android.support.v7.widget.CardView
+                        android:layout_margin="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.25">
+                        android:layout_weight="0.50">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:weightSum="1">
 
                             <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="100dp"
+                                android:layout_width="100dp"
+                                android:layout_height="80dp"
+                                android:layout_margin="8dp"
                                 android:layout_gravity="center"
-                                android:layout_margin="15dp"
                                 android:layout_weight="0.5"
-                                android:src="@drawable/sander" />
+                                android:src="@drawable/shoe" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -411,21 +512,74 @@
                                 android:weightSum="1">
 
                                 <TextView
+                                    android:gravity="center"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="General Products"
                                     android:textColor="#000"
-                                    android:textSize="16dp" />
+                                    android:textSize="14dp" />
 
                                 <TextView
+                                    android:gravity="center"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="0.5"
                                     android:text="Rs. 200"
                                     android:textColor="#000"
-                                    android:textSize="12dp"
+                                    android:textSize="12dp" />
 
-                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <!--ghfjhgfhjghjghj-->
+
+                    <android.support.v7.widget.CardView
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_margin="5dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/tshirt" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.5"
+                                android:orientation="vertical"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="T-shirts"
+                                    android:textColor="#000"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="Rs. 200"
+                                    android:textColor="#000"
+                                    android:textSize="12dp" />
 
                             </LinearLayout>
 

@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <android.support.v7.widget.Toolbar
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/toolbar_post"
+        android:id="@+id/toolbar_checkout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
@@ -15,12 +15,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableRight="@drawable/add_to_cart"
             android:text="Checkout"
             android:textColor="#fff"
-            android:drawableRight="@drawable/add_to_cart"
             android:textSize="15dp"
+            android:layout_marginRight="15dp"
             android:textStyle="normal"
-            android:typeface="serif"   />
+            android:typeface="serif" />
 
     </android.support.v7.widget.Toolbar>
 
@@ -29,124 +30,128 @@
         android:layout_height="wrap_content"
         android:scrollbars="none">
 
-    <RelativeLayout
-
-        android:id="@+id/clickme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:orientation="horizontal"
-        android:padding="30dp" >
-
-        <!-- ListRow Left sied Thumbnail image -->
-
-        <LinearLayout
-
-            android:id="@+id/thumbnail"
+        <RelativeLayout
+            android:id="@+id/clickme"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginRight="7dip"
-            android:padding="2dip" >
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-            <ImageView
-                android:id="@+id/list_image"
+            <!-- ListRow Left sied Thumbnail image -->
+
+            <LinearLayout
+                android:elevation="4dp"
+                android:background="#fff"
+                android:id="@+id/thumbnail"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:src="@drawable/five"></ImageView>
-        </LinearLayout>
+               android:padding="5dp">
 
-        <!-- Title Of Song -->
+                <ImageView
+                    android:id="@+id/list_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/five">
 
+                </ImageView>
+            </LinearLayout>
 
+            <!-- Title Of Song -->
 
-        <TextView
-            android:id="@+id/from_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/thumbnail"
-            android:text="Pineapple"
-            android:textColor="#040404"
-            android:textSize="15dip"
-            android:typeface="sans" />
-
-        <LinearLayout
-
-            android:id="@+id/cart_plus_minus_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/from_name"
-            android:layout_alignParentRight="true"
-
-            android:layout_marginRight="20dp"
-            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/plist_price_text"
+                android:id="@+id/from_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_marginLeft="80dp"
-                android:layout_weight="0.23"
-                android:paddingRight="5dip"
-                android:text="Rs. 20,000"
-                android:textColor="#1d1d1d"
-                android:textSize="12dip"
-                android:textStyle="bold" />
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Pineapple"
+                android:textColor="#040404"
+                android:textSize="15dip"
+                android:typeface="sans" />
 
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_margin="5dp"
-            android:padding="10dp"
-            android:id="@+id/dfh"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/cart_plus_minus_layout"
-            android:layout_marginTop="12dp">
-
-            <TextView
+            <LinearLayout
+                android:elevation="4dp"
+                android:background="#fff"
+                android:padding="3dp"
+                android:id="@+id/cart_plus_minus_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_pro" />
+                android:layout_below="@+id/from_name"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
 
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ll_ppp"
-            android:padding="20dp"
-            android:layout_below="@+id/dfh"
+                <TextView
+                    android:id="@+id/plist_price_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.23"
+                    android:paddingRight="5dip"
+                    android:text="Rs. 20,000"
+                    android:textColor="#1d1d1d"
+                    android:textSize="16dip"
+                    android:textStyle="bold" />
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:textColor="#fff"
-                android:id="@+id/place_or"
-                android:text="Place-Order"
-                android:background="@color/design_default_color_primary"
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dfh"
+                android:elevation="4dp"
+                android:background="#fff"
+                android:padding="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/cart_plus_minus_layout"
+                android:layout_marginTop="12dp">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_pro" />
 
-        <LinearLayout
-            android:padding="20dp"
-            android:layout_below="@+id/ll_ppp"
+            </LinearLayout>
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:textColor="#fff"
-                android:id="@+id/place_add_to_cart"
-                android:text="Add to cart"
-                android:background="@color/design_default_color_primary"
+            <LinearLayout
+                android:id="@+id/ll_ppp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dfh"
+                android:padding="10dp">
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/place_or"
+                    android:elevation="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_shape"
+                    android:text="Place-Order"
+                    android:textColor="#fff" />
 
-    </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_ppp"
+                android:padding="10dp">
+
+                <Button
+                    android:elevation="4dp"
+                    android:id="@+id/place_add_to_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_shape"
+                    android:text="Add to cart"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
     </ScrollView>
 
 </LinearLayout>
