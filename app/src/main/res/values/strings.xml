@@ -60,6 +60,27 @@ Intel Integrated
 
     <string-array name="array_category">
         <item>-Select-</item>
+        <item>Mens Wear</item>
+        <item>Cosmetics</item>
+        <item>Electronics</item>
+        <item>Car, Motorbike, Industrial</item>
+    </string-array>
+
+
+    <string-array name="array_cosmo">
+        <item>-Select-</item>
+        <item>Beauty and Personal Care</item>
+        <item>Body and Skin Care</item>
+        <item>Face Care</item>
+        <item>Face Packs</item>
+    </string-array>
+
+    <string-array name="array_skintype">
+        <item>-Select-</item>
+        <item>Normal Skin</item>
+        <item>Sensitive</item>
+        <item>All Skins Type</item>
+        <item>Face Packs</item>
     </string-array>
 
     <string-array name="emp_details">
