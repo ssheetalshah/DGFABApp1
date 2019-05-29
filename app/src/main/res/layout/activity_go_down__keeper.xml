@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_godown"
@@ -30,51 +30,51 @@
         app:cardCornerRadius="5dp">
 
         <LinearLayout
-            android:weightSum="1"
-            android:layout_weight="0.2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_gravity="center"
-            android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_weight="0.8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
             android:gravity="center"
-            >
+            android:orientation="horizontal"
+            android:weightSum="1">
 
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/store"
-                android:layout_gravity="center"
-                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:gravity="center">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/store" />
+
+            </LinearLayout>
 
 
             <LinearLayout
-                android:layout_weight="0.2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/tv_level"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Stock Overview"
-                    android:gravity="center"
-                    android:layout_gravity="center"
                     android:textAlignment="center"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
         </LinearLayout>
+
     </android.support.v7.widget.CardView>
 
 
@@ -85,51 +85,51 @@
         app:cardCornerRadius="5dp">
 
         <LinearLayout
-            android:weightSum="1"
-            android:layout_weight="0.2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <LinearLayout
-                android:layout_weight="0.8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                >
+                android:layout_weight="0.8"
+                android:gravity="center">
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/store"
                     android:layout_gravity="center"
-                    />
+                    android:src="@drawable/store" />
 
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_weight="0.2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Goods Receiving"
-                    android:gravity="center"
-                    android:layout_gravity="center"
                     android:textAlignment="center"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
+
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -137,51 +137,51 @@
         app:cardCornerRadius="5dp">
 
         <LinearLayout
-            android:weightSum="1"
-            android:layout_weight="0.2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <LinearLayout
-                android:layout_weight="0.8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                >
+                android:layout_weight="0.8"
+                android:gravity="center">
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/store"
                     android:layout_gravity="center"
-                    />
+                    android:src="@drawable/store" />
 
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_weight="0.2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Goods Issue"
-                    android:gravity="center"
-                    android:layout_gravity="center"
                     android:textAlignment="center"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
+
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -189,50 +189,50 @@
         app:cardCornerRadius="5dp">
 
         <LinearLayout
-            android:weightSum="1"
-            android:layout_weight="0.2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <LinearLayout
-                android:layout_weight="0.8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                >
+                android:layout_weight="0.8"
+                android:gravity="center">
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/store"
                     android:layout_gravity="center"
-                    />
+                    android:src="@drawable/store" />
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_weight="0.2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Inbound &amp; Outbound Products"
-                    android:gravity="center"
-                    android:layout_gravity="center"
                     android:textAlignment="center"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
+
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -240,51 +240,51 @@
         app:cardCornerRadius="5dp">
 
         <LinearLayout
-            android:weightSum="1"
-            android:layout_weight="0.2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <LinearLayout
-                android:layout_weight="0.8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                >
+                android:layout_weight="0.8"
+                android:gravity="center">
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/store"
                     android:layout_gravity="center"
-                    />
+                    android:src="@drawable/store" />
 
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_weight="0.2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:textStyle="bold"
-                    android:text="Cycle Counting"
-                    android:gravity="center"
                     android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Cycle Counting"
                     android:textAlignment="center"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
+
     <android.support.v7.widget.CardView
         android:id="@+id/cardeview"
         android:layout_width="match_parent"
@@ -293,54 +293,50 @@
         app:cardCornerRadius="5dp">
 
         <LinearLayout
-            android:weightSum="1"
-            android:layout_weight="0.2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <LinearLayout
-                android:layout_weight="0.8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                >
+                android:layout_weight="0.8"
+                android:gravity="center">
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/store"
                     android:layout_gravity="center"
-                    />
+                    android:src="@drawable/store" />
 
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_weight="0.2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:textStyle="bold"
-                    android:text="Transfer Posting"
-                    android:gravity="center"
                     android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Transfer Posting"
                     android:textAlignment="center"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
-
-
-
 
 
 </LinearLayout>
