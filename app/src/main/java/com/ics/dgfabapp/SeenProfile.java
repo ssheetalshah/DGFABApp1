@@ -40,6 +40,7 @@ public class SeenProfile extends AppCompatActivity {
                 }catch (Exception e)
                 {
                     Intent intent = new Intent(SeenProfile.this, CreateOrder.class);
+
                     startActivity(intent);
                     e.printStackTrace();
                 }
