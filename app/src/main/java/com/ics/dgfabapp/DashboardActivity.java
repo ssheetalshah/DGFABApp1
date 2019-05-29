@@ -950,9 +950,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.app_bar_search) {
-            return true;
-        }
+//        if (id == R.id.app_bar_search) {
+//            return true;
+//        }
 
         if (id == R.id.app_bar_notification) {
             Intent intent = new Intent(DashboardActivity.this, NotificationActivity.class);

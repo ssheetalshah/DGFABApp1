@@ -168,6 +168,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
                             .build()
                             .show();
                     Intent intent = new Intent(v.getContext(), ChatSentMessage.class);
+                    intent.putExtra("dealername", holder.textView.getText().toString());
                     v.getContext().startActivity(intent);
 
                 }
