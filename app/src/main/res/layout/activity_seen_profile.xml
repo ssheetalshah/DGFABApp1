@@ -20,7 +20,7 @@
             <ImageView
                 android:id="@+id/header_cover_image"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="80dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/pbgg" />
 
@@ -90,8 +90,8 @@
 
             <ImageButton
                 android:id="@+id/user_profile_photo"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_below="@+id/header_cover_image"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="-60dp"
@@ -126,7 +126,7 @@
                 android:padding="3dp"
                 android:text="JET Catrige"
                 android:textColor="#000"
-                android:textSize="18dp"
+                android:textSize="13dp"
                 android:typeface="serif" />
 
             <TextView
@@ -136,7 +136,7 @@
                 android:gravity="center"
                 android:text="Dealer"
                 android:textColor="#000"
-                android:textSize="16dp"
+                android:textSize="13dp"
                 android:typeface="serif" />
 
             <LinearLayout
@@ -166,7 +166,7 @@
                 <TextView
                     android:id="@+id/create_order"
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
+                    android:layout_height="30dp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/bt_bg"
@@ -180,7 +180,7 @@
                 <TextView
                     android:id="@+id/add_com"
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
+                    android:layout_height="30dp"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/bt_bg"
