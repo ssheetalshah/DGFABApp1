@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MLMActivity"></activity>
+        <activity android:name=".FeedsActivity"></activity>
         <activity android:name=".Show_buyer_product" />
         <activity android:name=".Add_Product_Clothes" />
         <activity android:name=".Add_Product_Cosmetics" />

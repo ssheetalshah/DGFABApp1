@@ -110,6 +110,16 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     Intent intent1 = new Intent(DashboardActivity.this, ProfileActivity.class);
                     startActivity(intent1);
                     return true;
+
+                case R.id.navigation_feeds:
+                    //  mTextMessage.setText("four");
+                    Intent feeds = new Intent(DashboardActivity.this, FeedsActivity.class);
+                    startActivity(feeds);
+                    return true;
+
+
+
+
             }
             return false;
         }

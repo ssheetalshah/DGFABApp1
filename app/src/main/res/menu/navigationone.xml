@@ -7,6 +7,12 @@
         android:title="Chat" />
 
     <item
+        android:id="@+id/navigation_feeds"
+        android:icon="@drawable/feeds"
+        android:title="Feeds" />
+
+
+    <item
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/directory"
         android:title="Directories" />
