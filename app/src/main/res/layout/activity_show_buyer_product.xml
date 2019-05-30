@@ -58,24 +58,31 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:orientation="horizontal"
-                android:weightSum="1">
+                android:weightSum="3">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:layout_margin="15dp"
-                    android:layout_weight="0.5"
+                    android:layout_weight="1"
                     android:src="@drawable/five" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"
+                    android:layout_weight="1"
                     android:orientation="vertical"
                     android:weightSum="1">
-
+                    <ImageView
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_favorite_border_black_24dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_weight="1"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -115,24 +122,34 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:orientation="horizontal"
-                android:weightSum="1">
+                android:weightSum="3">
+
+
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:layout_margin="15dp"
-                    android:layout_weight="0.5"
+                    android:layout_weight="1"
                     android:src="@drawable/mobl" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"
+                    android:layout_weight="1"
                     android:orientation="vertical"
                     android:weightSum="1">
-
+                    <ImageView
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_favorite_border_black_24dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_weight="1.0"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -143,7 +160,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="1"
                         android:text="Rs. 5000"
                         android:textColor="#000"
                         android:textSize="12dp" />
@@ -167,31 +184,38 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.25">
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:orientation="horizontal"
-                android:weightSum="1">
+                android:weightSum="2">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:layout_margin="15dp"
-                    android:layout_weight="0.5"
+                    android:layout_weight="1"
                     android:src="@drawable/sander" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="0.5"
+                    android:layout_weight="1"
                     android:orientation="vertical"
-                    android:weightSum="1">
-
+                    android:weightSum="3">
+                    <ImageView
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_favorite_border_black_24dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_weight="1.0"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
