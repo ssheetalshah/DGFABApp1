@@ -38,7 +38,7 @@
             <ImageView
                 android:id="@+id/header_cover_image"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="80dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/pbgg" />
 
@@ -60,8 +60,8 @@
 
             <ImageButton
                 android:id="@+id/user_profile_photo"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_below="@+id/header_cover_image"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="-60dp"
@@ -76,7 +76,7 @@
             <TextView
                 android:id="@+id/add_com"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="30dp"
                 android:layout_below="@id/user_profile_photo"
                 android:layout_marginLeft="190dp"
                 android:layout_marginTop="5dp"
@@ -106,11 +106,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:drawableLeft="@drawable/dot_green"
-                android:drawablePadding="8dp"
                 android:gravity="center"
                 android:text="JET Catrige"
                 android:textColor="#000"
-                android:textSize="18dp"
+                android:textSize="15dp"
                 android:typeface="serif" />
 
             <LinearLayout
@@ -126,7 +125,7 @@
                     android:id="@+id/progressBar4"
                     style="@style/MyProgressBar"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="0.20"
