@@ -84,7 +84,7 @@
                                 android:textColorHint="@color/colorAccent"
                                 android:background="@null"
                                 android:layout_weight="0.1"
-                                android:hint="Search Manufacture or Suppliers"
+                                android:hint="Search Products or Suppliers"
                                 android:textSize="10dp"
                                 android:textColor="#000"
                                 android:layout_width="match_parent"
