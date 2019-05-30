@@ -12,6 +12,7 @@ public class MeetingDetail extends AppCompatActivity {
     TextView getTime,getName;
     Button btn_ok;
     Toolbar toolbar_metdetail;
+    Button nextBt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,15 @@ public class MeetingDetail extends AppCompatActivity {
         getTime = (TextView) findViewById(R.id.getTime);
         getName = (TextView) findViewById(R.id.getName);
         btn_ok = (Button) findViewById(R.id.btn_ok);
+        nextBt = (Button) findViewById(R.id.nextBt);
+
+        nextBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MeetingDetail.this,Calender_Activity.class);
+                startActivity(intent);
+            }
+        });
 
         String my_string = getIntent().getStringExtra("Meeting");
         getTime.setText(my_string);
