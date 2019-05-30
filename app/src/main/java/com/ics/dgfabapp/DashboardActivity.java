@@ -117,14 +117,10 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                     startActivity(feeds);
                     return true;
 
-
-
-
             }
             return false;
         }
     };
-
 
 
     @Override
