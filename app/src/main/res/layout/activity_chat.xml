@@ -27,6 +27,7 @@
                 android:layout_height="40dp"
                 android:gravity="start|center"
                 android:text="Chats"
+                android:drawableRight="@drawable/search"
                 android:textColor="#fff"
                 android:textSize="15dp"
                 android:typeface="serif" />
@@ -37,6 +38,7 @@
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -104,6 +106,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:weightSum="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="2dp"
@@ -111,6 +114,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:layout_weight="0.5"
                         android:id="@+id/student_name_chat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -118,15 +122,14 @@
                         android:textColor="#000"
                         android:textSize="15sp"
                         android:textStyle="normal" />
-                    <!--<TextView-->
-                    <!--android:layout_weight="0.6"-->
-                    <!--android:id="@+id/tv_date_comment"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-
-                    <!--android:typeface="serif"-->
-                    <!--android:textColor="#000"-->
-                    <!--android:textSize="14sp" />-->
+                    <TextView
+                    android:layout_weight="0.5"
+                    android:id="@+id/tv_date_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="yesterday"
+                    android:typeface="serif"
+                    android:textSize="14sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -141,7 +144,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="3dp"
-                        android:text="Laxmi nagar"
+                        android:text="Good morining..."
                         android:textSize="13dp" />
 
                 </LinearLayout>
@@ -192,6 +195,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:weightSum="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="2dp"
@@ -199,6 +203,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:layout_weight="0.5"
                         android:id="@+id/student_nacdme_chat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -206,15 +211,13 @@
                         android:textColor="#000"
                         android:textSize="15sp"
                         android:textStyle="normal" />
-                    <!--<TextView-->
-                    <!--android:layout_weight="0.6"-->
-                    <!--android:id="@+id/tv_date_comment"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-
-                    <!--android:typeface="serif"-->
-                    <!--android:textColor="#000"-->
-                    <!--android:textSize="14sp" />-->
+                    <TextView
+                        android:layout_weight="0.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="08/05/2019"
+                        android:typeface="serif"
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -229,7 +232,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="3dp"
-                        android:text="Ambernath"
+                        android:text="I m going to dubai..."
                         android:textSize="13dp" />
 
                 </LinearLayout>
@@ -238,6 +241,176 @@
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            app:cardCornerRadius="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/prof" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:weightSum="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Jhui Nong Voi"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+                        <TextView
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="today"
+                            android:typeface="serif"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="Products are ready...."
+                            android:textSize="13dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            app:cardCornerRadius="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/prof" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:weightSum="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yong Li"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+                        <TextView
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="25/05/2019"
+                            android:typeface="serif"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="Ok sir, thanks..."
+                            android:textSize="13dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
     </LinearLayout>
 
 </LinearLayout>
