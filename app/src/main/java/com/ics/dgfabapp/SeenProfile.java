@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +19,8 @@ public class SeenProfile extends AppCompatActivity {
     ViewPager viewPager;
     TextView add_com,dealname;
     TextView create_order;
+    ImageView heart1,heart2;
+    ImageView share;
 
 
     @Override
@@ -25,6 +28,9 @@ public class SeenProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seen_profile);
         dealname = findViewById(R.id.dealname);
+        heart1 = findViewById(R.id.heart1);
+        heart2 = findViewById(R.id.heart2);
+        share = findViewById(R.id.share);
         tabLayout=(TabLayout)findViewById(R.id.tab_layout);
         viewPager=(ViewPager)findViewById(R.id.pager);
         create_order=(TextView) findViewById(R.id.create_order);
@@ -45,6 +51,34 @@ public class SeenProfile extends AppCompatActivity {
                 }
             }
         });
+
+        heart1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              heart1.setVisibility(View.GONE);
+              heart2.setVisibility(View.VISIBLE);
+            }
+        });
+
+        heart2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                heart2.setVisibility(View.GONE);
+                heart1.setVisibility(View.VISIBLE);
+            }
+        });
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String shareBody = "Here is the share content body";
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+            }
+        });
+
 //        create_order.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
