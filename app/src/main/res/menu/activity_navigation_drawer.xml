@@ -70,7 +70,10 @@
             android:id="@+id/nav_purodd"
             android:icon="@drawable/order"
             android:title="Purchase Order" />
-
+        <item
+            android:id="@+id/nav_actmlm"
+            android:icon="@drawable/order"
+            android:title="MLM" />
         <item
             android:id="@+id/nav_department"
             android:icon="@drawable/department"

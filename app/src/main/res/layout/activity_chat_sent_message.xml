@@ -29,6 +29,7 @@
                 android:orientation="horizontal">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileto"
                     android:layout_width="70dp"
                     android:layout_height="40dp"
                     android:layout_gravity="left"
@@ -181,7 +182,56 @@
 
             </LinearLayout>
 
+
         </android.support.v7.widget.CardView>
+        <LinearLayout
+            android:weightSum="4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                  <Button
+                      android:layout_marginTop="4dp"
+                      android:textSize="10dp"
+                      android:background="#fff"
+                      android:drawableLeft="@drawable/ic_createorder"
+                      android:text="Create Order"
+                      android:layout_weight="1"
+                      android:layout_width="match_parent"
+                      android:layout_height="40dp" >
+
+                  </Button>
+            <Button
+                android:background="#fff"
+                android:layout_marginTop="4dp"
+                android:textSize="10dp"
+                android:drawableLeft="@drawable/ic_favorite_black_24dp"
+                android:text="Favorites"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" >
+
+            </Button>
+            <Button
+                android:layout_marginTop="5dp"
+                android:background="#fff"
+                android:text="Hot Product"
+                android:textSize="10dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" >
+
+            </Button>
+            <Button
+                android:background="#fff"
+                android:layout_marginTop="4dp"
+                android:text="Mini Site"
+                android:textSize="10dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" >
+
+            </Button>
+
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
