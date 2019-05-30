@@ -22,7 +22,6 @@ public class SeenProfile extends AppCompatActivity {
     ImageView heart1,heart2;
     ImageView share;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -123,8 +122,13 @@ public class SeenProfile extends AppCompatActivity {
         add_com.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(add_com.getText().equals("Request Sent"))
+                {
+                    add_com.setText("Connect Now");
+                }else {
+                    add_com.setText("Request Sent");
+                }
 
-                add_com.setText("Connected");
             }
         });
         final ProfileAdapter profileAdapter = new ProfileAdapter(this,getSupportFragmentManager(), tabLayout.getTabCount());
