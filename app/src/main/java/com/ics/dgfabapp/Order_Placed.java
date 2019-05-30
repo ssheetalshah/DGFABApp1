@@ -31,8 +31,8 @@ public class Order_Placed extends AppCompatActivity {
         });
         //***********animation Bounce
         final Animation bounce = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bounce);
-        success = (ImageView) findViewById(R.id.success);
-        success.startAnimation(bounce);
+//        success = (ImageView) findViewById(R.id.success);
+//        success.startAnimation(bounce);
 
         donbtn.setOnClickListener(new View.OnClickListener() {
             @Override
