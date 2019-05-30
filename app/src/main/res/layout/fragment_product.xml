@@ -24,14 +24,26 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/inquries"
+                android:layout_weight="0.50"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:gravity="start|center"
-                android:text="Product Category"
+                android:text="Inquiries"
                 android:textColor="#fff"
                 android:textSize="15dp"
                 android:typeface="serif" />
 
+            <TextView
+                android:id="@+id/chatnow"
+                android:layout_weight="0.50"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Chat Now"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:typeface="serif" />
 
         </LinearLayout>
 
@@ -53,6 +65,7 @@
             android:text="Add Product"
             android:textColor="@color/colorPrimary"
             android:textSize="15dp" />
+
     </LinearLayout>
 
 
