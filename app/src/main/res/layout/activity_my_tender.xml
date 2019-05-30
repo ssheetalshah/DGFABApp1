@@ -68,7 +68,9 @@
                 android:id="@+id/lie"
                 android:layout_width="70dp"
                 android:layout_height="70dip"
-                android:src="@drawable/prof"></ImageView>
+                android:src="@drawable/prof">
+
+            </ImageView>
         </LinearLayout>
 
 
@@ -104,6 +106,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:weightSum="2"
             android:id="@+id/cart_plus_minust"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -112,12 +115,13 @@
             android:orientation="horizontal" >
 
             <TextView
+
                 android:id="@+id/plist_prixt"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_marginLeft="80dp"
-                android:layout_weight="0.23"
+                android:layout_weight="0.3"
                 android:paddingRight="5dip"
                 android:text="3 AC and 2 Frize"
                 android:textColor="#1d1d1d"
@@ -125,8 +129,13 @@
                 />
 
 
-
+            <ImageView
+                android:src="@drawable/ic_favorite_border_black_24dp"
+                android:layout_weight="1.6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -156,6 +165,7 @@
 
 
         <LinearLayout
+            android:weightSum="2"
             android:id="@+id/cart_pluyout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -187,6 +197,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:weightSum="2"
             android:id="@+id/cart_plus_minus_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -196,16 +207,21 @@
 
             <TextView
                 android:id="@+id/plis_text"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_marginLeft="80dp"
-                android:layout_weight="0.23"
+                android:layout_weight="0.6"
                 android:paddingRight="5dip"
                 android:text="3 AC and 2 Frize"
                 android:textColor="#1d1d1d"
                 android:textSize="12dip"
                 />
+            <ImageView
+                android:src="@drawable/ic_favorite_border_black_24dp"
+                android:layout_weight="1.0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
 
 
@@ -270,6 +286,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:weightSum="2"
             android:id="@+id/cart_plus_minus_layout11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -279,17 +296,21 @@
 
             <TextView
                 android:id="@+id/plis_text111"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_marginLeft="80dp"
-                android:layout_weight="0.23"
+                android:layout_weight="0.6"
                 android:paddingRight="5dip"
                 android:text="3 AC and 2 Frize"
                 android:textColor="#1d1d1d"
                 android:textSize="12dip"
                 />
-
+            <ImageView
+                android:src="@drawable/ic_favorite_border_black_24dp"
+                android:layout_weight="1.0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </RelativeLayout>
 
