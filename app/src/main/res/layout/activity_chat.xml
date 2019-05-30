@@ -129,7 +129,6 @@
                     android:layout_height="wrap_content"
                     android:text="yesterday"
                     android:typeface="serif"
-                    android:textColor="#000"
                     android:textSize="14sp" />
                 </LinearLayout>
 
@@ -145,7 +144,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="3dp"
-                        android:text="Laxmi nagar"
+                        android:text="Good morining..."
                         android:textSize="13dp" />
 
                 </LinearLayout>
@@ -218,7 +217,6 @@
                         android:layout_height="wrap_content"
                         android:text="08/05/2019"
                         android:typeface="serif"
-                        android:textColor="#000"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -234,7 +232,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="3dp"
-                        android:text="Ambernath"
+                        android:text="I m going to dubai..."
                         android:textSize="13dp" />
 
                 </LinearLayout>
@@ -304,7 +302,6 @@
                             android:layout_height="wrap_content"
                             android:text="today"
                             android:typeface="serif"
-                            android:textColor="#000"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -319,7 +316,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="3dp"
-                            android:text="Laxmi nagar"
+                            android:text="Products are ready...."
                             android:textSize="13dp" />
 
                     </LinearLayout>
@@ -388,7 +385,6 @@
                             android:layout_height="wrap_content"
                             android:text="25/05/2019"
                             android:typeface="serif"
-                            android:textColor="#000"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -403,7 +399,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="3dp"
-                            android:text="Ambernath"
+                            android:text="Ok sir, thanks..."
                             android:textSize="13dp" />
 
                     </LinearLayout>
