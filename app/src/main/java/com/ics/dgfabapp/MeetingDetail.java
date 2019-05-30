@@ -29,7 +29,6 @@ public class MeetingDetail extends AppCompatActivity {
             }
         });
 
-
         getTime = (TextView) findViewById(R.id.getTime);
         getName = (TextView) findViewById(R.id.getName);
         btn_ok = (Button) findViewById(R.id.btn_ok);

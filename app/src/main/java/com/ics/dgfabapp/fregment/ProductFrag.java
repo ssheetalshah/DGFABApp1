@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ics.dgfabapp.AddProduct;
+import com.ics.dgfabapp.ChatActivity;
+import com.ics.dgfabapp.InquiryScreen;
 import com.ics.dgfabapp.R;
 import com.ics.dgfabapp.adapter.ExpandableListAdapter;
 
@@ -29,6 +31,7 @@ public class ProductFrag extends Fragment {
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
     TextView add_product;
+    TextView chatnow,inquries;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -46,6 +49,8 @@ public class ProductFrag extends Fragment {
         // get the listview
         expListView = (ExpandableListView) view.findViewById(R.id.ex_lv);
         add_product=view.findViewById(R.id.add_product);
+        chatnow=view.findViewById(R.id.chatnow);
+        inquries=view.findViewById(R.id.inquries);
 
         add_product.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,6 +127,21 @@ public class ProductFrag extends Fragment {
             }
         });
 
+        chatnow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ChatActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        inquries.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), InquiryScreen.class);
+                startActivity(intent);
+            }
+        });
 
 
         super.onViewCreated(view, savedInstanceState);

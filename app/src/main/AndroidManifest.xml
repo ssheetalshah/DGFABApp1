@@ -11,8 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MLMActivity"></activity>
-        <activity android:name=".FeedsActivity"></activity>
+        <activity android:name=".NewChatActivity"></activity>
+        <activity android:name=".InquiryScreen" />
+        <activity android:name=".MLMActivity" />
+        <activity android:name=".FeedsActivity" />
         <activity android:name=".Show_buyer_product" />
         <activity android:name=".Add_Product_Clothes" />
         <activity android:name=".Add_Product_Cosmetics" />
