@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class Check_out extends AppCompatActivity {
-    Button place_or, place_add_to_cart;
+    Button place_or, place_add_to_cart,chat_now;
     Toolbar toolbar_checkout;
 
 
@@ -28,6 +28,7 @@ public class Check_out extends AppCompatActivity {
         });
 
         place_or = findViewById(R.id.place_or);
+        chat_now = findViewById(R.id.chat_now);
         place_add_to_cart = findViewById(R.id.place_add_to_cart);
 
 
@@ -35,6 +36,14 @@ public class Check_out extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Check_out.this, Order_Placed.class);
+                startActivity(intent);
+            }
+        });
+
+        chat_now.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Check_out.this, ChatSentMessage.class);
                 startActivity(intent);
             }
         });

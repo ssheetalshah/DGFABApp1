@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:scrollbars="none">
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/clickme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,7 +39,32 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <!-- ListRow Left sied Thumbnail image -->
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/sort"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Inquiry" />
+
+                <Button
+                    android:id="@+id/chat_now"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Chat now" />
+
+            </LinearLayout>
+
+
 
             <LinearLayout
                 android:elevation="4dp"
@@ -152,7 +177,7 @@
 
             </LinearLayout>
 
-        </RelativeLayout>
+        </LinearLayout>
     </ScrollView>
 
 </LinearLayout>

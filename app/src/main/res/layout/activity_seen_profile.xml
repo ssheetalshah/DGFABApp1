@@ -102,8 +102,6 @@
                 android:src="@drawable/prof">
 
             </ImageButton>
-
-
         </RelativeLayout>
 
 
@@ -119,14 +117,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
                 android:drawableLeft="@drawable/dot_green"
                 android:drawablePadding="10dp"
                 android:gravity="center"
                 android:padding="3dp"
                 android:text="JET Catrige"
                 android:textColor="#000"
-                android:textSize="13dp"
+                android:textSize="15dp"
                 android:typeface="serif" />
 
             <TextView
