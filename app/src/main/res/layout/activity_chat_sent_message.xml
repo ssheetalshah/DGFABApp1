@@ -231,10 +231,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
                   <Button
+                      android:id="@+id/creatorder"
                       android:layout_marginTop="4dp"
                       android:textSize="10dp"
                       android:background="#fff"
-                      android:drawableLeft="@drawable/ic_createorder"
+                      android:drawableTop="@drawable/ic_createorder"
                       android:text="Create Order"
                       android:layout_weight="1"
                       android:layout_width="match_parent"
@@ -242,10 +243,11 @@
 
                   </Button>
             <Button
+                android:id="@+id/fav"
                 android:background="#fff"
                 android:layout_marginTop="4dp"
                 android:textSize="10dp"
-                android:drawableLeft="@drawable/ic_favorite_black_24dp"
+                android:drawableTop="@drawable/ic_favorite_black_24dp"
                 android:text="Favorites"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
@@ -253,6 +255,8 @@
 
             </Button>
             <Button
+                android:drawableTop="@drawable/ic_whatshot_black_24dp"
+                android:id="@+id/hotpro"
                 android:layout_marginTop="5dp"
                 android:background="#fff"
                 android:text="Hot Product"
@@ -263,6 +267,9 @@
 
             </Button>
             <Button
+
+                android:drawableTop="@drawable/prr25"
+                android:id="@+id/minsite"
                 android:background="#fff"
                 android:layout_marginTop="4dp"
                 android:text="Mini Site"
