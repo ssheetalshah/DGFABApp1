@@ -58,13 +58,13 @@ public class MoviesAdap extends RecyclerView.Adapter<MoviesAdap.MyViewHolder> {
         holder.genre.setText(moviee.getGenre());
         holder.year.setText(moviee.getYear());
 
-        holder.rl.setOnClickListener(new View.OnClickListener() {
+      /*  holder.rl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              /*  Intent intent = new Intent(context, NewChatActivity.class);
-                context.startActivity(intent);*/
+              *//*  Intent intent = new Intent(context, NewChatActivity.class);
+                context.startActivity(intent);*//*
             }
-        });
+        });*/
     }
 
     @Override
