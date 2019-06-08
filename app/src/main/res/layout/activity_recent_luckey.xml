@@ -102,7 +102,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Lucky Id:987654321"
+                            android:text="Min. Prize: 5000"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimary"
                             android:textSize="13dp" />
@@ -110,14 +110,14 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Won Rs.15,000"
+                            android:text="Max. Prize: 15000"
                             android:textAlignment="center"
                             android:textSize="13dp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="14 May 2019, 9 am"
+                            android:text="Godrej Products"
                             android:textAlignment="center"
                             android:textSize="13dp" />
 
@@ -188,7 +188,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.40"
-                                android:text="Clothes"
+                                android:text="Sumsung"
                                 android:textAlignment="center"
                                 android:textColor="#000"
                                 android:textSize="16dp"
@@ -200,7 +200,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Lucky Id:987654321"
+                            android:text="Min. Prize: 6000"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimary"
                             android:textSize="13dp" />
@@ -208,14 +208,14 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Won Rs. 2000"
+                            android:text="Max. Prize: 9000"
                             android:textAlignment="center"
                             android:textSize="13dp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="10 May 2019, 8 am"
+                            android:text="Sumsung Mobiles"
                             android:textAlignment="center"
                             android:textSize="13dp" />
 
@@ -294,7 +294,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.40"
-                                android:text="Watches"
+                                android:text="Shera Clothes"
                                 android:textAlignment="center"
                                 android:textColor="#000"
                                 android:textSize="16dp"
@@ -306,7 +306,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Lucky Id:987654321"
+                            android:text="Min. Prize: 1000"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimary"
                             android:textSize="13dp" />
@@ -314,13 +314,13 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Won Rs.5,000"
+                            android:text="Max. Prize: 12000"
                             android:textAlignment="center"
                             android:textSize="13dp" />
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="14 May 2019, 9 am"
+                            android:text="Clothes"
                             android:textAlignment="center"
                             android:textSize="13dp" />
 
@@ -390,7 +390,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.40"
-                                android:text="Herbal"
+                                android:text="Herbal Care"
                                 android:textAlignment="center"
                                 android:textColor="#000"
                                 android:textSize="16dp"
@@ -402,7 +402,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Lucky Id:987654321"
+                            android:text="Min. Prize: 2000"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimary"
                             android:textSize="13dp" />
@@ -410,14 +410,14 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Won Rs.1,000"
+                            android:text="Max. Prize: 9000"
                             android:textAlignment="center"
                             android:textSize="13dp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="14 May 2019, 9 am"
+                            android:text="Cosmetic Products"
                             android:textAlignment="center"
                             android:textSize="13dp" />
                     </LinearLayout>
