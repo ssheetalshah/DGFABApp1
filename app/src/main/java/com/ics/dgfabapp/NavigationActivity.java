@@ -86,7 +86,7 @@ public class NavigationActivity extends AppCompatActivity
                     // mTextMessage.setText("three");
                     return true;
                 case R.id.navigation_profile:
-                    Intent intent1 = new Intent(NavigationActivity.this, ProfileActivity.class);
+                    Intent intent1 = new Intent(NavigationActivity.this, LinkProfile.class);
                     startActivity(intent1);
                     return true;
             }
