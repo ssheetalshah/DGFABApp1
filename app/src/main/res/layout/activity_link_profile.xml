@@ -41,7 +41,7 @@
                 <ImageView
                     android:id="@+id/header_cover_image"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="100dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/pbgg" />
 
@@ -65,7 +65,17 @@
                     android:layout_below="@+id/header_cover_image"
                     android:background="#fff"
                     android:paddingBottom="10dp">
-
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="55dp"
+                        android:text="Check Lucky Draw"
+                        android:textColor="#673AB7"
+                        android:layout_marginRight="25dp"
+                        android:layout_toLeftOf="@id/user_profile_name"
+                        android:textSize="12dp"
+                         />
 
                     <ImageView
                         android:id="@+id/add_friend"
@@ -783,7 +793,8 @@
             android:layout_alignParentBottom="true"
             android:layout_gravity="end|bottom"
             android:layout_margin="@dimen/fab_margin"
-            android:src="@drawable/addicon" />
+            android:src="@drawable/addicon"
+            android:layout_alignParentRight="true" />
 
     </RelativeLayout>
 </LinearLayout>
