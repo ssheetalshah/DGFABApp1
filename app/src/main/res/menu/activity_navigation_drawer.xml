@@ -139,6 +139,12 @@
             android:icon="@drawable/service"
             android:title="Service/Production Entry" />
 
+        <item
+            android:visible="false"
+            android:id="@+id/nav_lucky_draw"
+            android:icon="@drawable/service"
+            android:title="Lucky Draw" />
+
     </group>
 
     <item android:title="Communicate">

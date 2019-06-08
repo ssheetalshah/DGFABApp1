@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NewChatActivity"></activity>
+        <activity android:name=".History_luckey"></activity>
+        <activity android:name=".Recent_luckey" />
+        <activity android:name=".LuckyDraw" />
+        <activity android:name=".NewChatActivity" />
         <activity android:name=".InquiryScreen" />
         <activity android:name=".MLMActivity" />
         <activity android:name=".FeedsActivity" />

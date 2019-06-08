@@ -52,6 +52,7 @@ public class NavigationActivity extends AppCompatActivity
     Button btn;
     LinearLayout sad;
     TextView product_category;
+    Menu nav_menu_buyer;
     //    HeaderAdapter madapter;
     private RecyclerView rv_autoScroll;
     private final Runnable SCROLLING_RUNNABLE = new Runnable() {
@@ -140,6 +141,9 @@ public class NavigationActivity extends AppCompatActivity
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        nav_menu_buyer = navigationView.getMenu();
+        nav_menu_buyer.findItem(R.id.nav_lucky_draw).setVisible(true);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -277,6 +281,9 @@ public class NavigationActivity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_addprod) {
             Intent intent = new Intent(NavigationActivity.this, AddProduct.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_lucky_draw) {
+            Intent intent = new Intent(NavigationActivity.this, LuckyDraw.class);
             startActivity(intent);
         }
 
