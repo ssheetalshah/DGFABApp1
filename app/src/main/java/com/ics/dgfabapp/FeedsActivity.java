@@ -16,8 +16,6 @@ public class FeedsActivity extends AppCompatActivity {
     ViewPager viewPager;
     Toolbar toolbar_feeds;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

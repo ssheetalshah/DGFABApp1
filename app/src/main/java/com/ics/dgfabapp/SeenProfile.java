@@ -111,8 +111,10 @@ public class SeenProfile extends AppCompatActivity {
 
 
         add_com = findViewById(R.id.add_com);
+        tabLayout.addTab(tabLayout.newTab().setText("Home"));
         tabLayout.addTab(tabLayout.newTab().setText("OverView"));
         tabLayout.addTab(tabLayout.newTab().setText("Products"));
+        tabLayout.addTab(tabLayout.newTab().setText("Feed"));
         tabLayout.addTab(tabLayout.newTab().setText("Average"));
         tabLayout.addTab(tabLayout.newTab().setText("Analytics"));
         tabLayout.addTab(tabLayout.newTab().setText("Connections"));

@@ -55,6 +55,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     RecyclerView recycler_view;
     MyListData[] myListData;
     CircleImageView dunb_image;
+    FloatingActionButton fabeditproxds;
     View view;
     TextView callid;
     public static String whatsname;
@@ -156,7 +157,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         navigationView.setNavigationItemSelectedListener(this);
         navigationView = (NavigationView) findViewById(R.id.nav_viewabc);
         nav_Menu = navigationView.getMenu();
-
+        fabeditproxds =findViewById(R.id.fabeditproxds);
         // navigationView.setItemIconTintList(null);
 
         View headerView = navigationView.getHeaderView(0);
@@ -164,6 +165,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         Nav_text_email=headerView.findViewById(R.id.nav_email);
 
         ll_admin = (LinearLayout) findViewById(R.id.ll_admin);
+        fabeditproxds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this , Chain_chain.class);
+                startActivity(intent);
+            }
+        });
         aid2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

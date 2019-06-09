@@ -7,15 +7,23 @@
     android:orientation="vertical"
     tools:context=".LinkProfile">
 
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/toolbar_prff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:fitsSystemWindows="true">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <TextView
+
+            android:layout_marginTop="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Profile"
@@ -23,14 +31,20 @@
             android:textSize="15dp"
             android:textStyle="normal"
             android:typeface="serif" />
+            <android.support.v7.widget.SearchView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
 
+            </android.support.v7.widget.SearchView>
+        </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -78,7 +92,7 @@
                          />
 
                     <ImageView
-                        android:id="@+id/add_friend"
+                        android:id="@+id/edit_pro"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="16dp"
@@ -123,7 +137,85 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/profile_layout"
+                    android:layout_marginTop="-64dp"
                     android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_margin="5dp"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.88"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:src="@drawable/downthree" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.12"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Interests"
+                                android:textColor="#000" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start|center"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:id="@+id/interest"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nike INC ,Prakash Footwear"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="11dp" />
+
+                                <TextView
+                                    android:layout_width="40dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:background="#DBD7D7"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="Off"
+                                    android:textAllCaps="false"
+                                    android:textColor="#000"
+                                    android:textSize="10dp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Give back and help those who can benifit from your experience"
+                                android:textSize="11dp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -345,6 +437,83 @@
                         </LinearLayout>
 
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_margin="5dp"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.88"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:src="@drawable/downthree" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.12"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="My Connections"
+                                android:textColor="#000" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start|center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/mycons"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="See all my connections"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="11dp" />
+
+                                <TextView
+                                    android:layout_width="40dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:background="#DBD7D7"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="Off"
+                                    android:textAllCaps="false"
+                                    android:textColor="#000"
+                                    android:textSize="10dp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Give back and help those who can benifit from your experience"
+                                android:textSize="11dp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
                     <!---->
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -356,6 +525,7 @@
                         android:gravity="center"
                         android:orientation="horizontal"
                         android:padding="5dp"
+                        android:visibility="gone"
                         android:weightSum="1">
 
                         <LinearLayout
@@ -378,6 +548,7 @@
                             android:orientation="vertical">
 
                             <TextView
+
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Save items"
@@ -423,12 +594,17 @@
                     <!--ggggggggggggggggggggggggggg-->
 
                     <LinearLayout
+
                         android:layout_width="match_parent"
                         android:layout_height="8dp"
                         android:layout_marginTop="5dp"
                         android:background="#C5C4C4"
                         android:orientation="horizontal">
 
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
                     </LinearLayout>
 
                     <!--hhhhhhhhhhhhhhhhhhh-->
@@ -490,7 +666,7 @@
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="764dp"
                                     android:gravity="start|center"
                                     android:orientation="horizontal">
 
@@ -608,19 +784,19 @@
                         android:padding="5dp">
 
                         <TextView
-                            android:text="Contact"
-                            android:textSize="16dp"
-                            android:textColor="#000"
-                            android:layout_marginBottom="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableRight="@drawable/edit_icon" />
+                            android:layout_marginBottom="5dp"
+                            android:drawableRight="@drawable/edit_icon"
+                            android:text="Contact"
+                            android:textColor="#000"
+                            android:textSize="16dp" />
 
                         <LinearLayout
-                            android:weightSum="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:weightSum="1">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -647,7 +823,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Your Profile"
+                                    android:text="Facebook"
                                     android:textColor="#000" />
 
                                 <LinearLayout
@@ -657,10 +833,10 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:textColor="@color/colorPrimary"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
-                                        android:text="https://mail.google.com/mail/inbox/FMf"
+                                        android:text="https://ww.facebook.com/FMf"
+                                        android:textColor="@color/colorPrimary"
                                         android:textSize="11dp" />
 
                                 </LinearLayout>
@@ -672,10 +848,10 @@
                         <!---->
 
                         <LinearLayout
-                            android:weightSum="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:weightSum="1">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -702,7 +878,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="website"
+                                    android:text="Linked In"
                                     android:textColor="#000" />
 
                                 <LinearLayout
@@ -712,10 +888,10 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:textColor="@color/colorPrimary"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
-                                        android:text="https://mail.google.com/mail"
+                                        android:text="https://Linkedin.com/linked"
+                                        android:textColor="@color/colorPrimary"
                                         android:textSize="11dp" />
 
                                 </LinearLayout>
@@ -725,10 +901,10 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:weightSum="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:weightSum="1">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -755,7 +931,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Phone"
+                                    android:text="Twitter"
                                     android:textColor="#000" />
 
                                 <LinearLayout
@@ -765,10 +941,10 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:textColor="@color/colorPrimary"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
-                                        android:text="9988776655"
+                                        android:text="https://www.twitter.com"
+                                        android:textColor="@color/colorPrimary"
                                         android:textSize="11dp" />
 
                                 </LinearLayout>
@@ -776,8 +952,193 @@
                             </LinearLayout>
 
                         </LinearLayout>
+
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_margin="5dp"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:drawableRight="@drawable/edit_icon"
+                            android:text="Viewers"
+                            android:textColor="#000"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="0.80"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/briefcase" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="0.20"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nike Inc"
+                                    android:textColor="#000" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start|center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Manufactures of Shoes"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="11dp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!---->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="0.80"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/link" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="0.20"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prakash Clothes"
+                                    android:textColor="#000" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start|center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Clothes makers "
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="11dp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="0.80"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/pphone" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="0.20"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Twitter"
+                                    android:textColor="#000" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start|center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="https://www.twitter.com"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="11dp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
                 </LinearLayout>
 
             </RelativeLayout>
@@ -786,7 +1147,7 @@
 
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
+            android:id="@+id/fabeditpro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"

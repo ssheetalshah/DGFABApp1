@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.ics.dgfabapp.FeedsActivity;
+import com.ics.dgfabapp.Home_Manu;
 import com.ics.dgfabapp.fregment.AnalyticsFrag;
 import com.ics.dgfabapp.fregment.AverageFrag;
 import com.ics.dgfabapp.fregment.ConnectionsFrag;
@@ -27,22 +29,28 @@ public class ProfileAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
+                Home_Manu home_manu = new Home_Manu();
+                return home_manu;
+            case 1:
                 OverviewFrag overviewFrag = new OverviewFrag();
                 return overviewFrag;
-            case 1:
+            case 2:
 
                 ProductFrag productFrag = new ProductFrag();
                 return productFrag;
-            case 2:
+            case 3:
+                Intent intent = new Intent(myContext , FeedsActivity.class);
+                myContext.startActivity(intent);
+            case 4:
                 AverageFrag averageFrag = new AverageFrag();
                 return averageFrag;
-            case 3:
+            case 5:
                 AnalyticsFrag analyticsFrag = new AnalyticsFrag();
                 return analyticsFrag;
-            case 4:
+            case 6:
                 ConnectionsFrag connectionsFrag = new ConnectionsFrag();
                 return connectionsFrag;
-            case 5:
+            case 7:
                 IntrestFrag intrestFrag = new IntrestFrag();
                 return intrestFrag;
             default:
