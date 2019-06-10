@@ -16,19 +16,17 @@
         android:fitsSystemWindows="true">
 
         <LinearLayout
-
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="1">
 
-            <ImageView
-
+            <android.support.v7.widget.SearchView
+                android:id="@+id/searchh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.20"
-                android:gravity="start"
-                android:src="@drawable/search" />
+                android:layout_weight="0.20" />
 
             <ImageView
                 android:layout_weight="0.80"
