@@ -219,6 +219,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
             nav_Menu.findItem(R.id.nav_dispatc_entry).setVisible(true);
             nav_Menu.findItem(R.id.nav_ser_pro_entry).setVisible(true);
+            totalSale.setVisibility(View.VISIBLE);
 
             Nav_text_name.setText("Amrit");
             Nav_text_email.setText("amrit@gmail.com");
@@ -288,6 +289,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 nav_Menu.findItem(R.id.nav_bank_reco).setVisible(false);
                 nav_Menu.findItem(R.id.nav_create_staff).setVisible(false);
                 callid.setText("2 PM");
+                totalSale.setVisibility(View.VISIBLE);
 
                 Nav_text_name.setText("Anurag");
                 Nav_text_email.setText("anur89@gmail.com");

@@ -176,7 +176,16 @@
         android:background="@color/design_default_color_primary"
         android:text="Send To Dispatch"
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content" >
+    </Button>
+
+        <Button
+            android:background="@color/design_default_color_primary"
+            android:text="Print"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content" >
 
 
     </Button>
