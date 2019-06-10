@@ -89,6 +89,13 @@ public class NavigationActivity extends AppCompatActivity
                     Intent intent1 = new Intent(NavigationActivity.this, LinkProfile.class);
                     startActivity(intent1);
                     return true;
+
+
+                case R.id.navigation_feeds:
+                    //  mTextMessage.setText("four");
+                    Intent feeds = new Intent(NavigationActivity.this, FeedsActivity.class);
+                    startActivity(feeds);
+                    return true;
             }
             return false;
         }

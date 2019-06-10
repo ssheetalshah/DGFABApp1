@@ -43,6 +43,8 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
         Object object= getItem(position);
         DataModel dataModel=(DataModel)object;
 
+
+
         switch (v.getId())
         {
             case R.id.item_info:
@@ -81,6 +83,7 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
             viewHolder = (ViewHolder) convertView.getTag();
             result=convertView;
         }
+
 
         Animation animation = AnimationUtils.loadAnimation(mContext, (position > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_top);
         result.startAnimation(animation);

@@ -257,6 +257,16 @@
                 android:textAllCaps="false"
                 android:textColor="#fff" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/btn_shape"
+                android:text="Print"
+                android:textAllCaps="false"
+                android:textColor="#fff" />
+
         </LinearLayout>
     </ScrollView>
 

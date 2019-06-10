@@ -81,6 +81,14 @@ Intel Integrated
         <item>Face Packs</item>
     </string-array>
 
+    <string-array name="array_grntype">
+        <item>-Select-</item>
+        <item>Cash</item>
+        <item>Credit</item>
+        <item>Other</item>
+
+    </string-array>
+
     <string-array name="emp_details">
         <item>-Select-</item>
         <item>Admin/Owner</item>
@@ -91,6 +99,7 @@ Intel Integrated
         <item>IT</item>
         <item>Tally/Recheck</item>
         <item>service/production</item>
+        <item>Logistic</item>
 
     </string-array>
 
