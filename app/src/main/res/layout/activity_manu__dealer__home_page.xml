@@ -73,6 +73,7 @@
                     android:layout_margin="3dp">
 
                     <LinearLayout
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:orientation="horizontal"
