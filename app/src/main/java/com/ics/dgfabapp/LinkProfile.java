@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class LinkProfile extends AppCompatActivity {
@@ -21,6 +22,7 @@ public class LinkProfile extends AppCompatActivity {
     Toolbar toolbar_prff;
     SearchView searchView;
     Button recent_lucky, lucky_draw;
+    LinearLayout clicl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class LinkProfile extends AppCompatActivity {
         toolbar_prff = findViewById(R.id.toolbar_prff);
         recent_lucky = findViewById(R.id.recent_lucky);
         lucky_draw = findViewById(R.id.lucky_draw);
+        clicl = findViewById(R.id.clicl);
         edit_pro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,10 +51,17 @@ public class LinkProfile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        clicl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LinkProfile.this, SeenProfile.class);
+                startActivity(intent);
+            }
+        });
         mycons.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LinkProfile.this, Chain_chain.class);
+                Intent intent = new Intent(LinkProfile.this, Recent_luckey.class);
                 startActivity(intent);
             }
         });
