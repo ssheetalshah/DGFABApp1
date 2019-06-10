@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
+import com.ics.dgfabapp.NewSalesDetail;
 import com.ics.dgfabapp.R;
 import com.ics.dgfabapp.SalesOrderDetail;
 
@@ -43,7 +44,7 @@ public class Sales_Order extends AppCompatActivity {
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Sales_Order.this, SalesOrderDetail.class);
+                Intent intent = new Intent(Sales_Order.this, NewSalesDetail.class);
                 intent.putExtra("CompanyNmae",campony.getText().toString());
                 intent.putExtra("OrderNo",order.getText().toString());
                 startActivity(intent);
@@ -53,7 +54,7 @@ public class Sales_Order extends AppCompatActivity {
         two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Sales_Order.this, SalesOrderDetail.class);
+                Intent intent = new Intent(Sales_Order.this, NewSalesDetail.class);
                 intent.putExtra("CompanyNmae",company1.getText().toString());
                 intent.putExtra("OrderNo",order1.getText().toString());
                 startActivity(intent);
