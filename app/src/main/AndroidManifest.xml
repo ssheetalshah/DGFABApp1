@@ -101,6 +101,7 @@
         <activity android:name=".Followers" />
         <activity android:name=".LinkProfile" />
         <activity android:name=".EditProfilebuyer" />
+        <activity android:name=".All_Inerested_Players"></activity>
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"

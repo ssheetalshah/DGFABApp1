@@ -44,7 +44,7 @@ public class LinkProfile extends AppCompatActivity {
         interest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LinkProfile.this, All_Inerested_Players.class);
+                Intent intent = new Intent(LinkProfile.this, SeenProfile.class);
                 startActivity(intent);
             }
         });
