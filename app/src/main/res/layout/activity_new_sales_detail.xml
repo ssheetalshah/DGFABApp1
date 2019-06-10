@@ -36,7 +36,7 @@
             <Button
                 android:layout_weight="1"
                 android:textColor="#fff"
-                android:text="Send to Billing"
+                android:text="Send to Prepared"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_margin="10dp"
