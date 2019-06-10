@@ -24,6 +24,7 @@ public class LinkProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_link_profile);
+
         fabeditpro = findViewById(R.id.fabeditpro);
         edit_pro = findViewById(R.id.edit_pro);
         interest = findViewById(R.id.interest);

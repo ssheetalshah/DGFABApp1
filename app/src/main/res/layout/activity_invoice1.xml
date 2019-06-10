@@ -174,22 +174,7 @@
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
-    <Button
-        android:id="@+id/sendtop"
-        android:textColor="#fff"
-        android:background="@color/design_default_color_primary"
-        android:text="Send to Invoice Preparing"
-        android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:layout_height="wrap_content" />
 
-        <Button
-            android:textColor="#fff"
-            android:background="@color/design_default_color_primary"
-            android:text="Print"
-            android:layout_width="match_parent"
-            android:layout_margin="10dp"
-            android:layout_height="wrap_content" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/addmoreluck"

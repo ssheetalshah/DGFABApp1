@@ -167,20 +167,7 @@
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
-    <Button
-        android:text="Send to Billing"
-        android:background="@color/design_default_color_primary"
-        android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:layout_height="wrap_content" ></Button>
 
-        <Button
-            android:text="Print"
-            android:background="@color/design_default_color_primary"
-            android:layout_width="match_parent"
-            android:layout_margin="10dp"
-            android:textColor="#fff"
-            android:layout_height="wrap_content" ></Button>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/addmoreluck"

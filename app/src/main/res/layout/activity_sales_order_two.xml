@@ -168,17 +168,7 @@
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
-    <Button
-        android:text="Send to Prepared"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
-        <Button
-            android:text="Print"
-            android:layout_margin="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/addmoreluck"

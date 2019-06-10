@@ -235,26 +235,6 @@
         </LinearLayout>
     </android.support.design.card.MaterialCardView>
 
-    <Button
-        android:textColor="#fff"
-        android:text="Send to Approval"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_margin="10dp"
-        android:background="@color/design_default_color_primary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:textColor="#fff"
-        android:text="Print"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_margin="10dp"
-        android:background="@color/design_default_color_primary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/addmoreluck"
         android:layout_width="wrap_content"
