@@ -8,17 +8,19 @@ import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class LinkProfile extends AppCompatActivity {
-        ImageView edit_pro;
-        TextView mycons;
-        TextView interest;
-        FloatingActionButton fabeditpro;
-        Toolbar toolbar_prff;
-        SearchView searchView;
+    ImageView edit_pro;
+    TextView mycons;
+    TextView interest;
+    FloatingActionButton fabeditpro;
+    Toolbar toolbar_prff;
+    SearchView searchView;
+    Button recent_lucky, lucky_draw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,24 +32,26 @@ public class LinkProfile extends AppCompatActivity {
         interest = findViewById(R.id.interest);
         mycons = findViewById(R.id.mycons);
         toolbar_prff = findViewById(R.id.toolbar_prff);
+        recent_lucky = findViewById(R.id.recent_lucky);
+        lucky_draw = findViewById(R.id.lucky_draw);
         edit_pro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LinkProfile.this , SeenProfile.class);
+                Intent intent = new Intent(LinkProfile.this, SeenProfile.class);
                 startActivity(intent);
             }
         });
         interest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LinkProfile.this , All_Inerested_Players.class);
+                Intent intent = new Intent(LinkProfile.this, All_Inerested_Players.class);
                 startActivity(intent);
             }
         });
         mycons.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LinkProfile.this , Chain_chain.class);
+                Intent intent = new Intent(LinkProfile.this, Chain_chain.class);
                 startActivity(intent);
             }
         });
@@ -55,7 +59,7 @@ public class LinkProfile extends AppCompatActivity {
         fabeditpro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LinkProfile.this , EditProfilebuyer.class);
+                Intent intent = new Intent(LinkProfile.this, EditProfilebuyer.class);
                 startActivity(intent);
             }
         });
@@ -67,14 +71,29 @@ public class LinkProfile extends AppCompatActivity {
             }
         });
 
-        searchView = (SearchView)findViewById(R.id.searchh);
+        searchView = (SearchView) findViewById(R.id.searchh);
         ImageView searchIcon = searchView.findViewById(android.support.v7.appcompat.R.id.search_button);
-        searchIcon.setImageDrawable(ContextCompat.getDrawable(LinkProfile.this,R.drawable.search));
-        EditText searchEditText = (EditText)searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
+        searchIcon.setImageDrawable(ContextCompat.getDrawable(LinkProfile.this, R.drawable.search));
+        EditText searchEditText = (EditText) searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
         searchEditText.setTextColor(getResources().getColor(R.color.white));
         searchEditText.setHintTextColor(getResources().getColor(R.color.white));
-    }
 
+        recent_lucky.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LinkProfile.this, Recent_luckey.class);
+                startActivity(intent);
+            }
+        });
+
+        lucky_draw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LinkProfile.this, LuckyDraw.class);
+                startActivity(intent);
+            }
+        });
+    }
 
 
     @Override
