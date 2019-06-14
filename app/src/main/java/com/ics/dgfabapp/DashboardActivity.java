@@ -1071,9 +1071,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             Intent intent = new Intent(DashboardActivity.this, Creat_sales_accountant.class);
             intent.putExtra("pro" , "Create Purchase Order");
             startActivity(intent);
-        }else
-
-            if (id == R.id.nav_debitdoted) {
+        }else if (id == R.id.nav_debitdoted) {
             Intent intent = new Intent(DashboardActivity.this, DebitNoteActivity.class);
             startActivity(intent);
         }   if (id == R.id.nav_actmlm) {

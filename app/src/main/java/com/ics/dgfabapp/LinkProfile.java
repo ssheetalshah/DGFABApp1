@@ -23,6 +23,7 @@ public class LinkProfile extends AppCompatActivity {
     SearchView searchView;
     Button recent_lucky, lucky_draw;
     LinearLayout clicl;
+    TextView seeConnection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class LinkProfile extends AppCompatActivity {
         toolbar_prff = findViewById(R.id.toolbar_prff);
         recent_lucky = findViewById(R.id.recent_lucky);
         lucky_draw = findViewById(R.id.lucky_draw);
+        seeConnection = findViewById(R.id.seeConnection);
         clicl = findViewById(R.id.clicl);
         edit_pro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,6 +103,13 @@ public class LinkProfile extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LinkProfile.this, LuckyDraw.class);
                 startActivity(intent);
+            }
+        });
+        seeConnection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentt = new Intent(LinkProfile.this,All_Inerested_Players.class);
+                startActivity(intentt);
             }
         });
     }

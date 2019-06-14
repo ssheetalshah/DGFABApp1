@@ -56,7 +56,6 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/pbgg" />
 
-
                 <ImageButton
                     android:id="@+id/user_profile_photo"
                     android:layout_width="110dp"
@@ -231,6 +230,7 @@
                                     android:textSize="11dp" />
 
                                 <TextView
+                                    android:id="@+id/seeConnection"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="See 50+ connections"
@@ -284,6 +284,83 @@
                             android:text="500+ Credit"
                             android:textColor="#000"
                             android:textSize="13dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_margin="5dp"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.88"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:src="@drawable/downthree" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.12"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="My Connections"
+                                android:textColor="#000" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start|center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/mycons"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="See all my chains"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="11dp" />
+
+                                <TextView
+                                    android:layout_width="40dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:background="#DBD7D7"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="Off"
+                                    android:textAllCaps="false"
+                                    android:textColor="#000"
+                                    android:textSize="10dp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Give back and help those who can benifit from your experience"
+                                android:textSize="11dp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -591,82 +668,7 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_margin="5dp"
-                        android:background="#fff"
-                        android:clickable="true"
-                        android:elevation="4dp"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        android:padding="5dp"
-                        android:weightSum="1">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.88"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="30dp"
-                                android:src="@drawable/downthree" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.12"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="My Connections"
-                                android:textColor="#000" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="start|center"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/mycons"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="See all my connections"
-                                    android:textAlignment="center"
-                                    android:textColor="@color/colorAccent"
-                                    android:textSize="11dp" />
-
-                                <TextView
-                                    android:layout_width="40dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center"
-                                    android:background="#DBD7D7"
-                                    android:gravity="center"
-                                    android:padding="2dp"
-                                    android:text="Off"
-                                    android:textAllCaps="false"
-                                    android:textColor="#000"
-                                    android:textSize="10dp"
-                                    android:visibility="gone" />
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Give back and help those who can benifit from your experience"
-                                android:textSize="11dp"
-                                android:visibility="gone" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
                     <!---->
                     <LinearLayout
                         android:layout_width="match_parent"

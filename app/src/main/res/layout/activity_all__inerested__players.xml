@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".All_Inerested_Players">
 
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_interst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text=""
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:typeface="serif" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:layout_margin="5dp"
@@ -19,13 +34,14 @@
         android:gravity="center"
         android:orientation="vertical"
         android:padding="5dp">
+
         <TextView
-            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All Ready Connected"
             android:textAllCaps="true"
             android:textSize="13dp"
-            android:text="All Ready Connected"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,24 +70,27 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="0.20"
                 android:orientation="vertical">
-            <LinearLayout
-                android:weightSum="2"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_weight="1"
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nike Inc"
-                    android:textColor="#000" />
-                <ImageView
-                    android:id="@+id/messagedr"
-                    android:src="@drawable/message"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp" />
-            </LinearLayout>
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Nike Inc"
+                        android:textColor="#000" />
+
+                    <ImageView
+                        android:id="@+id/messagedr"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/message" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -122,23 +141,25 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="0.20"
                 android:orientation="vertical">
+
                 <LinearLayout
-                    android:weightSum="2"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                <TextView
-                    android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Prakash Clothes"
-                    android:textColor="#000" />
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Prakash Clothes"
+                        android:textColor="#000" />
 
                     <ImageView
-                        android:src="@drawable/message"
-                        android:layout_weight="1"
                         android:layout_width="match_parent"
-                        android:layout_height="20dp">
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/message">
 
 
                     </ImageView>
@@ -171,14 +192,13 @@
             android:weightSum="1">
 
 
-
             <LinearLayout
-                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="0.20"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -230,22 +250,25 @@
                     android:layout_marginLeft="10dp"
                     android:layout_weight="0.20"
                     android:orientation="vertical">
+
                     <LinearLayout
-                        android:weightSum="2"
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
                         <TextView
-                            android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="Flipcart Inc"
                             android:textColor="#000" />
+
                         <ImageView
-                            android:src="@drawable/message"
-                            android:layout_weight="1"
                             android:layout_width="match_parent"
-                            android:layout_height="20dp" />
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/message" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -296,23 +319,25 @@
                     android:layout_marginLeft="10dp"
                     android:layout_weight="0.20"
                     android:orientation="vertical">
+
                     <LinearLayout
-                        android:weightSum="2"
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
                         <TextView
-                            android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="Prakash Clothes"
                             android:textColor="#000" />
 
                         <ImageView
-                            android:src="@drawable/message"
-                            android:layout_weight="1"
                             android:layout_width="match_parent"
-                            android:layout_height="20dp">
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/message">
 
 
                         </ImageView>
@@ -353,20 +378,20 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:src="@drawable/pphone" />
+                        android:src="@drawable/pphone"
+                        android:visibility="gone" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="0.20"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -391,9 +416,9 @@
 
                 </LinearLayout>
 
-        </LinearLayout>
+            </LinearLayout>
 
-    </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -406,13 +431,14 @@
         android:gravity="center"
         android:orientation="vertical"
         android:padding="5dp">
+
         <TextView
-            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recommended"
             android:textAllCaps="true"
             android:textSize="13dp"
-            android:text="Recommended"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -441,30 +467,34 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="0.20"
                 android:orientation="vertical">
+
                 <LinearLayout
-                    android:weightSum="3"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
                     <TextView
-                        android:layout_weight="1"
                         android:layout_width="170dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:text="Peter England"
                         android:textColor="#000" />
+
                     <ImageView
 
                         android:id="@+id/adddir"
-                        android:src="@drawable/add"
-                        android:layout_weight="1"
                         android:layout_width="wrap_content"
-                        android:layout_height="20dp" />
-                    <TextView
+                        android:layout_height="20dp"
                         android:layout_weight="1"
+                        android:src="@drawable/add" />
+
+                    <TextView
                         android:id="@+id/needcon"
-                        android:text="Request sent"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" ></TextView>
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Request sent"></TextView>
                 </LinearLayout>
 
                 <LinearLayout
@@ -516,23 +546,25 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="0.20"
                 android:orientation="vertical">
+
                 <LinearLayout
-                    android:weightSum="2"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
                     <TextView
-                        android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:text="Hodor Clothes"
                         android:textColor="#000" />
 
                     <ImageView
-                        android:src="@drawable/add"
-                        android:layout_weight="1"
                         android:layout_width="match_parent"
-                        android:layout_height="20dp">
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/add">
 
 
                     </ImageView>
@@ -565,14 +597,13 @@
             android:weightSum="1">
 
 
-
             <LinearLayout
-                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="0.20"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -624,22 +655,25 @@
                     android:layout_marginLeft="10dp"
                     android:layout_weight="0.20"
                     android:orientation="vertical">
+
                     <LinearLayout
-                        android:weightSum="2"
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
                         <TextView
-                            android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="Thrones Inc"
                             android:textColor="#000" />
+
                         <ImageView
-                            android:src="@drawable/add"
-                            android:layout_weight="1"
                             android:layout_width="match_parent"
-                            android:layout_height="20dp" />
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/add" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -690,23 +724,25 @@
                     android:layout_marginLeft="10dp"
                     android:layout_weight="0.20"
                     android:orientation="vertical">
+
                     <LinearLayout
-                        android:weightSum="2"
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
                         <TextView
-                            android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="Prakash Clothes"
                             android:textColor="#000" />
 
                         <ImageView
-                            android:src="@drawable/message"
-                            android:layout_weight="1"
                             android:layout_width="match_parent"
-                            android:layout_height="20dp">
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/message">
 
 
                         </ImageView>
@@ -747,20 +783,20 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:src="@drawable/pphone" />
+                        android:src="@drawable/pphone"
+                        android:visibility="gone" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="0.20"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <TextView
                         android:layout_width="match_parent"
